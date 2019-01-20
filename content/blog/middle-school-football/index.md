@@ -1,9 +1,10 @@
 ---
 title: Middle School Football
-date: '2018-10-21T20:12:03.284Z'
+date: 2018-10-21T20:12:03.284Z
+excerpt: This year my I signed up my son for school football. It's been an exciting and eye-opening experience for both of us.
 ---
 
-Idiosyncratic enough? I haven't been blogging properly in like a decade, and I really miss this sometimes. So here goes.
+I haven't been blogging properly in like a decade, and I really miss this sometimes. So here goes.
 
 This year my I signed up my son for school football. He's in his last year of middle school, and had never participated in sports before. He had a encounter with Taekwando years ago, which at that point was more of a daycare then a sport for him. They had all kinds of fun, including belt promotions and demonstrations, but he really struggled with instructions, discipline and so forth. Overall, it was deemed not worth it after almost a year, and our annual contract with the club quietly expired.
 
