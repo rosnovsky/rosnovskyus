@@ -38,7 +38,7 @@ function Bio() {
               <a href={`https://twitter.com/${social.twitter}`}>
                 following me on Twitter
               </a>{' '}
-              at al costs!
+              at all costs!
             </p>
           </div>
         )

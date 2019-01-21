@@ -2,7 +2,7 @@
   "name": "rosnovsky-park-blog",
   "private": true,
   "description": "Rosnovsky Park blog",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "author": "Artem Rosnovsky <artem@rosnovsky.us>",
   "bugs": {
     "url": "https://github.com/rosnovsky/rosnovskyus/issues"
