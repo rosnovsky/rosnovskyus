@@ -1,10 +1,34 @@
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
+import './global.css'
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    a: {
+      color: 'var(--textLink)',
+    },
+    hr: {
+      background: 'var(--hr)',
+    },
     'a.gatsby-resp-image-link': {
-      boxShadow: `none`,
+      boxShadow: 'none',
+    },
+    'a.anchor': {
+      boxShadow: 'none',
+    },
+    'p code': {
+      fontSize: '1rem',
+    },
+    'li code': {
+      fontSize: '1rem',
+    },
+    blockquote: {
+      color: 'inherit',
+      borderLeftColor: 'inherit',
+      opacity: '0.8',
+    },
+    h1: {
+      color: 'var(--header)',
     },
   }
 }
