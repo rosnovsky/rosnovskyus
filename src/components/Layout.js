@@ -13,8 +13,8 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            ...scale(1.1),
+            marginBottom: rhythm(1.1),
             marginTop: 0,
           }}
         >
@@ -62,7 +62,32 @@ class Layout extends React.Component {
       >
         {header}
         {children}
-        <footer>© {new Date().getFullYear()} Artem Rosnovsky.</footer>
+        <footer>
+          <small>
+            <div style={{ float: 'right' }}>
+              Subscribe to{' '}
+              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+                RSS
+              </a>{' '}
+              feed
+            </div>
+            <a
+              href="https://twitter.com/rosnovsky"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>{' '}
+            &bull;{' '}
+            <a
+              href="https://github.com/rosnovsky"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>{' '}
+          </small>
+        </footer>
       </div>
     )
   }
