@@ -16,9 +16,19 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+          style={{
+            fontFamily: `proxima-nova, serif`,
+            fontWeight: `900`,
+            fontSize: `3rem`,
+          }}
+        >
+          {post.frontmatter.title}
+        </h1>
         <p
           style={{
+            fontFamily: `franklin-gothic, sans-serif`,
+            color: `hsla(0, 100%, 18%, .75)`,
             ...scale(-1 / 5),
             display: 'block',
             marginBottom: rhythm(1),
@@ -28,7 +38,14 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
           {` • ${formatReadingTime(post.timeToRead)}`}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          style={{
+            fontFamily: `franklin-gothic, sans-serif`,
+            fontSize: `1.2rem`,
+            fontWeight: `500`,
+          }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),

@@ -26,6 +26,9 @@ class BlogIndex extends React.Component {
             <div key={node.fields.slug}>
               <h3
                 style={{
+                  fontFamily: `proxima-nova, serif`,
+                  fontWeight: `900`,
+                  fontSize: `2rem`,
                   marginBottom: rhythm(1 / 4),
                 }}
               >
@@ -33,11 +36,21 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>
+              <span
+                style={{
+                  fontFamily: `franklin-gothic, sans-serif`,
+                  color: `hsla(0, 100%, 18%, .75)`,
+                }}
+              >
                 {node.frontmatter.date}
-                {` • ${formatReadingTime(node.timeToRead)}`}
-              </small>
+                {` • • • ${formatReadingTime(node.timeToRead)}`}
+              </span>
               <p
+                style={{
+                  fontFamily: `franklin-gothic, sans-serif`,
+                  fontSize: `1.2rem`,
+                  fontWeight: `500`,
+                }}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.excerpt || node.excerpt,
                 }}

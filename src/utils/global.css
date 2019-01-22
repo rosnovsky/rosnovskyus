@@ -1,5 +1,16 @@
+@import url('https://use.typekit.net/tyk4cgp.css');
+
 body {
-  --green: rgba(15, 54, 17, 1);
+  --green: rgb(19, 66, 21);
+  font-family: 'merriweather', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'eskapade', serif;
 }
 
 body {

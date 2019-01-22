@@ -30,6 +30,9 @@ Wordpress2016.overrideThemeStyles = () => {
     h1: {
       color: 'var(--header)',
     },
+    h3: {
+      color: 'var(--header)',
+    },
   }
 }
 

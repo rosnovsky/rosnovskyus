@@ -13,6 +13,9 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
+            fontFamily: `Roboto, sans-serif`,
+            fontWeight: `900`,
+            fontSize: `5rem`,
             ...scale(1.1),
             marginBottom: rhythm(1.1),
             marginTop: 0,
@@ -34,8 +37,9 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
+            fontFamily: `Roboto, sans-serif`,
+            fontWeight: `900`,
           }}
         >
           <Link
@@ -63,14 +67,28 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
-          <small>
-            <div style={{ float: 'right' }}>
-              Subscribe to{' '}
-              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-                RSS
-              </a>{' '}
-              feed
-            </div>
+          <div
+            style={{
+              float: 'right',
+              fontFamily: `franklin-gothic, sans-serif`,
+              fontSize: `0.8rem`,
+              fontWeight: `500`,
+            }}
+          >
+            Subscribe to{' '}
+            <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+              RSS
+            </a>{' '}
+            feed
+          </div>
+          <div
+            style={{
+              float: 'left',
+              fontFamily: `franklin-gothic, sans-serif`,
+              fontSize: `0.8rem`,
+              fontWeight: `500`,
+            }}
+          >
             <a
               href="https://twitter.com/rosnovsky"
               target="_blank"
@@ -86,7 +104,7 @@ class Layout extends React.Component {
             >
               Github
             </a>{' '}
-          </small>
+          </div>
         </footer>
       </div>
     )
