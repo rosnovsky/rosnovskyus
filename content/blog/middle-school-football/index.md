@@ -25,7 +25,7 @@ When a player gets injured, whether he's from your team or not, every other play
 
 Team building is a big deal.
 
-[![It's show time!](showtime.png)](https://www.youtube.com/watch?v=eU0QK50Tw-s "It's Showtime")
+`youtube: https://www.youtube.com/watch?v=eU0QK50Tw-s`
 
 Losing on a play, fumbling a ball, throwing an interception — and immediately moving on to the next play. No fuming, no regrets, no time for that, next play! This is kinda cool, really. Same goes for games lost: yes, it's an "L", _go home, do your homework, spend time with your family, see you tomorrow at practice_.
 
