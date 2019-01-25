@@ -95,8 +95,8 @@ module.exports = {
                 })
               })
             },
-            // for eventual language filter:
-            // filter: {fields: { langKey: {eq: "en"}}} in allMarkdownRemark
+            // for eventual language filter support:
+            // filter: {fields: { lang: {eq: "en"}}} in allMarkdownRemark
             query: `
               {
                 allMarkdownRemark(

@@ -2,6 +2,7 @@
 title: On Reading
 date: 2018-11-02T22:12:03.284Z
 excerpt: I love reading, but does reading Reddit or blogs count? Or is it only books should be considered proper reading?
+lang: English
 ---
 
 We all read a lot without even giving it a second thought. We read the news, Facebook feeds, Twitter, Reddit, Stack Overflow, that tutorial you've been keeping in an a tab for a weeks, text messages, you name it. If anything, we probably read more than before the _interwebs_, not less. The actual issue is that as a result of such reading overload we generally read way fewer books, then we used to.
