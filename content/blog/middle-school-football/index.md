@@ -31,18 +31,18 @@ Losing on a play, fumbling a ball, throwing an interception — and immediately 
 
 Homework, yes. There's a grade check process in place. If you get below a certain threshold, you are suspend form participation in games (you still can go to practice, though). Vlad did fall below this threshold for a week, and missed a game. He got super motivated to get back in the game and spend that whole week making up for things he failed in class, make-up tests, working on big projects and such.
 
-All in all, I think signing him up for football practice was one of the best decicions we made as parents. Not only did he met new friends, had this team experience, ran around quite a bit, learned how to catch a ball, and played some pretty real football games, he also discovered new things about himself as a person and got some extra motivation at school.
+All in all, I think signing him up for football practice was one of the best decisions we made as parents. Not only did he met new friends, had this team experience, ran around quite a bit, learned how to catch a ball, and played some pretty real football games, he also discovered new things about himself as a person and got some extra motivation at school.
 
 And the funniest part is that 10 years ago we didn't know football existed, and it's only been 4 years since we watched a game for the first time :)
 
-![img](0uzIiZAFQwq+3EsgHOJX3g_thumb_80b1.jpg)
+![On the field in Everett](1.jpg)
 
-![img](cKL3ulQOSXO5jeMDqVoJSA_thumb_7f5d.jpg)
+![Another game](2.jpg)
 
-![img](KBv9ebATQwiVuvGfIO0bmQ_thumb_7fd7.jpg)
+![Home game](3.jpg)
 
-![img](m9hrdfoERHKE8KET86IcbQ_thumb_8062.jpg)
+![Linebackers](4.jpg)
 
-![img](S5FAEAR5QPmwhJUIdFpqhA_thumb_8054.jpg)
+![DEFENSE!](5.jpg)
 
-![img](WbgNlZR1RjWsJYHslpMeA_thumb_7f13.jpg)
+![W or L?](6.jpg)

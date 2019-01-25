@@ -33,24 +33,17 @@ module.exports = {
               maxWidth: 590,
             },
           },
-          `gatsby-remark-reading-time`,
           {
-            resolve: 'gatsby-transformer-remark',
+            resolve: 'gatsby-remark-embed-video',
             options: {
-              plugins: [
-                {
-                  resolve: 'gatsby-remark-embed-video',
-                  options: {
-                    width: 630,
-                    ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-                    // height: 400, // Optional: Overrides optional.ratio
-                    related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-                    noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-                  },
-                },
-              ],
+              width: 800,
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              height: 400, // Optional: Overrides optional.ratio
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
             },
           },
+          `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
