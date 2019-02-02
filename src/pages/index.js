@@ -43,7 +43,7 @@ class BlogIndex extends React.Component {
                 }}
               >
                 {node.frontmatter.date}
-                {` • • • ${formatReadingTime(node.timeToRead)}`}
+                {` • • • ${node.frontmatter.readingTime ? formatReadingTime(node.frontmatter.readingTime) : formatReadingTime(node.timeToRead)}`}
               </span>
               <p
                 style={{
@@ -84,6 +84,7 @@ export const pageQuery = graphql`
             title
             lang
             excerpt
+            readingTime
           }
           timeToRead
         }

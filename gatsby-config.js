@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/`,
         name: `blog`,
       },
     },
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/podcast`,
+        name: `podcast`,
       },
     },
     {
@@ -106,7 +113,7 @@ module.exports = {
               })
             },
             // for eventual language filter support:
-            // filter: {fields: { lang: {eq: "en"}}} in allMarkdownRemark
+            // filter: {fields: { lang: {eq: "English"}}} in allMarkdownRemark
             query: `
               {
                 allMarkdownRemark(
