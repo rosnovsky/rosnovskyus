@@ -6,4 +6,4 @@ tags: ['travel', 'pilot']
 lang: English
 ---
 
-`youtube https://www.youtube.com/watch?v=rpSmobOhiVQ`
+`youtube: https://www.youtube.com/watch?v=rpSmobOhiVQ`
