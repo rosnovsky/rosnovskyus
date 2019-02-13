@@ -4,11 +4,11 @@ date: 2013-07-06T13:53:00
 excerpt: (Это плэйсхолдер для анонса подкаста и/или плеера)
 tags: ['Орегон', 'Ванкувер', "путешествия", "Вашингтон"]
 lang: Russian
-podcast: true
+type: "podcast"
 source: http://podtema.com/media/evergreen/evergreen001.mp3
-cover: cover001.jpg
+cover: ./cover001.jpg
 time: 83
-size: 98
+size: 76
 episode: 001
 episodeType: "full"
 mentions: [

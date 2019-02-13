@@ -5,7 +5,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
-import { formatReadingTime } from '../utils/helpers'
+import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
 
 class BlogIndex extends React.Component {
   render() {
@@ -21,7 +21,7 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+          const title = (node.frontmatter.type === "podcast" ? "🎙 " + node.frontmatter.title : node.frontmatter.title) || node.fields.slug
           return (
             <div key={node.fields.slug}>
               <h3
@@ -43,7 +43,7 @@ class BlogIndex extends React.Component {
                 }}
               >
                 {node.frontmatter.date}
-                {` • • • ${node.frontmatter.readingTime ? formatReadingTime(node.frontmatter.readingTime) : formatReadingTime(node.timeToRead)}`}
+                {` • • • ${node.frontmatter.type === "podcast" ? formatPodcastTime(node.frontmatter.time) : node.frontmatter.readingTime ? formatReadingTime(node.frontmatter.readingTime) : formatReadingTime(node.timeToRead)}`}
               </span>
               <p
                 style={{
@@ -85,6 +85,9 @@ export const pageQuery = graphql`
             lang
             excerpt
             readingTime
+            type
+            time
+            cover {publicURL}
           }
           timeToRead
         }

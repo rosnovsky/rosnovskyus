@@ -5,7 +5,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
-import { formatReadingTime } from '../utils/helpers'
+import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
             fontSize: `3rem`,
           }}
         >
-          {post.frontmatter.title}
+          {post.frontmatter.type === "podcast" ? "🎙 " + post.frontmatter.title : post.frontmatter.title}
         </h1>
         <p
           style={{
@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
-          {` • ${formatReadingTime(post.timeToRead)}`}
+          {` • ${post.frontmatter.type === "podcast" ? formatPodcastTime(post.frontmatter.time) : formatReadingTime(post.timeToRead)}`}
         </p>
         <div
           style={{
@@ -100,6 +100,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         lang
+        type
+        source
+        cover {publicURL}
+        time
+        size
+        episode
+        episodeType
+        mentions {type, text, url, isbn}
       }
       timeToRead
     }

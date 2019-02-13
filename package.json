@@ -13,6 +13,7 @@
     "babel-jest": "^24.0.0",
     "babel-preset-gatsby": "^0.1.6",
     "gatsby": "^2.0.76",
+    "gatsby-cli": "^2.4.10",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-google-analytics": "^2.0.5",
