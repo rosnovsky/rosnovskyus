@@ -3,7 +3,7 @@ module.exports = {
     title: `Rosnovsky Park™`,
     author: `Artem Rosnovsky`,
     description: `I have no idea what I'm doing`,
-    siteUrl: `https://new.rosnovsky.us`,
+    siteUrl: `https://rosnovsky.us`,
     social: {
       twitter: `rosnovsky`,
     },
@@ -37,7 +37,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
           {
@@ -45,7 +45,6 @@ module.exports = {
             options: {
               width: 800,
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              height: 400, // Optional: Overrides optional.ratio
               related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
               noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
             },
@@ -92,7 +91,7 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is a blog post I've posted at new.rosnovsky.us. You can read it <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is a blog post I've posted at rosnovsky.us. You can read it <a href="${siteUrl +
                   edge.node.fields.slug}">here</a>.)</div>
               `
 
