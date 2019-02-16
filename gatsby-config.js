@@ -85,6 +85,30 @@ module.exports = {
             }
           }
         `,
+        setup: ({
+          query: {
+            site: { siteMetadata },
+            ...rest
+          },
+        }) => {
+          return {
+            ...siteMetadata,
+            ...rest,
+            title: "Evergreen Podcast",
+            custom_namespaces: {
+              'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+            },
+            custom_elements: [
+              {
+                'itunes:image': {
+                  _attr: {
+                    href: "https://podtema.com/wp-content/uploads/2018/07/cover.png"
+                  }
+                }
+              }
+            ]
+          }
+        },
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -138,6 +162,81 @@ module.exports = {
             `,
             output: '/rss.xml',
             title: 'Rosnovsky Park™ RSS Feed',
+          },
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                const siteUrl = site.siteMetadata.siteUrl
+                let html = edge.node.html
+                html = html
+                  .replace(/href="\//g, `href="${siteUrl}/`)
+                  .replace(/src="\//g, `src="${siteUrl}/`)
+                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+
+                return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug, // link to the item
+                  // guid: '1123', // optional - defaults to url
+                  categories: ['Category 1', 'Category 2', 'Category 3', 'Category 4'], // optional - array of item categories
+                  // author: 'Guest Author', // optional - defaults to feed author property
+                  date: edge.node.frontmatter.date, // any format that js Date can parse.
+                  lat: 33.417974, //optional latitude field for GeoRSS
+                  long: -111.933231, //optional longitude field for GeoRSS
+                  enclosure: { url: edge.node.frontmatter.source }, // optional enclosure
+                  custom_elements: [
+                    { 'itunes:author': 'Artem Rosnovsky' },
+                    { 'itunes:subtitle': 'From Pacific Northwest to the World' },
+                    { 'itunes:duration': edge.node.frontmatter.time }
+                  ]
+                })
+              })
+            },
+
+            // for eventual language filter support:
+            query: `
+            {
+              site {
+                siteMetadata {
+                  title
+                  description
+                  siteUrl
+                  site_url: siteUrl
+                }
+              }
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] }
+                filter: {frontmatter: { type: {eq: "podcast"}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt(pruneLength: 250)
+                      html
+                      fields { 
+                        slug   
+                      }
+                      frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        lang
+                        type
+                        source
+                        cover {publicURL}
+                        time
+                        size
+                        episode
+                        episodeType
+                        mentions {type, text, url, isbn}
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/podcast.xml',
+            title: 'Evergreen Podcast',
           },
         ],
       },
