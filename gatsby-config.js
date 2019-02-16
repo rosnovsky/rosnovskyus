@@ -94,7 +94,7 @@ module.exports = {
           return {
             ...siteMetadata,
             ...rest,
-            title: "Evergreen Podcast",
+            description: "От автора Rosnovsky Park™ Weekly и Rosnovsky in Canada! Самый аутентичный подкаст на русском языке! Evergreen Podcast: Смотри ушами. Легендарный ведущий старейших подкастов на русском языке представляет третью серию подкастов — Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе США 🇺🇸. Путешествия, походы, природа, работа, технологии, семья, дети, деньги — всё, что волнует интересует!",
             custom_namespaces: {
               'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd',
             },
@@ -104,7 +104,23 @@ module.exports = {
                   _attr: {
                     href: "https://podtema.com/wp-content/uploads/2018/07/cover.png"
                   }
-                }
+                },
+
+                "itunes:owner":
+                {
+                  "itunes:name": "Artem Rosnovsky",
+                  "itunes:email": "artem@rosnovsky.us"
+                },
+
+                "itunes:category": "Personal Journals",
+                "itunes:category": "Places & Travel",
+                "itunes:category": "Society & Culture",
+
+                "itunes:keywords": "США, Канада, иммиграция, истории, Вашингтон, Орегон, росновский",
+                "itunes:explicit": "no",
+                "itunes:author": "Artem Rosnovsky",
+                "itunes:summary": "От автора Rosnovsky Park™ Weekly и Rosnovsky in Canada! Самый аутентичный подкаст на русском языке! Evergreen Podcast: Смотри ушами. Легендарный ведущий старейших подкастов на русском языке представляет третью серию подкастов — Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе США 🇺🇸. Путешествия, походы, природа, работа, технологии, семья, дети, деньги — всё, что волнует интересует!",
+                "itunes:subtitle": "From Pacific Northwest to the World"
               }
             ]
           }
@@ -135,13 +151,13 @@ module.exports = {
                 })
               })
             },
-            // for eventual language filter support:
-            // filter: {fields: { lang: {eq: "English"}}} in allMarkdownRemark
+
             query: `
               {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
+                  filter: {frontmatter: { type: {ne: "podcast"}}}
                 ) {
                   edges {
                     node {
@@ -177,24 +193,24 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   title: edge.node.frontmatter.title,
                   description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug, // link to the item
-                  // guid: '1123', // optional - defaults to url
-                  categories: ['Category 1', 'Category 2', 'Category 3', 'Category 4'], // optional - array of item categories
-                  // author: 'Guest Author', // optional - defaults to feed author property
-                  date: edge.node.frontmatter.date, // any format that js Date can parse.
-                  lat: 33.417974, //optional latitude field for GeoRSS
-                  long: -111.933231, //optional longitude field for GeoRSS
-                  enclosure: { url: edge.node.frontmatter.source }, // optional enclosure
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  date: edge.node.frontmatter.date,
+                  lat: 47.84311, //optional latitude field for GeoRSS
+                  long: -122.204579, //optional longitude field for GeoRSS
+                  enclosure: { url: edge.node.frontmatter.source, size: edge.node.frontmatter.size * 1048576, type: "audio/mp3" },
                   custom_elements: [
-                    { 'itunes:author': 'Artem Rosnovsky' },
-                    { 'itunes:subtitle': 'From Pacific Northwest to the World' },
-                    { 'itunes:duration': edge.node.frontmatter.time }
+                    {
+                      'itunes:duration': edge.node.frontmatter.time * 60,
+                      "content:encoded": html,
+                      "itunes:episode": edge.node.frontmatter.episode,
+                      "itunes:episodeType": edge.node.frontmatter.episodeType,
+                      "itunes:author": "Artem Rosnovsky",
+                    }
                   ]
                 })
               })
             },
 
-            // for eventual language filter support:
             query: `
             {
               site {
