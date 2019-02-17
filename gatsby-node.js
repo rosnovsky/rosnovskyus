@@ -49,7 +49,6 @@ exports.createPages = ({ graphql, actions }) => {
           next,
         },
       })
-      console.log(post.node.frontmatter)
     })
   })
 }

@@ -95,7 +95,6 @@ export const pageQuery = graphql`
             title
             lang
             excerpt
-            readingTime
             type
             time
             cover {publicURL}
