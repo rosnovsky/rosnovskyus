@@ -23,13 +23,16 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = (node.frontmatter.type === "podcast" ? "🎙 " + node.frontmatter.title : node.frontmatter.title) || node.fields.slug
           return (
-            <div key={node.fields.slug}>
+            <div key={node.fields.slug}
+              style={{
+                marginBottom: `5rem`
+              }}>
               <h3
                 style={{
                   fontFamily: `proxima-nova, serif`,
                   fontWeight: `900`,
-                  fontSize: `2rem`,
-                  marginBottom: rhythm(1 / 4),
+                  fontSize: `3rem`,
+                  marginBottom: rhythm(1 / 2),
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -49,10 +52,16 @@ class BlogIndex extends React.Component {
                 style={{
                   fontFamily: `franklin-gothic, sans-serif`,
                   fontSize: `1.2rem`,
+                  lineHeight: `2.4rem`,
                   fontWeight: `500`,
+                  marginTop: `1rem`
                 }}
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.excerpt || node.excerpt,
+                  __html: node.frontmatter.type === "podcast" ? `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
+                  style=
+                    "width: 100%;"
+                  preload="true"
+                  controls src="${node.frontmatter.source}" /><br/>${node.html}` : node.frontmatter.excerpt || node.html,
                 }}
               />
             </div>
@@ -76,8 +85,10 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          html
           fields {
             slug
+            
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
@@ -88,6 +99,7 @@ export const pageQuery = graphql`
             type
             time
             cover {publicURL}
+            source
           }
           timeToRead
         }

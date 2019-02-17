@@ -5,9 +5,9 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
-import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
+import { formatPodcastTime } from '../utils/helpers'
 
-class BlogPostTemplate extends React.Component {
+class PodcastPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
             fontSize: `3rem`,
           }}
         >
-          {post.frontmatter.title}
+          {"🎙 " + post.frontmatter.title}
         </h1>
         <p
           style={{
@@ -36,8 +36,25 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
-          {` • ${formatReadingTime(post.timeToRead)}`}
+          {` • ${formatPodcastTime(post.frontmatter.time)}`}
         </p>
+
+        <div
+          style={{
+            fontFamily: `franklin-gothic, sans-serif`,
+            fontSize: `1.2rem`,
+            fontWeight: `500`,
+          }}
+        >
+          <audio
+            style={{
+              width: `100%`
+            }}
+            preload="true"
+            controls src={post.frontmatter.source} />
+          <br />
+          <img src={post.frontmatter.cover.publicURL} />
+        </div>
         <div
           style={{
             fontFamily: `franklin-gothic, sans-serif`,
@@ -82,25 +99,32 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default PodcastPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
+  query PodcastPostBySlug($slug: String!) {
+          site {
+        siteMetadata {
+          title
         author
+        }
       }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
+    markdownRemark(fields: {slug: {eq: $slug } }) {
+          id
       excerpt(pruneLength: 160)
-      html
+        html
       frontmatter {
-        title
+          title
         date(formatString: "MMMM DD, YYYY")
         lang
         type
+        source
+        cover {publicURL}
+        time
+        size
+        episode
+        episodeType
+        mentions {type, text, url, isbn}
       }
       timeToRead
     }

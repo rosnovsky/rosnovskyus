@@ -23,8 +23,6 @@ mentions: [
   }
 ]
 ---
-![cover](cover001.jpg)
-
 - Я переезжаю — и вы помучайтесь
 - Обновленный временный сайт, архив RiC — скоро
 - Гости из Канады
@@ -36,5 +34,3 @@ mentions: [
 - Домашний хлеб и газировка
 - Русский магазин
 - Что же выбрать — Redbox, DVD, Blu-ray Netflix, Vudu, Hulu, iTunes, Amazon, Rdio, Spotify, Pandora, iRadio.
-
-<audio controls src="http://podtema.com/media/evergreen/evergreen001.mp3">Пожалуйста, используйте современный браузер. Ваш текущий браузер не поддерживает воспроизведение аудио. </audio>
