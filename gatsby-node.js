@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const podcastPost = path.resolve(`./src/templates/podcast-post.js`)
   return graphql(
     `
       {
@@ -20,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 lang
+                type
               }
             }
           }
@@ -40,7 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: post.node.fields.slug,
-        component: blogPost,
+        component: post.node.frontmatter.type == "podcast" ? podcastPost : blogPost,
         context: {
           slug: post.node.fields.slug,
           previous,

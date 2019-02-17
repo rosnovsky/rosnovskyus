@@ -74,12 +74,14 @@ class Layout extends React.Component {
               fontSize: `0.8rem`,
               fontWeight: `500`,
             }}
-          >
-            Subscribe to{' '}
+          >Subscribe: {' '}
             <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
               RSS
             </a>{' '}
-            feed
+            /{' '}
+            <a href="/podcast.xml" target="_blank" rel="noopener noreferrer">
+              Podcast
+            </a>{' '}
           </div>
           <div
             style={{

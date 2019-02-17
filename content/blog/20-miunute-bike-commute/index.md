@@ -1,10 +1,10 @@
 ---
 title: 20-minute bike commute in 5 minutes
 date: 2018-08-01T19:05:00
-excerpt: For a few months I've been commuting to work by bike. It's pretty amazing when bike commute becomes a real possibility!
 tags: ['work', 'bike', 'video']
 lang: English
 type: "video"
+time: 5
 ---
 
 `youtube: https://www.youtube.com/watch?v=K9tx6BbOFEc`
