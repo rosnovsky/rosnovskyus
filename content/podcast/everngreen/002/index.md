@@ -5,7 +5,7 @@ excerpt: (Это плэйсхолдер для анонса подкаста и/
 tags: ['Орегон', 'Ванкувер', "путешествия", "Вашингтон"]
 lang: Russian
 type: "podcast"
-source: http://podtema.com/media/evergreen/evergreen002.mp3
+source: https://podtema.com/media/evergreen/evergreen002.mp3
 cover: ./cover002.jpg
 time: 97
 size: 77
