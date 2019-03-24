@@ -8,19 +8,34 @@ import { rhythm } from '../utils/typography'
 import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
 
 class BlogIndex extends React.Component {
+  state = {
+    language: window.__preferredLanguage,
+  }
+
+  onLanguageChanged = newLanguage => {
+    this.setState({ language: newLanguage })
+  }
+
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    const postForLanguage = this.state.language
+      ? posts.filter(post => post.node.frontmatter.lang === this.state.language)
+      : posts
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        onLanguageChanged={this.onLanguageChanged}
+      >
         <SEO
           title="Home"
           keywords={[`blog`, `rosnovsky`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => {
+        {postForLanguage.map(({ node }) => {
           const title = (node.frontmatter.type === "podcast" ? "🎙 " + node.frontmatter.title : node.frontmatter.title) || node.fields.slug
           return (
             <div key={node.fields.slug}

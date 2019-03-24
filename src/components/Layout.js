@@ -1,13 +1,61 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Toggle from './Toggle'
+import russianFlag from '../assets/ru.svg'
+import usaFlag from '../assets/us.svg'
 import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
+  state = {
+    language: window.__preferredLanguage,
+  }
+
+  componentDidMount() {
+    this.setState({ language: window.__preferredLanguage })
+    window.__onPreferredLanguageChange = () => {
+      const newLanguage = window.__preferredLanguage
+      this.setState({ language: newLanguage })
+      this.props.onLanguageChanged(newLanguage)
+    }
+  }
+
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+
+    const languageToggle = (
+      <Toggle
+        className="pull-right"
+        icons={{
+          checked: (
+            <img
+              src={usaFlag}
+              width="16"
+              height="16"
+              role="presentation"
+              style={{ pointerEvents: 'none' }}
+            />
+          ),
+          unchecked: (
+            <img
+              src={russianFlag}
+              width="16"
+              height="16"
+              role="presentation"
+              style={{ pointerEvents: 'none' }}
+            />
+          ),
+        }}
+        checked={this.state.language === 'English'}
+        onChange={e =>
+          window.__setPreferredLanguage(
+            e.target.checked ? 'English' : 'Russian'
+          )
+        }
+      />
+    )
 
     if (location.pathname === rootPath) {
       header = (
@@ -31,6 +79,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
+          { languageToggle }
         </h1>
       )
     } else {
