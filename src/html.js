@@ -33,9 +33,7 @@ export default function HTML(props) {
 
                 if (!preferredLanguage) {
                   userLang = navigator.language || navigator.userLanguage;
-                  if (userLang === 'ru-RU') {
-                    preferredLanguage = 'Russian';
-                  }
+                  preferredLanguage = userLang === 'ru-RU' ? 'Russian' : 'English';
                 }
 
                 window.__setPreferredLanguage = function(newLanguage) {
@@ -45,7 +43,7 @@ export default function HTML(props) {
                   } catch (err) {}
                 }
 
-                setPreferredLanguage(preferredLanguage || 'English');
+                setPreferredLanguage(preferredLanguage || 'Russian');
               })();
             `,
           }}

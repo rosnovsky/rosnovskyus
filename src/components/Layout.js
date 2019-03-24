@@ -8,7 +8,8 @@ import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
   state = {
-    language: window.__preferredLanguage,
+    language:
+      typeof window !== 'undefined' ? window.__preferredLanguage : 'Russian',
   }
 
   componentDidMount() {
@@ -79,7 +80,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-          { languageToggle }
+          {languageToggle}
         </h1>
       )
     } else {
@@ -123,7 +124,8 @@ class Layout extends React.Component {
               fontSize: `0.8rem`,
               fontWeight: `500`,
             }}
-          >Subscribe: {' '}
+          >
+            Subscribe:{' '}
             <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
               RSS
             </a>{' '}

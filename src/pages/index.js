@@ -9,7 +9,8 @@ import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
 
 class BlogIndex extends React.Component {
   state = {
-    language: window.__preferredLanguage,
+    language:
+      typeof window !== 'undefined' ? window.__preferredLanguage : 'Russian',
   }
 
   onLanguageChanged = newLanguage => {
@@ -36,12 +37,17 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         {postForLanguage.map(({ node }) => {
-          const title = (node.frontmatter.type === "podcast" ? "🎙 " + node.frontmatter.title : node.frontmatter.title) || node.fields.slug
+          const title =
+            (node.frontmatter.type === 'podcast'
+              ? '🎙 ' + node.frontmatter.title
+              : node.frontmatter.title) || node.fields.slug
           return (
-            <div key={node.fields.slug}
+            <div
+              key={node.fields.slug}
               style={{
-                marginBottom: `5rem`
-              }}>
+                marginBottom: `5rem`,
+              }}
+            >
               <h3
                 style={{
                   fontFamily: `proxima-nova, serif`,
@@ -61,7 +67,13 @@ class BlogIndex extends React.Component {
                 }}
               >
                 {node.frontmatter.date}
-                {` • • • ${node.frontmatter.type === "podcast" ? formatPodcastTime(node.frontmatter.time) : node.frontmatter.readingTime ? formatReadingTime(node.frontmatter.readingTime) : formatReadingTime(node.timeToRead)}`}
+                {` • • • ${
+                  node.frontmatter.type === 'podcast'
+                    ? formatPodcastTime(node.frontmatter.time)
+                    : node.frontmatter.readingTime
+                    ? formatReadingTime(node.frontmatter.readingTime)
+                    : formatReadingTime(node.timeToRead)
+                }`}
               </span>
               <p
                 style={{
@@ -69,14 +81,19 @@ class BlogIndex extends React.Component {
                   fontSize: `1.2rem`,
                   lineHeight: `2.4rem`,
                   fontWeight: `500`,
-                  marginTop: `1rem`
+                  marginTop: `1rem`,
                 }}
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.type === "podcast" ? `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
+                  __html:
+                    node.frontmatter.type === 'podcast'
+                      ? `<img src="${
+                          node.frontmatter.cover.publicURL
+                        }" /><br/><audio
                   style=
                     "width: 100%;"
                   preload="true"
-                  controls src="${node.frontmatter.source}" /><br/>${node.html}` : node.frontmatter.excerpt || node.html,
+                  controls src="${node.frontmatter.source}" /><br/>${node.html}`
+                      : node.frontmatter.excerpt || node.html,
                 }}
               />
             </div>
@@ -86,9 +103,7 @@ class BlogIndex extends React.Component {
     )
   }
 }
-
 export default BlogIndex
-
 export const pageQuery = graphql`
   query {
     site {
@@ -103,7 +118,6 @@ export const pageQuery = graphql`
           html
           fields {
             slug
-            
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
@@ -112,7 +126,9 @@ export const pageQuery = graphql`
             excerpt
             type
             time
-            cover {publicURL}
+            cover {
+              publicURL
+            }
             source
           }
           timeToRead
