@@ -4,101 +4,95 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import LangContext from '../context/LangContext'
 import { rhythm } from '../utils/typography'
 import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
 
 class BlogIndex extends React.Component {
-  state = {
-    language:
-      typeof window !== 'undefined' ? window.__preferredLanguage : 'Russian',
-  }
-
-  onLanguageChanged = newLanguage => {
-    this.setState({ language: newLanguage })
-  }
-
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    const postForLanguage = this.state.language
-      ? posts.filter(post => post.node.frontmatter.lang === this.state.language)
-      : posts
 
     return (
-      <Layout
-        location={this.props.location}
-        title={siteTitle}
-        onLanguageChanged={this.onLanguageChanged}
-      >
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Home"
           keywords={[`blog`, `rosnovsky`, `javascript`, `react`]}
         />
         <Bio />
-        {postForLanguage.map(({ node }) => {
-          const title =
-            (node.frontmatter.type === 'podcast'
-              ? '🎙 ' + node.frontmatter.title
-              : node.frontmatter.title) || node.fields.slug
-          return (
-            <div
-              key={node.fields.slug}
-              style={{
-                marginBottom: `5rem`,
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: `proxima-nova, serif`,
-                  fontWeight: `900`,
-                  fontSize: `3rem`,
-                  marginBottom: rhythm(1 / 2),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <span
-                style={{
-                  fontFamily: `franklin-gothic, sans-serif`,
-                  color: `hsla(0, 100%, 18%, .75)`,
-                }}
-              >
-                {node.frontmatter.date}
-                {` • • • ${
-                  node.frontmatter.type === 'podcast'
-                    ? formatPodcastTime(node.frontmatter.time)
-                    : node.frontmatter.readingTime
-                    ? formatReadingTime(node.frontmatter.readingTime)
-                    : formatReadingTime(node.timeToRead)
-                }`}
-              </span>
-              <p
-                style={{
-                  fontFamily: `franklin-gothic, sans-serif`,
-                  fontSize: `1.2rem`,
-                  lineHeight: `2.4rem`,
-                  fontWeight: `500`,
-                  marginTop: `1rem`,
-                }}
-                dangerouslySetInnerHTML={{
-                  __html:
-                    node.frontmatter.type === 'podcast'
-                      ? `<img src="${
-                          node.frontmatter.cover.publicURL
-                        }" /><br/><audio
+        <LangContext.Consumer>
+          {lang =>
+            (lang.postLanguage
+              ? posts.filter(
+                  post => post.node.frontmatter.lang === lang.postLanguage
+                )
+              : posts
+            ).map(({ node }) => {
+              const title =
+                (node.frontmatter.type === 'podcast'
+                  ? '🎙 ' + node.frontmatter.title
+                  : node.frontmatter.title) || node.fields.slug
+              return (
+                <div
+                  key={node.fields.slug}
+                  style={{
+                    marginBottom: `5rem`,
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: `proxima-nova, serif`,
+                      fontWeight: `900`,
+                      fontSize: `3rem`,
+                      marginBottom: rhythm(1 / 2),
+                    }}
+                  >
+                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </h3>
+                  <span
+                    style={{
+                      fontFamily: `franklin-gothic, sans-serif`,
+                      color: `hsla(0, 100%, 18%, .75)`,
+                    }}
+                  >
+                    {node.frontmatter.date}
+                    {` • • • ${
+                      node.frontmatter.type === 'podcast'
+                        ? formatPodcastTime(node.frontmatter.time)
+                        : node.frontmatter.readingTime
+                        ? formatReadingTime(node.frontmatter.readingTime)
+                        : formatReadingTime(node.timeToRead)
+                    }`}
+                  </span>
+                  <p
+                    style={{
+                      fontFamily: `franklin-gothic, sans-serif`,
+                      fontSize: `1.2rem`,
+                      lineHeight: `2.4rem`,
+                      fontWeight: `500`,
+                      marginTop: `1rem`,
+                    }}
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        node.frontmatter.type === 'podcast'
+                          ? `<img src="${
+                              node.frontmatter.cover.publicURL
+                            }" /><br/><audio
                   style=
                     "width: 100%;"
                   preload="true"
                   controls src="${node.frontmatter.source}" /><br/>${node.html}`
-                      : node.frontmatter.excerpt || node.html,
-                }}
-              />
-            </div>
-          )
-        })}
+                          : node.frontmatter.excerpt || node.html,
+                    }}
+                  />
+                </div>
+              )
+            })
+          }
+        </LangContext.Consumer>
       </Layout>
     )
   }
