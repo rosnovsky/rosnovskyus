@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import LangContext from '../context/LangContext'
+import Toggle from './Toggle'
+import russianFlag from '../assets/ru.svg'
+import usaFlag from '../assets/us.svg'
 import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
@@ -8,6 +12,40 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+
+    const languageToggle = (
+      <LangContext.Consumer>
+        {lang => (
+          <Toggle
+            className="pull-right"
+            icons={{
+              checked: (
+                <img
+                  src={usaFlag}
+                  width="16"
+                  height="16"
+                  role="presentation"
+                  style={{ pointerEvents: 'none' }}
+                />
+              ),
+              unchecked: (
+                <img
+                  src={russianFlag}
+                  width="16"
+                  height="16"
+                  role="presentation"
+                  style={{ pointerEvents: 'none' }}
+                />
+              ),
+            }}
+            checked={lang.postLanguage === 'English'}
+            onChange={e =>
+              lang.setPostLanguage(e.target.checked ? 'English' : 'Russian')
+            }
+          />
+        )}
+      </LangContext.Consumer>
+    )
 
     if (location.pathname === rootPath) {
       header = (
@@ -31,6 +69,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
+          {languageToggle}
         </h1>
       )
     } else {
@@ -74,7 +113,8 @@ class Layout extends React.Component {
               fontSize: `0.8rem`,
               fontWeight: `500`,
             }}
-          >Subscribe: {' '}
+          >
+            Subscribe:{' '}
             <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
               RSS
             </a>{' '}

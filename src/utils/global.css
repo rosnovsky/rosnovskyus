@@ -177,3 +177,7 @@ pre[data-line] {
   float: left;
   min-width: 100%;
 }
+
+.pull-right {
+  float: right;
+}
