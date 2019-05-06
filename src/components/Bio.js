@@ -37,8 +37,7 @@ function Bio() {
                 fontWeight: `500`,
               }}
             >
-              Hi, I'm <strong>{author}</strong>, and I have no idea what I'm
-              doing.
+              Hi, I'm <strong>{author}</strong>, and I solve problems, one line of code at a time. JavaScript, Node and React.
               {` `}
               Avoid{' '}
               <a href={`https://twitter.com/${social.twitter}`}>
