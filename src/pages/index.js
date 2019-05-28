@@ -1,4 +1,5 @@
 import React from 'react'
+import * as Sentry from '@sentry/browser';
 import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
@@ -7,6 +8,8 @@ import SEO from '../components/seo'
 import LangContext from '../context/LangContext'
 import { rhythm } from '../utils/typography'
 import { formatReadingTime, formatPodcastTime } from '../utils/helpers'
+
+Sentry.init({ dsn: 'https://d387e32ec1fe48cc826a624cff01521e@sentry.io/1470136' });
 
 class BlogIndex extends React.Component {
   render() {
