@@ -14,7 +14,7 @@ So two weeks ago I decided to give biking a shot. I mean, what could possibly go
 
 Now, my bike is an eBike. It has a battery, a motor and it has 5-level Pedal Assist Systems (PAS) along with a throttle. One can use this bike without pedaling at all, or without any assistance from the motor. I’m doing something in-between: I use PAS at about level 2, and I use throttle to start faster at traffic lights. It means, that while I pedal pretty hard, I get some help from the motor, especially going uphill, and I use the motor to start faster after I come to a complete stop at an intersection or such. In this mode, the battery lasts for about 40 miles, it seems. And since I track my rides with Apple Watch, I get a pretty accurate estimate of my physical effort (hint: it’s not insignificant)
 
-![img](PNG-image.png)
+![img](PNG-image.jpg)
 
 So although, in a way, it is not a “pure” biking experience, I must say, if it wasn’t for the motor, I would probably never get into biking at all considering all the hills we have here and my poor physical shape. But with a little help here and there from the batter, I can now exercise outside as a normal human being.
 
