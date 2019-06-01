@@ -1,8 +1,13 @@
-@import url('https://use.typekit.net/tyk4cgp.css');
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
 
 body {
   --green: rgb(19, 66, 21);
-  font-family: 'merriweather', serif;
+  font-family: "system";
   font-weight: 400;
   font-style: normal;
 }
@@ -10,7 +15,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'eskapade', serif;
+  font-family: "system"
 }
 
 body {
