@@ -21,7 +21,7 @@ class Layout extends React.Component {
             icons={{
               checked: (
                 <img
-                  src={usaFlag}
+                  src={russianFlag}
                   width="16"
                   height="16"
                   role="presentation"
@@ -30,7 +30,7 @@ class Layout extends React.Component {
               ),
               unchecked: (
                 <img
-                  src={russianFlag}
+                  src={usaFlag}
                   width="16"
                   height="16"
                   role="presentation"
