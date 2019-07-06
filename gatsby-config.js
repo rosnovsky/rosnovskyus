@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Rosnovsky Park™`,
     author: `Artem Rosnovsky`,
-    description: `I have no idea what I'm doing 👨‍💻🎙🏕`,
+    description: `Pushing Bytes & Pixels 👨‍💻🎙🏕`,
     siteUrl: `https://rosnovsky.us`,
     social: {
       twitter: `rosnovsky`,
