@@ -4,6 +4,9 @@ date: 2018-10-21T20:12:03.284Z
 excerpt: This year my I signed up my son for school football. It's been an exciting and eye-opening experience for both of us.
 tags: ['sport', 'football', 'family', 'entertainment', 'school']
 lang: English
+author: Artem Rosnovsky
+draft: false
+image: 2.jpg
 ---
 
 I haven't been blogging properly in like a decade, and I really miss this sometimes. So here goes.

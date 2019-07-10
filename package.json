@@ -1,10 +1,9 @@
 {
-  "name": "gatsby-casper",
-  "description": "Casper for gatsby",
-  "version": "0.0.0",
+  "name": "rosnovskyus",
+  "description": "Rosnovsky Park website",
+  "version": "2.0.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
-  "license": "MIT",
+  "author": "Artem Rosnovsky <artem@rosnovsky.us>",
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
@@ -79,6 +78,6 @@
     "typescript": "3.5.2"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   }
 }
