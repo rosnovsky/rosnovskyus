@@ -4,6 +4,8 @@ date: 2018-06-09T14:23:00+00:00
 excerpt: Since I broke my leg in late earlier this year, it's been a hell of a ride. And just a few months late, I've hit 100 miles on bike.
 tags: ['health', 'broken leg', 'fitness', 'work', 'bike']
 lang: English
+author: Artem Rosnovsky
+image: fullsizeoutput_210f.jpeg
 ---
 
 Today I hit my first 100 miles on my still new RadCity from Rad Power Bikes. I got this bike in mid-February, and a couple of days after that I broke my stupid right leg at the knee. I was unable to stand on my own or walk without a walker until late April, and only in mid-May I was cleared to use my both legs for walking sans crutches. I still can’t really walk well or far: I limp heavily, I can only go really slowly, walking is still very difficult for me, and walking a mile is still out of the question (it gets better every week, though; I workout, do physical therapy and such).
