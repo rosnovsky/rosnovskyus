@@ -4,6 +4,7 @@ date: 2018-08-01T19:05:00
 tags: ['work', 'bike', 'video']
 lang: English
 type: "video"
+author: Ghost
 time: 5
 ---
 

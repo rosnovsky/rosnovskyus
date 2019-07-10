@@ -2,17 +2,12 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Rosnovsky Park™`,
-    author: `Artem Rosnovsky`,
-    description: `I have no idea what I'm doing 👨‍💻🎙🏕`,
-    siteUrl: `https://rosnovsky.us`,
-    social: {
-      twitter: `rosnovsky`,
-      github: `rosnovsky`
-    },
-    mapping: {
-      'MarkdownRemark.frontmatter.author': 'AuthorYaml',
-    },
+    title: 'Ghost',
+    description: 'The professional publishing platform',
+    siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
+  },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
     'gatsby-plugin-sitemap',
