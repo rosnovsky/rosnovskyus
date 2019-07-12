@@ -174,7 +174,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query {
     
-    header: file(relativePath: { eq: "img/blog-cover.jpg" }) {
+    header: file(relativePath: { eq: "img/blog-cover.webp" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
@@ -198,7 +198,7 @@ export const pageQuery = graphql`
             draft
             image {
               childImageSharp {
-                fluid(maxWidth: 3720) {
+                fluid(maxWidth: 840) {
                   ...GatsbyImageSharpFluid
                 }
               }

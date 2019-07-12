@@ -6,7 +6,7 @@ lang: English
 type: "video"
 author: Artem Rosnovsky
 time: 5
-image: IMG_2499.jpeg
+image: IMG_2499.webp
 ---
 
 

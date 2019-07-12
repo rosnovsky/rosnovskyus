@@ -51,7 +51,7 @@ export interface WebsiteConfig {
 const config: WebsiteConfig = {
   title: 'Rosnovsky Park™',
   description: 'From Pacific Northwest to the World',
-  coverImage: 'img/blog-cover.jpg',
+  coverImage: 'img/blog-cover.webp',
   logo: '',
   lang: 'en',
   siteUrl: 'https://rosnovsky.us',

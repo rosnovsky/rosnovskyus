@@ -272,7 +272,7 @@ export const pageQuery = graphql`
       location
       profile_image {
         childImageSharp {
-          fluid(maxWidth: 3720) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -301,7 +301,7 @@ export const pageQuery = graphql`
             draft
             image {
               childImageSharp {
-                fluid(maxWidth: 3720) {
+                fluid(maxWidth: 840) {
                   ...GatsbyImageSharpFluid
                 }
               }

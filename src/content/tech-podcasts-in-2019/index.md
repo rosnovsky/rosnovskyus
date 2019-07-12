@@ -20,7 +20,7 @@ Dev podcasts don't only provide a great deal of information and an amazing learn
 
 ### [Syntax](https://syntax.fm/) 
 
-Relatively new and a real hit. Two hosts, Wes "Barracuda" Bos & Scott "El Toro Loco" Tolinski, normally make JavaScript courses and speak at conferences, but every now and then (more like a few times a week) they get together and talk shop. From general things like how do you advance as a freelancer or get your first dev job to the newest CSS tricks and _sick_ latest internalization features. "Potluck" Q&A episodes and pinpoint "Tasty Treats".   
+![syntax.fm cover](syntax.png)(https://syntax.fm/) Relatively new and a real hit. Two hosts, Wes "Barracuda" Bos & Scott "El Toro Loco" Tolinski, normally make JavaScript courses and speak at conferences, but every now and then (more like a few times a week) they get together and talk shop. From general things like how do you advance as a freelancer or get your first dev job to the newest CSS tricks and _sick_ latest internalization features. "Potluck" Q&A episodes and pinpoint "Tasty Treats".   
 
 <small>Syntax [iTunes](https://itunes.apple.com/ca/podcast/syntax-tasty-web-development-treats/id1253186678?mt=2) | Syntax [RSS](http://feed.syntax.fm/rss)</small>
 
