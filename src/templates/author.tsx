@@ -136,8 +136,8 @@ const Author: React.FC<AuthorTemplateProps> = props => {
         <meta property="og:type" content="profile" />
         <meta property="og:title" content={`${author.id} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-        <meta property="article:author" content="https://www.facebook.com/ghost" />
+        <meta property="article:publisher" content="https://www.facebook.com/rosnovsky" />
+        <meta property="article:author" content="https://www.facebook.com/rosnovsky" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
@@ -272,7 +272,7 @@ export const pageQuery = graphql`
       location
       profile_image {
         childImageSharp {
-          fluid(maxWidth: 3720) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -301,7 +301,7 @@ export const pageQuery = graphql`
             draft
             image {
               childImageSharp {
-                fluid(maxWidth: 3720) {
+                fluid(maxWidth: 840) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -312,7 +312,7 @@ export const pageQuery = graphql`
               avatar {
                 children {
                   ... on ImageSharp {
-                    fixed(quality: 90) {
+                    fixed(quality: 100) {
                       src
                     }
                   }

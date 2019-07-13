@@ -5,7 +5,7 @@ tags: ['web development', 'work']
 lang: English
 type: "text"
 author: Artem Rosnovsky
-image: live-coding-vs-imposter-paralysis/screenshot.png
+image: live-coding-vs-imposter-paralysis/blog0022.png
 excerpt: ...It feels like everything I've been doing as a developer so far is some sort of shenanigans that I've managed to pull off somehow, against all odds. Every morning when I get to work I think to myself that today is the day I get discovered. But every time on my long commute back home I'm surprised if not perplexed by clear, measurable, and evident progress I've made that day...
 ---
 

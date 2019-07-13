@@ -6,7 +6,7 @@ lang: English
 type: "video"
 author: Artem Rosnovsky
 time: 5
-image: 20-miunute-bike-commute/IMG_2499.jpeg
+image: 20-miunute-bike-commute/blog0011.jpg
 ---
 
 

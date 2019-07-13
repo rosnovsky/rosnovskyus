@@ -198,7 +198,7 @@ export const pageQuery = graphql`
             draft
             image {
               childImageSharp {
-                fluid(maxWidth: 3720) {
+                fluid(maxWidth: 840) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -209,7 +209,7 @@ export const pageQuery = graphql`
               avatar {
                 children {
                   ... on ImageSharp {
-                    fixed(quality: 90) {
+                    fixed(quality: 100) {
                       src
                     }
                   }

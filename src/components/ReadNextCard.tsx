@@ -178,7 +178,7 @@ const ReadNextCard: React.FC<ReadNextProps> = props => {
             childImageSharp {
               # Specify the image processing specifications right in the query.
               # Makes it trivial to update as your page's design changes.
-              fluid(maxWidth: 2000) {
+              fluid(maxWidth: 840) {
                 ...GatsbyImageSharpFluid
               }
             }
