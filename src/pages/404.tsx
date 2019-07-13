@@ -100,42 +100,46 @@ export default NotFoundPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          timeToRead
-          frontmatter {
-            title
-            date
-            tags
-            image {
-              childImageSharp {
-                fluid(maxWidth: 840) {
-                  ...GatsbyImageSharpFluid
+    allMarkdownRemark( 
+      filter: { frontmatter: { draft: { ne: true } } }, 
+      limit: 3, 
+      sort: { fields: [frontmatter___date],  
+        order: DESC }) {
+          edges {
+            node {
+              timeToRead
+              frontmatter {
+                title
+                date
+                tags
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 840) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
-              }
-            }
-            author {
-              id
-              bio
-              avatar {
-                children {
-                  ... on ImageSharp {
-                    fixed(quality: 100) {
-                      src
+                author {
+                  id
+                  bio
+                  avatar {
+                    children {
+                      ... on ImageSharp {
+                        fixed(quality: 100) {
+                          src
+                        }
+                      }
                     }
                   }
                 }
               }
+              excerpt
+              fields {
+                layout
+                slug
+              }
             }
-          }
-          excerpt
-          fields {
-            layout
-            slug
           }
         }
       }
-    }
-  }
-`;
+    `;
