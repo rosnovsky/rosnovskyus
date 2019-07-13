@@ -6,6 +6,7 @@ lang: English
 type: "text"
 excerpt: "Top Tech Podcasts 2019"
 author: Artem Rosnovsky
+draft: true
 ---
 
 It's hard to believe, but I've been listening to podcasts for over 14 years, and been podcasting myself since April 2006. Just think about it: back then Youtube had just pivoted from being [a dating site](https://www.cnet.com/news/youtube-started-as-an-online-dating-site/), Twitter had like 150 active users, Uber won't exist for another 3 years or so, and the most innovative mobile phone companies in the world are Nokia and Blackberry. Blockbuster was huge, and Lost was the biggest TV show of all time, still in Season 3 :)

@@ -1,24 +1,24 @@
 - id: web development
   description: I do web development. Here's a collection of posts on the topic..
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: coding
   description: Let's talk code.
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: health
   description: Does your back ache yet? 
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: video
   description: Moving pictures, basically.
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: music
   description: Melodic poetry 🎶
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: sport
   description: Faster. Stronger. LAUDER.
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: books
   description: Thicc stacks of paper.
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
 - id: travel
   description: Going somewhere?
-  image: img/blog-cover.webp
+  image: img/blog-cover.jpg
