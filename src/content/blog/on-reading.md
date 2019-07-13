@@ -5,7 +5,7 @@ excerpt: I love reading, but does reading Reddit or blogs count? Or is it only b
 tags: ['books', 'ideas']
 lang: English
 author: Artem Rosnovsky
-image: alfons-morales-YLSwjSy7stw-unsplash.jpg
+image: on-reading/alfons-morales-YLSwjSy7stw-unsplash.jpg
 ---
 
 We all read a lot without even giving it a second thought. We read the news, Facebook feeds, Twitter, Reddit, Stack Overflow, that tutorial you've been keeping in an a tab for a weeks, text messages, you name it. If anything, we probably read more than before the _interwebs_, not less. The actual issue is that as a result of such reading overload we generally read way fewer books, then we used to.

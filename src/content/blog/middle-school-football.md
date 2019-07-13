@@ -6,7 +6,7 @@ tags: ['sport', 'football', 'family', 'entertainment', 'school']
 lang: English
 author: Artem Rosnovsky
 draft: false
-image: 2.jpg
+image: middle-school-football/2.jpg
 ---
 
 I haven't been blogging properly in like a decade, and I really miss this sometimes. So here goes.
@@ -38,14 +38,14 @@ All in all, I think signing him up for football practice was one of the best dec
 
 And the funniest part is that 10 years ago we didn't know football existed, and it's only been 4 years since we watched a game for the first time :)
 
-![On the field in Everett](1.jpg)
+![On the field in Everett](/middle-school-football/1.jpg)
 
-![Another game](2.jpg)
+![Another game](/middle-school-football/2.jpg)
 
-![Home game](3.jpg)
+![Home game](middle-school-football/3.jpg)
 
-![Linebackers](4.jpg)
+![Linebackers](middle-school-football/4.jpg)
 
-![DEFENSE!](5.jpg)
+![DEFENSE!](middle-school-football/5.jpg)
 
-![W or L?](6.jpg)
+![W or L?](middle-school-football/6.jpg)
