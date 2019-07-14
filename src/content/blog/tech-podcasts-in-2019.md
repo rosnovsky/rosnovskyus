@@ -6,19 +6,19 @@ lang: English
 type: "text"
 excerpt: "Top Tech Podcasts 2019" # TODO: Make excerpts work with Casper
 author: Artem Rosnovsky
-draft: true
+draft: false
 image: 30-top-tech-podcasts-in-2019/cover.png
 ---
 
-It's hard to believe, but I've been listening to podcasts for over 14 years, and been podcasting myself since April 2006. Just think about it: back then Youtube had just pivoted from being [a dating site](https://www.cnet.com/news/youtube-started-as-an-online-dating-site/), Twitter had like 150 active users, Uber won't exist for another 3 years or so, and the most innovative mobile phone companies in the world are Nokia and Blackberry. Blockbuster was huge, and Lost was the biggest TV show of all time, still in Season 3 :)
+It's hard to believe, but I've been listening to podcasts for almost 15 years, and been podcasting myself since April 2006. Just think about it: back then Youtube had just pivoted from being [a dating site](https://www.cnet.com/news/youtube-started-as-an-online-dating-site/), Twitter had like 150 active users, Uber won't exist for another 3 years or so, and the most innovative mobile phone companies in the world are Nokia and Blackberry. Blockbuster was huge, and Lost was the biggest TV show of all time, still in Season 3 :)
 
 Podcasting never took off the way video streaming did, but I don't think it's an issue. Spoken word historically loses to moving pictures in popularity, but more often then not wins in substance and depth. Not only this, but podcasts do not require the same level of focus and concentration as does, say, Youtube. You can't really drive and watch [Kurzgesagt](https://www.youtube.com/user/Kurzgesagt), but you can drive and listen to [Science Vs](https://gimletmedia.com/shows/science-vs).
 
-Here's a list of my favorite podcasts. Some of them are in their second decade of running, some are pretty new, but all of them are a tremendous source of knowledge, news, and human experience as it relates to hitech industry in general, and software development in particular. Feel free to make a [pull request](https://github.com/rosnovsky/rosnovskyus/tree/master/content/blog/tech-podcasts-in-2019/index.md) if you think I've missed a great show here!
+Here's a list of my favorite podcasts. Some of them are in their second decade of running, some are pretty new, but all of them are a tremendous source of knowledge, news, and human experience as it relates to hitech industry in general, and software development in particular. Feel free to make a [pull request](https://github.com/rosnovsky/rosnovskyus/blob/master/src/content/blog/tech-podcasts-in-2019.md) if you think I've missed a great show here!
 
 ## Dev
 
-Dev podcasts don't only provide a great deal of information and an amazing learning experience, but they also give a greater sense of community and feeling of belonging. Below is a list of podcasts that deal directly with software and web development.  
+Dev podcasts provide a great deal of information and an amazing learning experience. They also give a greater sense of community and feeling of belonging. Below is a list of podcasts that deal directly with software and web development.  
 
 ### 1. [Syntax](https://syntax.fm/) 
 
@@ -63,7 +63,7 @@ The Changelog has been around for quite some time now. Episodes feature prominen
 [![](30-top-tech-podcasts-in-2019/js-party.png)](https://changelog.com/jsparty)
 
 🎉🎉🎉
-Fun and casual, the kind of chat you'd like to be a part of. As serious as some topics are (burnout, anyone?), episodes are mostly on enspiring and empowering side.  
+Fun and casual, the kind of chat you'd like to be a part of. As serious as some topics are (burnout, anyone?), episodes are mostly on inspiring and empowering side.  
 
 <small>JS Party [iTunes](https://itunes.apple.com/us/podcast/js-party/id1209616598) | JS Party [RSS](https://changelog.com/jsparty/feed)</small>
 
@@ -83,7 +83,7 @@ Developer Tea is on a shorter, bite-size side of podcasting. Inspiring and usefu
 
 [![](30-top-tech-podcasts-in-2019/full-stack-radio.jpg)](http://www.fullstackradio.com/)
 
-Weekly in-depth interview show with Adam Wathan. Sometimes I listen to the guests 
+Weekly in-depth interview show with Adam Wathan. Sometimes I listen to the guests and wonder if I'd ever have such an enormous understanding of tech as they do. 
 
 <small>Full Stack Radio [iTunes](https://geo.itunes.apple.com/ca/podcast/feed/id955596067) | Full Stack Radio [RSS](https://rss.simplecast.com/podcasts/279/rss)</small>
 
@@ -113,7 +113,7 @@ FreeCodeCamp is one of the absolutely best and completely free and open-source r
 
 [![](30-top-tech-podcasts-in-2019/second-career-devs.png)](https://secondcareerdevs.com/)
 
-Kyle talks with people who became software engineers after they had a previous career in other fields. This one is oparticularly dear to me since I've been a journalist and a radio host in my _previous life_, and can very much relate as being a second career developer myself. 
+Kyle talks with people who became software engineers after they had a previous career in other fields. This one is particularly dear to me since I've been a journalist and a radio host in my _previous life_, and can very much relate as being a second career developer myself. 
 
 <small>Second Career Devs [iTunes](https://podcasts.apple.com/us/podcast/second-career-devs/id1317467797) | Second Career Devs [RSS](http://feeds.soundcloud.com/users/soundcloud:users:332558027/sounds.rss)</small>
 
@@ -123,7 +123,7 @@ Kyle talks with people who became software engineers after they had a previous c
 
 [![](30-top-tech-podcasts-in-2019/maintainable.png)](https://maintainable.fm/)
 
-Legacy code, technical debt, and how to maintain and advance older projects (personal or at work). This one is tailored more towards seaoned developers audience, but anyone could bemnefit regardless of current experience level.
+Legacy code, technical debt, and how to maintain and advance older projects (personal or at work). This one is tailored more towards seasoned developers audience, but anyone could benefit regardless of current experience level.
 
 <small>Maintainable [iTunes](https://podcasts.apple.com/us/podcast/maintainable/id1459893010) | Maintainable [RSS](https://feeds.simplecast.com/7y1CbAbN)</small>
 
@@ -133,7 +133,7 @@ Legacy code, technical debt, and how to maintain and advance older projects (per
 
 [![](30-top-tech-podcasts-in-2019/codepen-radio.png)](https://blog.codepen.io/radio/)
 
-CodePen is an awesome tool to quickly prototype a feature, showcase some code, do an excersice or collaborate on a project. They run an insightful podcast about, well, running a web software business.  
+CodePen is an awesome tool to quickly prototype a feature, showcase some code, do an exercise or collaborate on a project. They run an insightful podcast about, well, running a web software business.  
 
 <small>CodePen Radio [iTunes](https://itunes.apple.com/us/podcast/codepen-radio/id824437159) | CodePen Radio [RSS](https://blog.codepen.io/feed/podcast/)</small>
 
@@ -153,7 +153,7 @@ Indeed. Topics vary greatly, but you'll find yourself diving deep into different
 
 ## General Tech Talk
 
-Quick Intro
+More on the general side, these podcasts cover tech news. Some of them go in-depth with philosophical implications of tech stories, some deal with particulars of working in tech. 
 
 ### 14. [This Week in Tech](https://www.twit.tv/shows/this-week-in-tech)
 
@@ -170,7 +170,7 @@ P.S. I've met with Leo once a while back, it was fun :)
 
 [![](30-top-tech-podcasts-in-2019/atp.png)](https://atp.fm/)
 
-Marco Arment, Casey Liss, and John Siracusa, a trio of well-known software developers, writers and producers, run this very special show. It's both sarcastic, and optimistic, and all-doom-and-gloom at times, but then it's something else completely. It's all over the place in the best sence possible. It is quite heavily Apple-leaning, since hosts been covering Apple or working with Apple stack for decades. Marco Arment, for instance, is the person responsible for [Overcast](https://overcast.fm/), without a doubt the best podcast app out there. 
+Marco Arment, Casey Liss, and John Siracusa, a trio of well-known software developers, writers and producers, run this very special show. It's both sarcastic, and optimistic, and all-doom-and-gloom at times, but then it's something else completely. It's all over the place in the best sense possible. It is quite heavily Apple-leaning, since hosts been covering Apple or working with Apple stack for decades. Marco Arment, for instance, is the person responsible for [Overcast](https://overcast.fm/), without a doubt the best podcast app out there. 
 
 <small>Accidental [iTunes](https://itunes.apple.com/us/podcast/accidental-tech-podcast/id617416468) | Accidental [RSS](http://atp.fm/episodes?format=rss)</small>
 
@@ -186,13 +186,13 @@ I couldn't skip Indie Hackers, although this is probably one of the podcasts tha
 
 ## Apple/Mac
 
-Quick intro
+As we all know, Apple _invented_ podcasts. To exactly no one's surprise, Apple is heavily covered by dozens of different shows. The company is beloved by some, and despised by others, but I really don't know a single person who's completely indifferent towards Apple. 
 
 ### 17. MacBreak Weekly
 
 [![](30-top-tech-podcasts-in-2019/mbw.jpg)](https://www.twit.tv/shows/macbreak-weekly)
 
-This is the oldes Mac and Apple show in existence; I remember watching one of the first ever HD videos I've ever watched, like, 50 years ago or something, and this first video was one of the how-to episodes of MBW (I still remember the openening score along with the video, and how long it took to download, and how very jittery it was on my old computer). One of my all-time favorites.
+This is the oldest Mac and Apple show in existence; I remember watching one of the first ever HD videos I've ever watched, like, 50 years ago or something, and this first video was one of the how-to episodes of MBW (I still remember the opening score along with the video, and how long it took to download, and how very jittery it was on my old computer). One of my all-time favorites.
 
 <small>MacBreak Weekly [iTunes](https://podcasts.apple.com/us/podcast/macbreak-weekly-mp3/id179237749?uo=10) | MacBreak Weekly [RSS](http://feeds.twit.tv/mbw.xml)</small>
 
@@ -208,7 +208,7 @@ Co-founder of Relay.fm network Myke Hurley and his legendary co-host Jason Snell
 
 [![](30-top-tech-podcasts-in-2019/vector.jpg)](https://www.imore.com/vector)
 
-Rene Ritchie of iMore runs this (almost) daily (and sometimes twice-a-day) show about personal tech in general and Apple tech in particular. Rene is great at explaining things, and usualy he gets to the bottom of whaterver he's talking about before actually talking about it. 
+Rene Ritchie of iMore runs this (almost) daily (and sometimes twice-a-day) show about personal tech in general and Apple tech in particular. Rene is great at explaining things, and usually he gets to the bottom of whatever he's talking about before actually talking about it. 
 
 <small>Vector [iTunes](http://applepodcasts.com/vector) | Vector [RSS](http://vector.libsyn.com/rss)</small>
 
@@ -220,49 +220,59 @@ A unique mix of perspectives and accents. Apple-focused, this show offers a grea
 
 <small>Connected [iTunes](https://itunes.apple.com/us/podcast/id909109652) | Connected [RSS](https://overcast.fm/itunes909109652/connected)</small>
 
-## Google/Android
+## Google & Android
 
-Quick intro
+Googleverse is of course a thing, and quite a few exciting things go on in this universe at any given moment. 
 
 ### 21. This Week in Google
 
-[![](30-top-tech-podcasts-in-2019/coding-blocks.png)](https://www.codingblocks.net/)
+[![](30-top-tech-podcasts-in-2019/twig.jpg)](https://www.twit.tv/shows/this-week-in-google)
 
-<small>This Week in Google iTunes | This Week in Google RSS</small>
+This actually is quite a show. It is called This Week in Google, but man, do they ever stick to the topic! I mean it as a compliment, really: tha show is broader then just Google news, and covers everything even remotely related to Google, or Google's tech, or Google's potential tech, or future of technology, or whatever is exciting today :)
+
+<small>This Week in Google [iTunes](https://podcasts.apple.com/us/podcast/this-week-in-google-mp3/id326120877?uo=10) | This Week in Google [RSS](http://feeds.twit.tv/twig.xml)</small>
 
 ### 22. Material Podcast
 
-[![](30-top-tech-podcasts-in-2019/coding-blocks.png)](https://www.codingblocks.net/)
+[![](30-top-tech-podcasts-in-2019/material.png)](https://www.relay.fm/material)
 
-<small>Material Podcast iTunes | Material Podcast RSS</small>
+Two people known for their other shows, Andy Ihnatko of MacBreak Weekly and Florence Ion of All About Android, joined forces to create Material Podcast. All things Android, with quite a bit of easygoing fire-side chatter and entertaining points of view.  
+
+<small>Material Podcast [iTunes](https://itunes.apple.com/us/podcast/material/id1015422651) | Material Podcast [RSS](https://www.relay.fm/material/feed)</small>
 
 ### 23. All About Android
 
-[![](30-top-tech-podcasts-in-2019/coding-blocks.png)](https://www.codingblocks.net/)
+[![](30-top-tech-podcasts-in-2019/aaa.jpg)](https://www.twit.tv/shows/all-about-android)
 
-<small>All About Android iTunes | All About Android RSS</small>
+Along with Android Central's podcast, this is probably the Android show for the Android faithful. When a bunch of people passionate about Android, get together and spill their frustrations and excitement and hopes and experiences, no matter what you think about Android, you're in for a great show.
 
-## Microsoft/Windows
+<small>All About Android [iTunes](https://podcasts.apple.com/us/podcast/all-about-android-mp3/id429307630?uo=10) | All About Android [RSS](http://feeds.twit.tv/aaa.xml)</small>
 
-Quick intro
+## Microsoft & Windows
+
+In recent years, Microsoft shifted a lot from a consumer-focused operating system and office software powerhouse, to a consumer and enterprise cloud and services company (with amazing consumer devices division, I must add!) In my personal opinion, this incredible turn of events doesn't get enough love and attention, but then again, data lakes and Azure Active Directory probably have a rather narrow audience. Nevertheless, a few shows do an excellent job covering all things Microsoft. 
 
 ### 24. Windows Weekly
 
-[![](30-top-tech-podcasts-in-2019/coding-blocks.png)](https://www.codingblocks.net/)
+[![](30-top-tech-podcasts-in-2019/windows-weekly.jpg)](https://www.twit.tv/shows/windows-weekly)
 
-<small>Windows Weekly iTunes | Windows Weekly RSS</small>
+If you're looking for some friendly venom from people covering Microsoft professionally, look no further. Sometimes I wonder why all the sarcasm, but then hosts go in-depth explains what's going on, why, since when, and what's next.  
+
+<small>Windows Weekly [iTunes](https://podcasts.apple.com/us/podcast/windows-weekly-mp3/id197875368?uo=10) | Windows Weekly [RSS](http://feeds.twit.tv/ww.xml)</small>
 
 ### 25. This Week in Channel 9
 
-[![](30-top-tech-podcasts-in-2019/coding-blocks.png)](https://www.codingblocks.net/)
+[![](30-top-tech-podcasts-in-2019/twoc9.jpg)](https://channel9.msdn.com/shows/This+Week+On+Channel+9/)
 
-<small>TWiC9 iTunes | TWiC9 RSS</small>
+This is a bit _meta_. My colleague Christina Warren basically sums up all things Channel 9, Microsoft's outgoing stream of news, feature update talks, tech discussions, blog posts and so on. I also recommend [Channel 9](https://channel9.msdn.com/) in it's entirety, but be ready, it's a lot of great content. 
+
+<small>TWiC9 [iTunes](https://itunes.apple.com/gb/podcast/this-week-on-channel-9-mp4-channel-9/id360667463) | TWiC9 [RSS](https://channel9.msdn.com/Shows/This+Week+On+Channel+9/feed/mp3)</small>
 
 ### 26. Windows Central Podcast
 
-[![](30-top-tech-podcasts-in-2019/coding-blocks.png)](https://www.codingblocks.net/)
+[![](30-top-tech-podcasts-in-2019/windows-central.png)](http://windowscentral.libsyn.com/)
 
-<small>Windows Central iTunes | Windows Central RSS</small>
+<small>Windows Central [iTunes](https://itunes.apple.com/us/podcast/windows-central-podcast/id1120948170?at=10l3Vy&ct=UUwpUdUnU40700YYwYwo5uw4zdpo5zwgzloorzgc3bomnxw2) | Windows Central [RSS](http://windowscentral.libsyn.com/rss)</small>
 
 ## General
 
