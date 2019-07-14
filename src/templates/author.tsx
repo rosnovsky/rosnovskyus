@@ -160,9 +160,10 @@ const Author: React.FC<AuthorTemplateProps> = props => {
           css={[outer, SiteHeader]}
           style={{
             // eslint-disable-next-line @typescript-eslint/camelcase
-            backgroundImage: author.profile_image ?
-              `url(${author.profile_image.childImageSharp.fluid.src})` :
-              '',
+            background:
+            author.profile_image ?
+              `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${author.profile_image.childImageSharp.fluid.src})` :
+                '',
           }}
         >
           <div css={inner}>
