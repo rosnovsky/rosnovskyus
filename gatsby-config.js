@@ -55,12 +55,52 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
-    'gatsby-plugin-feed',
     {
-      resolve: 'gatsby-plugin-postcss',
+      resolve: `gatsby-plugin-feed`,
       options: {
-        postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
+        feeds: [
+          {
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      excerpt(pruneLength: 250)
+                      html
+                      fields { 
+                        slug   
+                      }
+                      frontmatter {
+                        title
+                        date
+                        excerpt
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Rosnovsky Park™ RSS Feed',
+          },
+        ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Rosnovsky Park™`,
+        short_name: `Rosnovsky.us`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/favicon.ico`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };
