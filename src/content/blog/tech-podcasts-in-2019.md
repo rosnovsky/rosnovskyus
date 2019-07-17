@@ -1,6 +1,6 @@
 ---
-title: 30 Top Tech and Dev Podcasts in 2019
-date: 2019-06-10T10:53:00
+title: 30 Best Tech and Dev Podcasts
+date: 2019-06-10T11:53:00
 tags: ['podcasting', 'web development']
 lang: English
 type: "text"
@@ -266,7 +266,7 @@ If you're looking for some friendly venom from people covering Microsoft profess
 
 [![podcast cover](30-top-tech-podcasts-in-2019/twoc9.jpg)](https://channel9.msdn.com/shows/This+Week+On+Channel+9/)
 
-This is a bit _meta_. My colleague Christina Warren basically sums up all things Channel 9, Microsoft's outgoing stream of news, feature update talks, tech discussions, blog posts and so on. I also recommend [Channel 9](https://channel9.msdn.com/) in it's entirety, but be ready, it's a lot of great content. 
+This is a bit _meta_. My colleague Christina Warren basically sums up all things Channel 9, Microsoft's outgoing stream of news, feature update talks, tech discussions, blog posts and so on. I also recommend [Channel 9](https://channel9.msdn.com/) in its entirety, but be ready, it's a lot of great content. 
 
 <small>TWiC9 [iTunes](https://itunes.apple.com/gb/podcast/this-week-on-channel-9-mp4-channel-9/id360667463) | TWiC9 [RSS](https://channel9.msdn.com/Shows/This+Week+On+Channel+9/feed/mp3)</small>
 
