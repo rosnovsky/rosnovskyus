@@ -48,7 +48,7 @@ const About: React.FC = () => (
               <p>
                 If you have a project for me, or have a problem you need solved, just leave your name below or email me at artem@rosnovsky.us
               </p>
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST" action="/about" data-netlify="true">
                 <p>
                   <label>Name <input type="text" name="name" /></label>
                 </p>
