@@ -48,13 +48,13 @@ const About: React.FC = () => (
               <p>
                 If you have a project for me, or have a problem you need solved, just leave your name below or email me at artem@rosnovsky.us
               </p>
-              <form name="contact" method="POST" action="/about" data-netlify="true">
-                <p>
-                  <label>Name <input type="text" name="name" /></label>
-                </p>
-                <p>
-                  <label>Email <input type="email" name="email" /></label>
-                </p>
+              <form name="contact" method="POST" action="/about/" data-netlify="true">
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>   
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
                 <p>
                   <button type="submit">Send</button>
                 </p>
