@@ -46,19 +46,8 @@ const About: React.FC = () => (
                 More often than not, I'm invited by businesses of all sizes to come on board and deliver a product, per specs, within a few months. This is, basically, my specialty: I come in, solve problems, build projects, and deliver products, all on a tight schedule. 
               </p>
               <p>
-                If you have a project for me, or have a problem you need solved, just leave your name below or email me at artem@rosnovsky.us
+                If you have a project for me, or have a problem you need solved, just email me at artem@rosnovsky.us
               </p>
-              <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label>Your Name: <input type="text" name="name" /></label>   
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email" /></label>
-              </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
             </div>
           </PostFullContent>
         </article>
