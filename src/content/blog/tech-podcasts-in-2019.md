@@ -313,3 +313,31 @@ A little bit on a corporate side of things, but nevertheless informative in gene
 This one is again a more on a general interest side of things. Still, it's a lot of fun and inspiration, and thought-provoking conversations, neatly packed in a 30-60 minutes.
 
 <small>99% invisible [iTunes](https://itunes.apple.com/us/podcast/99-invisible/id394775318?at=10l9zE) | 99% invisible [RSS](http://feeds.99percentinvisible.org/99percentinvisible)</small>
+
+# Community Update
+
+After I posted [best dev podcasts](https://dev.to/rosnovsky/30-best-dev-and-tech-podcasts-35dh) post on Dev.to, I've got a bunch of excellent recommendations to add to the list. 
+
+### 31. [Front End Happy Hour](https://frontendhappyhour.com/)
+
+### 32. [Soft Skills Engineering](https://softskills.audio/)
+
+### 33. [Weekly Dev Tips](https://weeklydevtips.com/)
+
+### 34. [Independence](https://independence.fm/)
+
+### 35. [Command Line Heroes](https://www.redhat.com/en/command-line-heroes)
+
+### 36. [Friday Afternoon Deploy](https://friday.hirelofty.com/)
+
+### 37. [Ladybug Podcast](https://ladybug.dev/)
+
+### 38. [dev(up)](https://www.developingup.com/)
+
+### 39. [Darknet Dairies](https://darknetdiaries.com/)
+
+### 40. [Hackable?](https://hackablepodcast.com//)
+
+### 41. [Malicious Life](https://malicious.life/)
+
+### 42. [La vie en code](https://www.lavieencode.net/podcast/)
