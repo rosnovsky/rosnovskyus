@@ -7,7 +7,6 @@ module.exports = {
     siteUrl: 'https://rosnovsky.us',
     titleTemplate: "%s · Rosnovsky Park™",
     image: "/image.jpg",
-    twitterUsername: '@rosnovsky' // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
