@@ -1,7 +1,7 @@
 ---
-title: Digital Hygiene 2019
+title: Digital Hygiene
 date: 2019-07-10T10:53:00
-tags: ['tech',]
+tags: ['tech', 'self-hosting', 'fedeverse', 'foss', 'privacy']
 lang: English
 type: "text"
 excerpt: ""
