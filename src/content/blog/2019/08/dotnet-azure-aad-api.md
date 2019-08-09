@@ -7,6 +7,7 @@ type: "text"
 excerpt: "Here's how you make a Web API with .NET, authenticate your enterprise app with Azure, and read from corporate database authenticating with Service Principal Azure Active Directory authentication."
 author: Artem Rosnovsky
 draft: true
+image: monroe-4.6-earthquake-2019.jpg
 ---
 
 Here's how you make a Web API with .NET, authenticate your enterprise app with Azure, and read from a corporate database with Service Principal Azure Active Directory authentication.

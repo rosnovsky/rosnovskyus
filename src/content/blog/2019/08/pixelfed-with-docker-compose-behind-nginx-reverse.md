@@ -7,6 +7,7 @@ type: "text"
 excerpt: ""
 author: Artem Rosnovsky
 draft: true
+image: monroe-4.6-earthquake-2019.jpg
 ---
 
 - few words about Fediverse, link to the digital hygiene post
