@@ -20,7 +20,7 @@ Years passed, and earthquakes were replaced _on my radar_ by more pressing issue
 
 And then you wake up at 2:51 am on a Friday night because your bed is shaking pretty violently, and the whole house is rattling and creaking for a whole 5-10 seconds.
 
-![](monroe-4.6-earthquake-2019/4.6.jpg)
+![](monroe-4.6-earthquake-2019/cover.jpg)
 
 Apparently, this is the third strongest earthquake in Washington in the last 10 years, two others being M4.9 in Poulsbo in 2009, and M4.7 near Okanagan in 2011. This one hit only 7 miles from home, in Monroe (I'm in Mill Creek), about 1 hour northeast of Seattle.
 
@@ -28,7 +28,7 @@ At first, I though a truck hit our house. We have a pretty quite straight street
 
 But then it went all quiet. Wife woke up, looked at the time on her phone, and went back to sleep (she later addmitted that she didn't understand why she randomly woke up in the middle of night, and angrily went back to sleep as in like, what the hell, why am I awake?!). Neighbors across the yard turned their patio lights, all was quite, but felt off. A few minutes later, another shake, much shorter (like, maybe a 2-3 seconds), but as noticeable. By this time, I realized what's going on, got up, met our completely freaked out cats just outside our bedroom, checked on my son (he didn't wake up), and checked twitter:
 
-[![](/monroe-4.6-earthquake-2019/tweet.png)](https://twitter.com/MyEverettNews/status/1149617954918526976)
+[![](monroe-4.6-earthquake-2019/tweet.png)](https://twitter.com/MyEverettNews/status/1149617954918526976)
 
 I never felt an earthquake before (at least, I can't remember it), and this was a jolt of an experience. We don't have any food or water for emergencies! I have no idea what to do in an earthquake (run? go outside? crawl under the bed??). So I spent the rest of the night reading through al the news about all the local earthquakes, [preparedness blogs](https://www.beyondsurvivalgear.com/11-survival-gear-essentials/), and so on. I'm still not prepared, but I'm on track!
 
