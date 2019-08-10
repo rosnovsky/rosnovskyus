@@ -7,7 +7,6 @@ type: "text"
 excerpt: ""
 author: Artem Rosnovsky
 draft: true
-# image: 
 ---
 
 I've been cleaning my digital life for the past couple of months:

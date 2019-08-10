@@ -7,7 +7,7 @@ type: "text"
 excerpt: ...And then you wake up at 2:51 am on a Friday night because your bed is shaking pretty violently, and the whole house is rattling and creaking for a whole 5-10 seconds...
 author: Artem Rosnovsky
 draft: false
-image: monroe-4.6-earthquake-2019.jpg
+image: monroe-4.6-earthquake-2019/cover.jpg
 ---
 
 It's been a few weeks since I'd been woken up in the middle of the night by an earthquake. I just want to write this down since this was one of my first encounters with this natural phenomenon. I think, I've been through a light earthquake when I was visiting California in 1996, but I can't be sure, and I couldn't find any archival information (it was sometime in August 1996, somewhere either in Sacramento, or in LA area).

@@ -7,7 +7,6 @@ type: "text"
 excerpt: "Broken leg chronicles"
 author: Artem Rosnovsky
 draft: true
-image: broken-leg-chronicles/cover.png
 ---
 
 Stuff

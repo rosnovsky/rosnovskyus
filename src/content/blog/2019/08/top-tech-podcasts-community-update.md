@@ -7,7 +7,6 @@ type: "text"
 excerpt: ""
 author: Artem Rosnovsky
 draft: true
-# image: 
 ---
 
 All the FOSS and InfoSec podcasts
