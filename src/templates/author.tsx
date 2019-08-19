@@ -164,6 +164,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
             author.profile_image ?
               `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${author.profile_image.childImageSharp.fluid.src})` :
                 '',
+              backgroundSize: `cover`
           }}
         >
           <div css={inner}>

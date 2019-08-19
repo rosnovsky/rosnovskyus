@@ -125,7 +125,7 @@ const IndexPage: React.FC<IndexProps> = props => {
         <header
           css={[outer, SiteHeader]}
           style={{
-            background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${props.data.header.childImageSharp.fluid.src})`
+            background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${props.data.header.childImageSharp.fluid.src})`,
           }}
         >
           <div css={inner}>
