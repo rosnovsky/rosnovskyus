@@ -41,10 +41,14 @@ So how do I choose? Should I try Debian? After all, it runs on my home server. O
 
 And what about desktop environments? They are, again, so alike, yet so different. GNOME looks ok, but KDE people tend to bash it a lot, and Plasma 5 indeed looks amazing. Perhaps, Cinnamon? Bungie? MATE? Maybe, Xfce? Pantheon? Deepin?
 
-And what about hardware? Do NVidia cards work with Linux or do they not? Or is it the integrated Intel stuff that doesn't work (or does it work?) What about HiDPI screens? Touch? Wifi cards?
+And what about hardware? Do NVidia cards work with Linux or do they not? Or is it the integrated Intel stuff that doesn't work (or does it work?) What about HiDPI screens? Touch? External audio interfaces?
 
 So here's what I learned. **Literally, none of this matters.** When you're just starting out, just go with the largest community, most available information, and just start somewhere. As far as hardware goes, Linux is at the point where it doesn't matter what hardware you have, it will almost certainly support it. Worst case scenario, you'd need to type a few things into a command line, and maybe reboot.
 
 ## Status
+
+RIght now, I'm on a top-notch Dell XPS 15, 32 Gb of RAM, 1 TB of fast SSD and an Ubuntu. It's been fantastic so far. I enjoy tinkering with the system, tweaking every little thing to my liking, although arguably in GNOME it doesn't go as far as in KDE. I've installed all the apps I need, including Steam, and with NVidia card on (I can turn it on and off at will), games look fantastic on this incredible HiDPI OLED touchscreen. I do venture into other live distros that I store on an SD card (yep, I've got an SD card reader here! Fuck you, Apple!) It's been almost 5 hours since I've unplugged the charger; I've been coding a bit, watching videos, listening to music in the background (and switching between tracks with predictable function keys), and writing this post on this great keyboard. Battery holds at 40%, and I haven't really done any serious optimizations yet (although I plan to; I want to see if I can make this baby run for 10 hours on a single charge while I'm doing some meaningful work)
+
+Are there quirks? Oh, hell yes. For starters, I've got a really new Killer Wifi card here, and apparently, it hasn't made its way into the kernel yet. So I had indeed struggled for a few minutes until I found a step-by-step (with 2 steps, really) tutorial on how to add this specific card driver to my system. It will, of course, be included in the fall system update. Aside from that, some weirdness is going on with some VS Code shortcuts (they are supposed to work, but they don't, specifically `Shift+Alt+Up/Down`); email clients are trash (not that I use them anyway, but still)
 
 ## What's next
