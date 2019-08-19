@@ -6,7 +6,7 @@ lang: English
 type: "text"
 excerpt: ""
 author: Artem Rosnovsky
-draft: false
+draft: true
 image: mac-to-linux/ubuntu.png  
 ---
 
