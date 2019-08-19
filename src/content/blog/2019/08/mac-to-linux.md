@@ -6,22 +6,45 @@ lang: English
 type: "text"
 excerpt: ""
 author: Artem Rosnovsky
-draft: true
+draft: false
 image: mac-to-linux/ubuntu.png  
 ---
 
 In 2005, I bought my first Mac mini. It had 1.25 Ghz G3 processor, like, 256 Mb of RAM and a 40 Gb HDD. At the moment, it was the most exciting device I've ever owned. Mac OS X was such a blow of fresh air after Windows XP! It was well-designed, friendly, relatively fast, quiet. It had all the apps I wanted to use, and since I've never been a gamer, lack of gaming titles didn't bother me at all. I was in love with Apple. In the years since, I owned a bunch of laptops, a couple of iMacs, all kinds of iPhones, iPads, and a pair of Apple Watches. My family is a full Apple house.
 
-Apple of 2005 is not the same company as Apple in 2019. I'm not going to get into everything that makes Apple of 2019 a Microsoft of 2005, and it's not fair to compare them one to one, still, I'm convinced that these two have way more in common these days then they are different. Anyway, I'm not here to start another holy war, I'm just documenting my jorney here.
+Apple of 2005 is not the same company as Apple in 2019. I'm not going to get into everything that makes Apple of 2019 a Microsoft of 2005, and it's not fair to compare them one to one, still, I'm convinced that these two have way more in common these days then they are different. Anyway, I'm not here to start another holy war, I'm just documenting my journey here.
 
-# Reasons
+## Reasons
 
-# Plan
+I've been thinking about leaving Apple ecosystem for a while now. Apple has been slow to innovate or even uphold any level of quality of their laptops. In late 2016 I bought the latest and presumably the greatest MacBook Pro with TouchBar, and I had never been so disappointed in any Apple product, and possibly, in any piece of technology in a very long while. TouchBar is an unusable gimmick which replaced perfectly good function keys. The butterfly keyboard is by far, the very worst keyboard I've ever seen or used in my entire life (not to mention that I had to replace it twice due to it constantly breaking). The computer is slow as heck (my bad, I could only afford 8 gigs of RAM), holds charge for like 2 hours of light web browsing, tops, only has these stupid USB-C ports, doesn't have an SD-card reader, has a relatively meh screen by today standards, no graphic card to speak of, and doesn't support touch. Its operating system and applications are stale at best, and the day when Apple prevents any non-Apple-App-Store apps from running on their laptops is closer than you think.
 
-# Process
+Now that I've got it out of my system, let's get to the real reason: **Apple is boring as hell**. I remember when they were on the forefront of things, now they are just a cult of elite fashion, mediocre tech and status quo. All interesting things in tech industry are happening elsewhere, and it's been like this for a while now.
 
-# Progress
+I want adventure. I want the new stuff. I want the cutting edge. I want round pegs in the square holes. I want to be with the misfits, the crazy ones. With the ones who see things differently.
 
-# Status
+## Plan
 
-# What's next
+To this day, I haven't had any serious experience with Linux. I use Windows 10 at work, and it's a pretty ok system, but it's not something I want to deal with in my personal life for a variety of reasons (from the fact that direction may and will change, and you have no input, to the fact that you get system "as is", and it always be like that.)
+
+The only alternative I know to Windows and Mac OS is Linux in all its flavors. So my plan was simple: try some Linuxes (or is it *Linuxi?*), make sure they meet my needs, gradually transition my work to Linux, and finally migrate to a decent hardware as well. This is a sensible thing to do, a smooth and straightforward plan. So, yeah. I did none of this in this order. What I did, I outright bought a performance laptop, slapped Ubuntu on it, and haven't opened my MacBook for a week. This is how real *crazy ones* explore new things, amirite?
+
+## Process
+
+Here's how it went. I've been reading about different branches of Linux, different flavours, desktop environments, and all things in between. I watch countless hours of Youtube reviews of different hardware, how it plays with different software, what works, what doesn't, how things are done, what they look like, what gets the Linux people excited, and so forth. It actually took me down the rabbit hole of open-source software, decentralization, privacy, and other things, su much so that I've completely left mainstream social networks for Mastodon and Pixelfed. But this is a whole [different story](#) - a story of me suddenly realizing that I've been doing my digital hygiene and social media all wrong this whole time.
+
+Anywho. Selecting a distro is like whoa?! 😲 There hundreds if not thousands of them, most of them are so much alike, but some are so very different. Some have underlying philosophy that drives the whole thing, some just have a cuter set of icons and friendlier setup guide.
+
+So how do I choose? Should I try Debian? After all, it runs on my home server. Or maybe, Ubuntu? I've tried it a few times in the past, and it runs on all my Digital Ocean instances. Maybe, Arch? It's so customizable, they said. Manjaro, the friendly Arch? Fedora? CentOS? Mint? KDE Neon? OpenSUSE?
+
+![](mac-to-linux/linuxi.png)
+<small>*I've got them all!*</small>
+
+And what about desktop environments? They are, again, so alike, yet so different. GNOME looks ok, but KDE people tend to bash it a lot, and Plasma 5 indeed looks amazing. Perhaps, Cinnamon? Bungie? MATE? Maybe, Xfce? Pantheon? Deepin?
+
+And what about hardware? Do NVidia cards work with Linux or do they not? Or is it the integrated Intel stuff that doesn't work (or does it work?) What about HiDPI screens? Touch? Wifi cards?
+
+So here's what I learned. **Literally, none of this matters.** When you're just starting out, just go with the largest community, most available information, and just start somewhere. As far as hardware goes, Linux is at the point where it doesn't matter what hardware you have, it will almost certainly support it. Worst case scenario, you'd need to type a few things into a command line, and maybe reboot.
+
+## Status
+
+## What's next
