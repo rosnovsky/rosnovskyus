@@ -1,12 +1,12 @@
 ---
 title: Migrating to Linux after 15 years on Mac 
-date: 2019-08-20T10:53:00
+date: 2019-08-20
 tags: ['foss', 'linux', 'tech']
 lang: English
 type: "text"
 excerpt: ""
 author: Artem Rosnovsky
-draft: true
+draft: false
 image: mac-to-linux/ubuntu.png  
 ---
 
@@ -30,7 +30,7 @@ The only alternative I know to Windows and Mac OS is Linux in all its flavors. S
 
 ## Process
 
-Here's how it went. I've been reading about different branches of Linux, different flavours, desktop environments, and all things in between. I watch countless hours of Youtube reviews of different hardware, how it plays with different software, what works, what doesn't, how things are done, what they look like, what gets the Linux people excited, and so forth. It actually took me down the rabbit hole of open-source software, decentralization, privacy, and other things, su much so that I've completely left mainstream social networks for Mastodon and Pixelfed. But this is a whole [different story](#) - a story of me suddenly realizing that I've been doing my digital hygiene and social media all wrong this whole time.
+Here's how it went. I've been reading about different branches of Linux, different flavours, desktop environments, and all things in between. I watch countless hours of Youtube reviews of different hardware, how it plays with different software, what works, what doesn't, how things are done, what they look like, what gets the Linux people excited, and so forth. It actually took me down the rabbit hole of open-source software, decentralization, privacy, and other things, so much so that I've completely left mainstream social networks for Mastodon. But this is a whole [different story](/blog/2019/08/digital-hygiene/) - a story of me suddenly realizing that I've been doing my digital hygiene and social media all wrong this whole time.
 
 Anywho. Selecting a distro is like whoa?! 😲 There hundreds if not thousands of them, most of them are so much alike, but some are so very different. Some have underlying philosophy that drives the whole thing, some just have a cuter set of icons and friendlier setup guide.
 
@@ -47,8 +47,12 @@ So here's what I learned. **Literally, none of this matters.** When you're just 
 
 ## Status
 
-RIght now, I'm on a top-notch Dell XPS 15, 32 Gb of RAM, 1 TB of fast SSD and an Ubuntu. It's been fantastic so far. I enjoy tinkering with the system, tweaking every little thing to my liking, although arguably in GNOME it doesn't go as far as in KDE. I've installed all the apps I need, including Steam, and with NVidia card on (I can turn it on and off at will), games look fantastic on this incredible HiDPI OLED touchscreen. I do venture into other live distros that I store on an SD card (yep, I've got an SD card reader here! Fuck you, Apple!) It's been almost 5 hours since I've unplugged the charger; I've been coding a bit, watching videos, listening to music in the background (and switching between tracks with predictable function keys), and writing this post on this great keyboard. Battery holds at 40%, and I haven't really done any serious optimizations yet (although I plan to; I want to see if I can make this baby run for 10 hours on a single charge while I'm doing some meaningful work)
+RIght now, I'm on a top-notch Dell XPS 15, 32 Gb of RAM, 1 TB of fast SSD and an Ubuntu. It's been fantastic so far. I enjoy tinkering with the system, tweaking every little thing to my liking, although arguably in GNOME it doesn't go as far as in KDE. I've installed all the apps I need, including Steam, and with NVidia card on (I can turn it on and off at will), games look fantastic on this incredible HiDPI OLED touchscreen. I do venture into other live distros that I store on an SD card (yep, I've got an SD card reader here! Fuck you, Apple!) It's been almost 5 hours since I've unplugged the charger; I've been coding a bit, watching videos, listening to music in the background (and switching between tracks with predictable function keys), and writing this post on this great keyboard. Battery holds at 40%, and I haven't really done any serious optimizations yet (although I plan to; I want to see if I can make this baby run for 10 hours on a single charge while I'm doing some meaningful work.)
 
-Are there quirks? Oh, hell yes. For starters, I've got a really new Killer Wifi card here, and apparently, it hasn't made its way into the kernel yet. So I had indeed struggled for a few minutes until I found a step-by-step (with 2 steps, really) tutorial on how to add this specific card driver to my system. It will, of course, be included in the fall system update. Aside from that, some weirdness is going on with some VS Code shortcuts (they are supposed to work, but they don't, specifically `Shift+Alt+Up/Down`); email clients are trash (not that I use them anyway, but still)
+Are there quirks? Oh, hell yes. For starters, I've got a really new Killer Wifi card here, and apparently, it hasn't made its way into the kernel yet. So I had indeed struggled for a few minutes until I found a step-by-step (with 2 steps, really) tutorial on how to add this specific card driver to my system. It will, of course, be included in the fall system update. Aside from that, some weirdness is going on with some VS Code shortcuts (they are supposed to work, but they don't, specifically `Shift+Alt+Up/Down`); email clients are trash (not that I use them anyway, but still), Firefox is surprisingly unstable (it crashes whenever another app tries to open a browser window). There are tricky issues with .NET (it installs, runs and builds just fine, but some weirdness is going on with serving server responses and SSL, not sure yet). Overall visual language in GNOME is outdated, even though I'd say it's meh bordering with ok. As for the laptop itself, speakers are narrowly passable at best. Oh, and fingerprint scanner doesn't work, and on first try external monitor didn't connect right away (pending investigation). HiDPI screen is also quirky in that scaling is basically 100%, 200%, or 300%, and some apps get confused (although, I've already seen Nextcloud fix it before my eyes: 2 days ago it was confused, now it's all good). Notifications in GNOME are useless since you can't really really read the third line (and if click as to expand, they just clear up). I bet I'll think of something else before the weekend.
 
 ## What's next
+
+Glad you asked! Next, I'm staying here for as long as this laptop lasts. With these specs, this solid quality build, and this level of future-proofing and serviceability (oh yeah, I can replace the SSD with a bigger one eventually; memory is topped out, though, but the battery is replaceable and serviceable as well) it could last me for 10 years. Sure, it's still very early, but I'm so very happy with this move, I can't even. So, will see.
+
+As a side note here, I'm researching GNOME themes. I mean, out of dozens and dozens that I've seen, literally none are good. I'm on Arc-Darker now, and I can stand it, but I'm looking into building my own theme. I've heard they are CSS-based ;)
