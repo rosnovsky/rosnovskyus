@@ -1,12 +1,12 @@
 ---
-title: Migrating to Linux after 15 years on Mac 
+title: "New OS, Who Dis: Going Linux after 15 years on Mac" 
 date: 2019-08-20
-tags: ['foss', 'linux', 'tech']
+tags: ['linux', 'foss', 'tech']
 lang: English
 type: "text"
 excerpt: ""
 author: Artem Rosnovsky
-draft: false
+draft: true
 image: mac-to-linux/ubuntu.png  
 ---
 
