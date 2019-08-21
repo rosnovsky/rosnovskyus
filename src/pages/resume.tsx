@@ -32,7 +32,7 @@ const Resume: React.FC = () => (
             <main id="site-main" className="site-main" css={[SiteMain, outer]}>
                 <article className="post page" css={[PostFull, NoImage]}>
                     <PostFullHeader>
-                        <PostFullTitle>Artem Rosnovsky<br/> <h1>Web Developer</h1><h3><a href="https://github.com/rosnovsky">Github</a></h3></PostFullTitle>
+                        <PostFullTitle>Artem Rosnovsky<br/> <h1>Web Developer</h1><h3><a href="https://github.com/rosnovsky">Github</a> | <a href="art-rosnovsky-web-dev.pdf">Full Resume (PDF)</a></h3></PostFullTitle>
                     </PostFullHeader>
 
                     <PostFullContent className="post-full-content">
