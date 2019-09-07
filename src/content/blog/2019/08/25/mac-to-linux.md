@@ -7,7 +7,7 @@ type: "text"
 excerpt: ""
 author: Artem Rosnovsky
 draft: false
-image: mac-to-linux/ubuntu.png  
+image: mac-to-linux/ubuntu.png
 ---
 
 In 2005, I bought my first Mac mini. It had 1.25 Ghz G3 processor, like, 256 Mb of RAM and a 40 Gb HDD. At the moment, it was the most exciting device I've ever owned. Mac OS X was such a blow of fresh air after Windows XP! It was well-designed, friendly, relatively fast, quiet. It had all the apps I wanted to use, and since I've never been a gamer, lack of gaming titles didn't bother me at all. I was in love with Apple. In the years since, I owned a bunch of Macbooks, a couple of iMacs, all kinds of iPhones, iPads, and a pair of Apple Watches. My family is a full Apple house.
