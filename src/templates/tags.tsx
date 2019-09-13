@@ -163,8 +163,8 @@ export const pageQuery = graphql`
             date
             image {
               childImageSharp {
-                fluid(maxWidth: 1240) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 2000) {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
