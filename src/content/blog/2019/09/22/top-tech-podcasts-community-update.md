@@ -1,12 +1,12 @@
 ---
 title: "Top Tech and Dev Podcasts: Community Update"
-date: 2019-09-10
+date: 2019-09-22
 tags: ['podcasting', 'web development', 'open source', 'linux']
 lang: English
 # excerpt: ""
 author: Artem Rosnovsky
 draft: true
-image: top-tech-podcasts-community-update/update.jpg
+image: community.jpg
 ---
 
 A few weeks ago, I published a [list of the best tech and dev podcasts](/blog/tech-podcasts-in-2019/). I've got so much feedback and so many excellent suggestions, that it's time for a Community Update. I've also got very curios about Free and Open Source Software recently and I've included some of my newly favorite FOSS podcasts as well.
