@@ -5,7 +5,7 @@ tags: ['blog', 'text', 'open source']
 lang: English
 # excerpt: ""
 author: Artem Rosnovsky
-draft: false
+draft: true
 image: nature.jpg
 ---
 
