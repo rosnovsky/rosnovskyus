@@ -93,7 +93,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {frontmatter: { type: {ne: "podcast"}}}
+                  filter: {frontmatter: { draft: {ne: true}}}
                 ) {
                   edges {
                     node {
