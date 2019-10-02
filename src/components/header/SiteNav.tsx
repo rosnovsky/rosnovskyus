@@ -151,7 +151,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/resume">Resume</Link>  
             </li>
             <li role="menuitem">
-              <strong><Link to="/feed">RSS Feed</Link></strong>
+              <strong><Link to="/feed/">RSS Feed</Link></strong>
             </li>
           </ul>
         </SiteNavLeft>
