@@ -125,7 +125,8 @@ const IndexPage: React.FC<IndexProps> = props => {
         <header
           css={[outer, SiteHeader]}
           style={{
-            backgroundImage: `url('${props.data.header.childImageSharp.fluid.src}')`,
+            background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${props.data.header.childImageSharp.fluid.src})`,
+            backgroundSize: `cover`
           }}
         >
           <div css={inner}>
@@ -178,6 +179,7 @@ export const pageQuery = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
+        
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
@@ -199,7 +201,7 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 840) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

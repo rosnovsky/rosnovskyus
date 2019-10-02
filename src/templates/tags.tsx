@@ -89,10 +89,10 @@ const Tags: React.FC<TagTemplateProps> = props => {
           className={`${tagData && tagData.node.image ? '' : 'no-cover'}`}
           css={[outer, SiteHeader]}
           style={{
-            backgroundImage:
+            background:
               tagData && tagData.node.image ?
-                `url('${tagData.node.image.childImageSharp.fluid.src}')` :
-                '',
+              `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${tagData.node.image.childImageSharp.fluid.src})` : '',
+              backgroundSize: `cover`
           }}
         >
           <div css={inner}>
@@ -163,8 +163,8 @@ export const pageQuery = graphql`
             date
             image {
               childImageSharp {
-                fluid(maxWidth: 1240) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 2000) {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

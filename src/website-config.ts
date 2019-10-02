@@ -57,11 +57,10 @@ const config: WebsiteConfig = {
   siteUrl: 'https://rosnovsky.us',
   facebook: 'https://www.facebook.com/rosnovsky',
   twitter: 'https://twitter.com/rosnovsky',
-  showSubscribe: false,
-  mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
-  mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
+  showSubscribe: true,
+  mailchimpAction: 'https://rosnovsky.us11.list-manage.com/subscribe/post?u=e4fad23c5627b8f9070cdce9e&amp;id=874dfc643c',
+  mailchimpName: 'b_e4fad23c5627b8f9070cdce9e_874dfc643c',
   mailchimpEmailFieldName: 'MERGE0',
-  googleSiteVerification: 'GoogleCode',
 };
 
 export default config;

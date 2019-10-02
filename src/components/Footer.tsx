@@ -79,17 +79,8 @@ const Footer: React.FC = () => {
         </section>
         <SiteFooterNav>
           <Link to="/">Latest Posts</Link>
-          {config.facebook && (
-            <a href={config.facebook} target="_blank" rel="noopener noreferrer">
-              Facebook
-            </a>
-          )}
-          {config.twitter && (
-            <a href={config.twitter} target="_blank" rel="noopener noreferrer">
-              Twitter
-            </a>
-          )}
           <a href="/rss.xml">RSS</a>
+          <a rel="me" href="https://social.rosnovsky.us/@rosnovsky">Mastodon</a>
         </SiteFooterNav>
       </div>
     </footer>

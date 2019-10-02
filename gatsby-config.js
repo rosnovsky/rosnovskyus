@@ -3,8 +3,10 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Rosnovsky Park™',
-    description: 'From Pacific Northwest to the World',
-    siteUrl: 'https://rosnovsky.us', // full path to blog - no ending slash
+    description: 'Blog of Artem Rosnovsky, software engineer from Seattle, WA',
+    siteUrl: 'https://rosnovsky.us',
+    titleTemplate: "%s · Rosnovsky Park™",
+    image: "/image.jpg",
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -29,6 +31,7 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1rem',
             },
           },
+          '@weknow/gatsby-remark-twitter',
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
