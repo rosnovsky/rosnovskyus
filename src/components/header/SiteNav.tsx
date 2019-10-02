@@ -148,11 +148,11 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/about">About</Link>
             </li>
             <li role="menuitem">
-              <strong><Link to="/resume">Resume</Link></strong>
+              <Link to="/resume">Resume</Link>  
             </li>
-            {/* <li role="menuitem">
-              <Link to="/tags/getting-started/">Getting Started</Link>
-            </li> */}
+            <li role="menuitem">
+              <strong><Link to="/feed">RSS Feed</Link></strong>
+            </li>
           </ul>
         </SiteNavLeft>
         <SiteNavRight>
@@ -181,7 +181,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             )}
           </SocialLinks>
           {config.showSubscribe && (
-            <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
+            <SubscribeButton onClick={this.openModal}>Newsletter</SubscribeButton>
           )}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         </SiteNavRight>
