@@ -58,7 +58,7 @@ Another "vendor" podcast on the list. This one comes from Mozilla, one of my fav
 
 This one is more an _academic_ side of things, as in discussing protocols proposals, things that globally impact the ActivityPub in general and Fediverse and Mastodon in particular. A little dry at times, but at times it's really a fun listen (especially when it comes to cool tools and such)
 
-<small>~~Libre Lounge~~ [iTunes](URL) | Libre Lounge [RSS](https://librelounge.org/rss-feed.rss)</small>
+<small>~~Libre Lounge [iTunes](URL)~~ | Libre Lounge [RSS](https://librelounge.org/rss-feed.rss)</small>
 
 ---
 ### 8. [Linux For Everyone](https://linuxforeveryone.fireside.fm/)
