@@ -44,12 +44,10 @@ const Resume: React.FC = () => (
                                 <div>
                                     <h1>Microsoft</h1>
                                     <h3>Web Developer</h3>
-                                    <h6>Apr 2019 - Present</h6>
+                                    <h6>Apr 2019 - Oct 2019</h6>
                                     <p><em>Developing internal tools and solutions for IDCxP FastTrack Team.</em></p>
 
                                     <p>Developed a time-saving search interface (React) with the backend server (C#, .NET Core, MSSQL) for an internal management application, with advanced Azure Active Directory-based authentication, server and database performance tweaks, and responsive client interface.</p>
-
-                                    <p>Developing a complex interface and integration between Dynamics 360 CRM and a collection of databases to improve and optimize customer request workflows.</p>
                                 </div>
                                 <div>
                                     <h2>Transmark Logistics</h2>

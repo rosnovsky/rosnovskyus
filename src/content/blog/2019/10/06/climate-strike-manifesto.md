@@ -1,6 +1,6 @@
 ---
 title: "My Climate Strike Manifesto"
-date: 2019-09-22
+date: 2019-10-06
 tags: ['blog', 'text', 'open source']
 lang: English
 # excerpt: ""
