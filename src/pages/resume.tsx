@@ -72,7 +72,7 @@ const Resume: React.FC = () => (
                                 <div>
                                     <h2>Intel</h2>
                                     <h3>Web Producer</h3>
-                                    <h6>Apr 2019 - Present</h6>
+                                    <h6>Dec 2016 - Apr 2017</h6>
                                     <ul>
                                         <li>Assisted in managing tasks for a team of web authors and QA engineers</li>
                                         <li>Successfully launched Intel’s new Product catalog, using AEM, HTML, CSS, and Bootstrap</li>
@@ -83,6 +83,7 @@ const Resume: React.FC = () => (
                             <div>
                                 <h3>Farmslist</h3>
                                 <h6>Founder, Web Developer</h6>
+                                <h6>Aug 2016 - Jan 2018</h6>
                                 <ul>
                                     <li>Provided guidance for UX/UI designer and architecture for the project as a whole</li>
                                     <li>Developed and fine-tuned Handlebars-based templates for transactional emails</li>
