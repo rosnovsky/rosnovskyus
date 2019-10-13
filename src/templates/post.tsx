@@ -1,38 +1,38 @@
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
-import * as _ from 'lodash';
-import { setLightness } from 'polished';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
-import { Helmet } from 'react-helmet';
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
+import * as _ from 'lodash'
+import { setLightness } from 'polished'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import { Helmet } from 'react-helmet'
 
-import AuthorCard from '../components/AuthorCard';
-import Footer from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import PostCard from '../components/PostCard';
-import PostContent from '../components/PostContent';
-import PostFullFooter from '../components/PostFullFooter';
-import PostFullFooterRight from '../components/PostFullFooterRight';
-import ReadNextCard from '../components/ReadNextCard';
-import Subscribe from '../components/subscribe/Subscribe';
-import Wrapper from '../components/Wrapper';
-import IndexLayout from '../layouts';
-import { colors } from '../styles/colors';
-import { inner, outer, SiteHeader, SiteMain } from '../styles/shared';
-import config from '../website-config';
+import AuthorCard from '../components/AuthorCard'
+import Footer from '../components/Footer'
+import SiteNav from '../components/header/SiteNav'
+import PostCard from '../components/PostCard'
+import PostContent from '../components/PostContent'
+import PostFullFooter from '../components/PostFullFooter'
+import PostFullFooterRight from '../components/PostFullFooterRight'
+import ReadNextCard from '../components/ReadNextCard'
+import Subscribe from '../components/subscribe/Subscribe'
+import Wrapper from '../components/Wrapper'
+import IndexLayout from '../layouts'
+import { colors } from '../styles/colors'
+import { inner, outer, SiteHeader, SiteMain } from '../styles/shared'
+import config from '../website-config'
 
 const PostTemplate = css`
   .site-main {
     background: #fff;
     padding-bottom: 4vw;
   }
-`;
+`
 
 export const PostFull = css`
   position: relative;
   z-index: 50;
-`;
+`
 
 export const NoImage = css`
   .post-full-content {
@@ -43,7 +43,7 @@ export const NoImage = css`
   .post-full-content:after {
     display: none;
   }
-`;
+`
 
 export const PostFullHeader = styled.header`
   margin: 0 auto;
@@ -54,7 +54,7 @@ export const PostFullHeader = styled.header`
   @media (max-width: 500px) {
     padding: 14vw 3vw 10vw;
   }
-`;
+`
 
 const PostFullMeta = styled.section`
   display: flex;
@@ -69,11 +69,11 @@ const PostFullMeta = styled.section`
     font-size: 1.2rem;
     line-height: 1.3em;
   }
-`;
+`
 
 const PostFullMetaDate = styled.time`
   color: ${colors.blue};
-`;
+`
 
 export const PostFullTitle = styled.h1`
   margin: 0;
@@ -81,7 +81,7 @@ export const PostFullTitle = styled.h1`
   @media (max-width: 500px) {
     font-size: 2.9rem;
   }
-`;
+`
 
 const PostFullImage = styled.figure`
   margin: 0 -10vw -165px;
@@ -103,116 +103,116 @@ const PostFullImage = styled.figure`
     margin-bottom: 4vw;
     height: 350px;
   }
-`;
+`
 
 const DateDivider = styled.span`
   display: inline-block;
   margin: 0 6px 1px;
-`;
+`
 
 const ReadNextFeed = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0 -20px;
   padding: 40px 0 0 0;
-`;
+`
 
 interface PageTemplateProps {
   pathContext: {
-    slug: string;
-  };
+    slug: string
+  }
   data: {
     logo: {
       childImageSharp: {
-        fixed: any;
-      };
-    };
+        fixed: any
+      }
+    }
     markdownRemark: {
-      html: string;
-      htmlAst: any;
-      excerpt: string;
-      timeToRead: string;
+      html: string
+      htmlAst: any
+      excerpt: string
+      timeToRead: string
       frontmatter: {
-        title: string;
-        date: string;
-        userDate: string;
+        title: string
+        date: string
+        userDate: string
         image: {
           childImageSharp: {
-            fluid: any;
-          };
-        };
-        tags: string[];
+            fluid: any
+          }
+        }
+        tags: string[]
         author: {
-          id: string;
-          bio: string;
+          id: string
+          bio: string
           avatar: {
             children: Array<{
               fixed: {
-                src: string;
-              };
-            }>;
-          };
-        };
-      };
-    };
+                src: string
+              }
+            }>
+          }
+        }
+      }
+    }
     relatedPosts: {
-      totalCount: number;
+      totalCount: number
       edges: Array<{
         node: {
-          timeToRead: number;
+          timeToRead: number
           frontmatter: {
-            title: string;
-          };
+            title: string
+          }
           fields: {
-            slug: string;
-          };
-        };
-      }>;
-    };
-  };
+            slug: string
+          }
+        }
+      }>
+    }
+  }
   pageContext: {
-    prev: PageContext;
-    next: PageContext;
-  };
+    prev: PageContext
+    next: PageContext
+  }
 }
 
 export interface PageContext {
-  excerpt: string;
-  timeToRead: number;
+  excerpt: string
+  timeToRead: number
   fields: {
-    slug: string;
-  };
+    slug: string
+  }
   frontmatter: {
     image: {
       childImageSharp: {
-        fluid: any;
-      };
-    };
-    title: string;
-    date: string;
-    draft?: boolean;
-    tags: string[];
+        fluid: any
+      }
+    }
+    title: string
+    date: string
+    draft?: boolean
+    tags: string[]
     author: {
-      id: string;
-      bio: string;
+      id: string
+      bio: string
       avatar: {
         children: Array<{
           fixed: {
-            src: string;
-          };
-        }>;
-      };
-    };
-  };
+            src: string
+          }
+        }>
+      }
+    }
+  }
 }
 
 const PageTemplate: React.FC<PageTemplateProps> = props => {
-  const post = props.data.markdownRemark;
-  let width = '';
-  let height = '';
+  const post = props.data.markdownRemark
+  let width = ''
+  let height = ''
   if (post.frontmatter.image && post.frontmatter.image.childImageSharp) {
-    width = post.frontmatter.image.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
-    height = String(Number(width) / post.frontmatter.image.childImageSharp.fluid.aspectRatio);
+    width = post.frontmatter.image.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0]
+    height = String(Number(width) / post.frontmatter.image.childImageSharp.fluid.aspectRatio)
   }
 
   return (
@@ -227,8 +227,11 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
-          <meta property="og:image" content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`} />
+        {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
+          <meta
+            property="og:image"
+            content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
+          />
         )}
         <meta property="article:published_time" content={post.frontmatter.date} />
         {/* not sure if modified time possible */}
@@ -243,18 +246,28 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
-        {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
-          <meta name="twitter:image" content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`} />
+        {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
+          <meta
+            name="twitter:image"
+            content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
+          />
         )}
         <meta name="twitter:label1" content="Written by" />
         <meta name="twitter:data1" content={post.frontmatter.author.id} />
         <meta name="twitter:label2" content="Filed under" />
         {post.frontmatter.tags && <meta name="twitter:data2" content={post.frontmatter.tags[0]} />}
-        {config.twitter && <meta name="twitter:site" content={`@${config.twitter.split('https://twitter.com/')[1]}`} />}
-        {config.twitter && <meta
-          name="twitter:creator"
-          content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-        />}
+        {config.twitter && (
+          <meta
+            name="twitter:site"
+            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
+          />
+        )}
+        {config.twitter && (
+          <meta
+            name="twitter:creator"
+            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
+          />
+        )}
         {width && <meta property="og:image:width" content={width} />}
         {height && <meta property="og:image:height" content={height} />}
       </Helmet>
@@ -273,20 +286,19 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                   <PostFullMetaDate dateTime={post.frontmatter.date}>
                     {post.frontmatter.userDate}
                   </PostFullMetaDate>
-                  {post.frontmatter.tags &&
-                    post.frontmatter.tags.length > 0 && (
-                      <>
-                        <DateDivider>/</DateDivider>
-                        <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                          {post.frontmatter.tags[0]}
-                        </Link>
-                      </>
+                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                    <>
+                      <DateDivider>/</DateDivider>
+                      <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
+                        {post.frontmatter.tags[0]}
+                      </Link>
+                    </>
                   )}
                 </PostFullMeta>
                 <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
               </PostFullHeader>
 
-              {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
+              {post.frontmatter.image && post.frontmatter.image.childImageSharp && (
                 <PostFullImage>
                   <Img
                     style={{ height: '100%' }}
@@ -323,10 +335,10 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         <Footer />
       </Wrapper>
     </IndexLayout>
-  );
-};
+  )
+}
 
-export default PageTemplate;
+export default PageTemplate
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
@@ -389,4 +401,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -1,5 +1,5 @@
 // tslint:disable:no-http-string
-import * as React from 'react';
+import * as React from 'react'
 
 const Website: React.FC = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ height: '1.6rem' }}>
@@ -11,5 +11,5 @@ const Website: React.FC = () => (
       fill="none"
     />
   </svg>
-);
-export default Website;
+)
+export default Website

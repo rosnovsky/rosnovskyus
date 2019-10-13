@@ -1,24 +1,24 @@
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
-import { colors } from './colors';
-import { darken, lighten } from 'polished';
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
+import { colors } from './colors'
+import { darken, lighten } from 'polished'
 
 export const outer = css`
   position: relative;
   padding: 0 4vw;
-`;
+`
 
 // Centered content container blocks
 export const inner = css`
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
-`;
+`
 
 export const SiteMain = css`
   z-index: 100;
   flex-grow: 1;
-`;
+`
 
 export const SiteTitle = styled.h1`
   z-index: 10;
@@ -26,7 +26,7 @@ export const SiteTitle = styled.h1`
   padding: 0;
   font-size: 3.8rem;
   font-weight: 700;
-`;
+`
 
 export const SiteDescription = styled.h2`
   z-index: 10;
@@ -36,7 +36,7 @@ export const SiteDescription = styled.h2`
   font-weight: 300;
   letter-spacing: 0.5px;
   opacity: 0.8;
-`;
+`
 
 export const PostFeed = css`
   position: relative;
@@ -44,14 +44,14 @@ export const PostFeed = css`
   flex-wrap: wrap;
   margin: 0 -20px;
   padding: 40px 0 0 0;
-`;
+`
 
 export const PostFeedRaise = css`
   @media (min-width: 900px) {
     margin-top: -70px;
     padding-top: 0;
   }
-`;
+`
 
 export const SocialLink = css`
   display: flex;
@@ -70,7 +70,7 @@ export const SocialLink = css`
     height: 1.8rem;
     fill: #fff;
   }
-`;
+`
 
 export const SiteHeader = css`
   position: relative;
@@ -80,7 +80,7 @@ export const SiteHeader = css`
   /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
   background: ${darken('0.05', colors.darkgrey)} no-repeat center center;
   background-size: cover;
-`;
+`
 
 export const SiteHeaderContent = styled.div`
   display: flex;
@@ -91,7 +91,7 @@ export const SiteHeaderContent = styled.div`
   min-height: 200px;
   max-height: 450px;
   text-align: center;
-`;
+`
 
 export const SiteHeaderStyles = css`
   content: '';
@@ -133,7 +133,7 @@ export const SiteHeaderStyles = css`
     padding-right: 0;
     padding-left: 0;
   }
-`;
+`
 
 export const AuthorProfileImage = css`
   display: block;
@@ -144,4 +144,4 @@ export const AuthorProfileImage = css`
   margin-right: 15px;
   width: 60px;
   height: 60px;
-`;
+`

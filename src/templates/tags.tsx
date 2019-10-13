@@ -1,11 +1,11 @@
-import { graphql } from 'gatsby';
-import React from 'react';
+import { graphql } from 'gatsby'
+import React from 'react'
 
-import Footer from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
-import IndexLayout from '../layouts';
+import Footer from '../components/Footer'
+import SiteNav from '../components/header/SiteNav'
+import PostCard from '../components/PostCard'
+import Wrapper from '../components/Wrapper'
+import IndexLayout from '../layouts'
 import {
   inner,
   outer,
@@ -16,47 +16,47 @@ import {
   SiteHeaderContent,
   SiteMain,
   SiteTitle,
-} from '../styles/shared';
-import { PageContext } from './post';
-import Helmet from 'react-helmet';
-import config from '../website-config';
+} from '../styles/shared'
+import { PageContext } from './post'
+import Helmet from 'react-helmet'
+import config from '../website-config'
 
 interface TagTemplateProps {
   pathContext: {
-    slug: string;
-  };
+    slug: string
+  }
   pageContext: {
-    tag: string;
-  };
+    tag: string
+  }
   data: {
     allTagYaml: {
       edges: Array<{
         node: {
-          id: string;
-          description: string;
+          id: string
+          description: string
           image?: {
             childImageSharp: {
-              fluid: any;
-            };
-          };
-        };
-      }>;
-    };
+              fluid: any
+            }
+          }
+        }
+      }>
+    }
     allMarkdownRemark: {
-      totalCount: number;
+      totalCount: number
       edges: Array<{
-        node: PageContext;
-      }>;
-    };
-  };
+        node: PageContext
+      }>
+    }
+  }
 }
 
 const Tags: React.FC<TagTemplateProps> = props => {
-  const tag = (props.pageContext.tag) ? props.pageContext.tag : '';
-  const { edges, totalCount } = props.data.allMarkdownRemark;
+  const tag = props.pageContext.tag ? props.pageContext.tag : ''
+  const { edges, totalCount } = props.data.allMarkdownRemark
   const tagData = props.data.allTagYaml.edges.find(
-    n => n.node.id.toLowerCase() === tag.toLowerCase(),
-  );
+    n => n.node.id.toLowerCase() === tag.toLowerCase()
+  )
 
   return (
     <IndexLayout>
@@ -90,9 +90,10 @@ const Tags: React.FC<TagTemplateProps> = props => {
           css={[outer, SiteHeader]}
           style={{
             background:
-              tagData && tagData.node.image ?
-              `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${tagData.node.image.childImageSharp.fluid.src})` : '',
-              backgroundSize: `cover`
+              tagData && tagData.node.image
+                ? `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${tagData.node.image.childImageSharp.fluid.src})`
+                : '',
+            backgroundSize: `cover`,
           }}
         >
           <div css={inner}>
@@ -125,10 +126,10 @@ const Tags: React.FC<TagTemplateProps> = props => {
         <Footer />
       </Wrapper>
     </IndexLayout>
-  );
-};
+  )
+}
 
-export default Tags;
+export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -190,4 +191,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
