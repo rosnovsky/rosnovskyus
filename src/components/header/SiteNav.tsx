@@ -121,19 +121,19 @@ interface SiteNaveState {
 }
 
 class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
-  subscribe = React.createRef<SubscribeModal>();
+  public subscribe = React.createRef<SubscribeModal>();
 
-  constructor(props: SiteNavProps) {
+  public constructor(props: SiteNavProps) {
     super(props);
     this.state = { isOpen: false };
   }
-  openModal = () => {
+  public openModal = () => {
     if (this.subscribe.current) {
       this.subscribe.current.open();
     }
   };
 
-  render() {
+  public render() {
     const { isHome = false } = this.props;
     return (
       <nav css={[isHome && HomeNavRaise, SiteNavStyles]}>
@@ -148,10 +148,12 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/about">About</Link>
             </li>
             <li role="menuitem">
-              <Link to="/resume">Resume</Link>  
+              <Link to="/resume">Resume</Link>
             </li>
             <li role="menuitem">
-              <strong><Link to="/feed/">RSS Feed</Link></strong>
+              <strong>
+                <Link to="/feed/">RSS Feed</Link>
+              </strong>
             </li>
           </ul>
         </SiteNavLeft>
@@ -181,7 +183,9 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             )}
           </SocialLinks>
           {config.showSubscribe && (
-            <SubscribeButton onClick={this.openModal}>Newsletter</SubscribeButton>
+            <SubscribeButton onClick={this.openModal}>
+              Newsletter
+            </SubscribeButton>
           )}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         </SiteNavRight>

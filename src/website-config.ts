@@ -58,7 +58,8 @@ const config: WebsiteConfig = {
   facebook: 'https://www.facebook.com/rosnovsky',
   twitter: 'https://twitter.com/rosnovsky',
   showSubscribe: true,
-  mailchimpAction: 'https://rosnovsky.us11.list-manage.com/subscribe/post?u=e4fad23c5627b8f9070cdce9e&amp;id=874dfc643c',
+  mailchimpAction:
+    'https://rosnovsky.us11.list-manage.com/subscribe/post?u=e4fad23c5627b8f9070cdce9e&amp;id=874dfc643c',
   mailchimpName: 'b_e4fad23c5627b8f9070cdce9e_874dfc643c',
   mailchimpEmailFieldName: 'MERGE0',
 };

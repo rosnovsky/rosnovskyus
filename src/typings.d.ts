@@ -20,8 +20,8 @@ declare module 'rehype-react' {
     components: any;
   }
   class RehypeReact {
-    Compiler: any
-    constructor(options: RehypeOptions);
+    public Compiler: any;
+    public constructor(options: RehypeOptions);
   }
   export default RehypeReact;
 }

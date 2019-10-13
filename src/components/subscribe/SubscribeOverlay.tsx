@@ -23,7 +23,8 @@ const SubscribeOverlay = styled.div`
   background: rgba(0, 25, 40, 0.97);
   opacity: ${(props: SubscribeOverlayProps) => (props.open ? 1 : 0)};
   transition: opacity 200ms ease-in;
-  pointer-events: ${(props: SubscribeOverlayProps) => (props.open ? 'auto' : 'none')};
+  pointer-events: ${(props: SubscribeOverlayProps) =>
+    props.open ? 'auto' : 'none'};
   backdrop-filter: blur(3px);
 
   form {
@@ -150,49 +151,51 @@ interface SubscribeState {
 }
 
 class SubscribeModal extends React.Component<any, SubscribeState> {
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.state = { isOpen: false };
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount() {
     this.unsubscribeEsc();
   }
 
-  escFunction = (event: KeyboardEvent) => {
+  public escFunction = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       this.close();
     }
   };
 
-  subscribeEsc() {
+  public subscribeEsc() {
     document.addEventListener('keydown', this.escFunction, false);
   }
 
-  unsubscribeEsc() {
+  public unsubscribeEsc() {
     document.removeEventListener('keydown', this.escFunction, false);
   }
 
-  open = () => {
+  public open = () => {
     this.setState({ isOpen: true });
     this.subscribeEsc();
   };
 
-  close = () => {
+  public close = () => {
     this.setState({ isOpen: false });
     this.unsubscribeEsc();
   };
 
-  render() {
+  public render() {
     return (
       <SubscribeOverlay open={this.state.isOpen}>
         <SubscribeOverlayClose onClick={this.close} />
         <SubscribeOverlayContent>
           <SubscribeLogo />
-          <SubscribeOverlayTitle>Subscribe to {config.title}</SubscribeOverlayTitle>
+          <SubscribeOverlayTitle>
+            Subscribe to {config.title}
+          </SubscribeOverlayTitle>
           <SubscribeOverlayDescription>
-            Stay up to date! Get all the latest &amp; greatest posts delivered straight to your
-            inbox
+            Stay up to date! Get all the latest &amp; greatest posts delivered
+            straight to your inbox
           </SubscribeOverlayDescription>
           <SubscribeForm />
         </SubscribeOverlayContent>

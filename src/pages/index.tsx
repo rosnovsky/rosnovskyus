@@ -77,16 +77,20 @@ export interface IndexProps {
       };
     };
     allMarkdownRemark: {
-      edges: Array<{
+      edges: {
         node: PageContext;
-      }>;
+      }[];
     };
   };
 }
 
 const IndexPage: React.FC<IndexProps> = props => {
-  const width = props.data.header.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
-  const height = String(Number(width) / props.data.header.childImageSharp.fluid.aspectRatio);
+  const width = props.data.header.childImageSharp.fluid.sizes
+    .split(', ')[1]
+    .split('px')[0];
+  const height = String(
+    Number(width) / props.data.header.childImageSharp.fluid.aspectRatio
+  );
   return (
     <IndexLayout css={HomePosts}>
       <Helmet>
@@ -102,8 +106,15 @@ const IndexPage: React.FC<IndexProps> = props => {
           property="og:image"
           content={`${config.siteUrl}${props.data.header.childImageSharp.fluid.src}`}
         />
-        {config.facebook && <meta property="article:publisher" content={config.facebook} />}
-        {config.googleSiteVerification && <meta name="google-site-verification" content={config.googleSiteVerification} />}
+        {config.facebook && (
+          <meta property="article:publisher" content={config.facebook} />
+        )}
+        {config.googleSiteVerification && (
+          <meta
+            name="google-site-verification"
+            content={config.googleSiteVerification}
+          />
+        )}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={config.title} />
         <meta name="twitter:description" content={config.description} />
@@ -126,7 +137,7 @@ const IndexPage: React.FC<IndexProps> = props => {
           css={[outer, SiteHeader]}
           style={{
             background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${props.data.header.childImageSharp.fluid.src})`,
-            backgroundSize: `cover`
+            backgroundSize: `cover`,
           }}
         >
           <div css={inner}>
@@ -174,21 +185,20 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    
     header: file(relativePath: { eq: "img/blog-cover.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        
+
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: { frontmatter: { draft: { ne: true } } },
-      limit: 1000,
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { draft: { ne: true } } }
+      limit: 1000
     ) {
       edges {
         node {
