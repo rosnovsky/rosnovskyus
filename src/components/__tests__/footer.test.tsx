@@ -5,7 +5,6 @@ import { render } from '@testing-library/react';
 import Footer from '../Footer';
 import { useStaticQuery } from 'gatsby';
 
-
 describe('SiteNav Component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
