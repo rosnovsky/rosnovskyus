@@ -1,9 +1,9 @@
-import IndexLayout from '../layouts'
-import Wrapper from '../components/Wrapper'
-import SiteNav from '../components/header/SiteNav'
-import { SiteHeader, outer, inner, SiteMain } from '../styles/shared'
-import * as React from 'react'
-import { css } from '@emotion/core'
+import IndexLayout from '../layouts';
+import Wrapper from '../components/Wrapper';
+import SiteNav from '../components/header/SiteNav';
+import { SiteHeader, outer, inner, SiteMain } from '../styles/shared';
+import * as React from 'react';
+import { css } from '@emotion/core';
 
 import {
   PostFullHeader,
@@ -180,4 +180,4 @@ const Resume: React.FC = () => (
   </IndexLayout>
 );
 
-export default Resume
+export default Resume;

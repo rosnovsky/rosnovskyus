@@ -1,14 +1,14 @@
-import { graphql } from 'gatsby'
-import * as React from 'react'
-import { css } from '@emotion/core'
-import Helmet from 'react-helmet'
+import { graphql } from 'gatsby';
+import * as React from 'react';
+import { css } from '@emotion/core';
+import Helmet from 'react-helmet';
 
-import Footer from '../components/Footer'
-import SiteNav from '../components/header/SiteNav'
-import PostCard from '../components/PostCard'
-import Wrapper from '../components/Wrapper'
-import IndexLayout from '../layouts'
-import config from '../website-config'
+import Footer from '../components/Footer';
+import SiteNav from '../components/header/SiteNav';
+import PostCard from '../components/PostCard';
+import Wrapper from '../components/Wrapper';
+import IndexLayout from '../layouts';
+import config from '../website-config';
 import {
   inner,
   outer,
@@ -19,8 +19,8 @@ import {
   SiteHeaderContent,
   SiteMain,
   SiteTitle,
-} from '../styles/shared'
-import { PageContext } from '../templates/post'
+} from '../styles/shared';
+import { PageContext } from '../templates/post';
 
 const HomePosts = css`
   @media (min-width: 795px) {
@@ -62,20 +62,20 @@ const HomePosts = css`
       padding: 0 40px 30px;
     }
   }
-`
+`;
 
 export interface IndexProps {
   data: {
     logo: {
       childImageSharp: {
-        fixed: any
-      }
-    }
+        fixed: any;
+      };
+    };
     header: {
       childImageSharp: {
-        fluid: any
-      }
-    }
+        fluid: any;
+      };
+    };
     allMarkdownRemark: {
       edges: {
         node: PageContext;
@@ -168,7 +168,7 @@ const IndexPage: React.FC<IndexProps> = props => {
                     process.env.NODE_ENV !== 'production') && (
                     <PostCard key={post.node.fields.slug} post={post.node} />
                   )
-                )
+                );
               })}
             </div>
           </div>
@@ -178,10 +178,10 @@ const IndexPage: React.FC<IndexProps> = props => {
         <Footer />
       </Wrapper>
     </IndexLayout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -238,4 +238,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
