@@ -1,8 +1,8 @@
-import { graphql, Link, StaticQuery } from 'gatsby'
-import * as React from 'react'
-import { css } from '@emotion/core'
+import { graphql, Link, StaticQuery } from 'gatsby';
+import * as React from 'react';
+import { css } from '@emotion/core';
 
-import config from '../../website-config'
+import config from '../../website-config';
 
 const SiteNavLogoStyles = css`
   flex-shrink: 0;
@@ -24,14 +24,14 @@ const SiteNavLogoStyles = css`
     width: auto;
     height: 21px;
   }
-`
+`;
 
 interface SiteNavLogoProps {
   logo?: {
     childImageSharp: {
-      fixed: any
-    }
-  }
+      fixed: any;
+    };
+  };
 }
 
 const SiteNavLogo = () => (
@@ -58,6 +58,6 @@ const SiteNavLogo = () => (
       </Link>
     )}
   />
-)
+);
 
-export default SiteNavLogo
+export default SiteNavLogo;

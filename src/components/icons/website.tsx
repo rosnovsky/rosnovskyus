@@ -1,5 +1,5 @@
 // tslint:disable:no-http-string
-import * as React from 'react'
+import * as React from 'react';
 
 const Website: React.FC = () => (
   <svg
@@ -15,5 +15,5 @@ const Website: React.FC = () => (
       fill="none"
     />
   </svg>
-)
-export default Website
+);
+export default Website;

@@ -5,8 +5,8 @@ module.exports = {
     title: 'Rosnovsky Park™',
     description: 'Blog of Artem Rosnovsky, software engineer from Seattle, WA',
     siteUrl: 'https://rosnovsky.us',
-    titleTemplate: "%s · Rosnovsky Park™",
-    image: "/image.jpg",
+    titleTemplate: '%s · Rosnovsky Park™',
+    image: '/image.jpg',
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -65,18 +65,18 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                const siteUrl = site.siteMetadata.siteUrl
+                const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is a blog post I've posted at rosnovsky.us. You can read it <a href="${siteUrl +
                   edge.node.fields.slug}">here</a>.)</div>
-              `
+              `;
 
-                let html = edge.node.html
+                let html = edge.node.html;
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
                   .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.excerpt,
@@ -84,8 +84,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': html + postText }],
-                })
-              })
+                });
+              });
             },
 
             query: `
