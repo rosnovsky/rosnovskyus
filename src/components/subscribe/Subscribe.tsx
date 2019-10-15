@@ -3,9 +3,6 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { colors } from '../../styles/colors';
-import SubscribeForm from './SubscribeForm';
-
 const SubscribeFormSection = styled.section`
   margin: 1.5em 0;
   padding: 6.5vw 7vw 7vw;

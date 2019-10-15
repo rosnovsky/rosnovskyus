@@ -11,7 +11,7 @@
     "lint": "eslint src/**/*.tsx src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.tsx src/**/*.ts",
     "start": "npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest && codecov"
   },
   "dependencies": {
     "@emotion/core": "10.0.10",
@@ -24,7 +24,7 @@
     "emotion-server": "10.0.9",
     "eslint-plugin-prettier": "^3.1.1",
     "gatsby": "^2.15.9",
-    "gatsby-cli": "^2.7.44",
+    "gatsby-cli": "^2.8.1",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-canonical-urls": "2.0.13",
     "gatsby-plugin-emotion": "4.0.7",
@@ -84,6 +84,7 @@
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-react": "7.13.0",
     "eslint-plugin-react-hooks": "1.6.0",
+    "prettier": "^1.18.2",
     "rimraf": "2.6.3",
     "typescript": "3.5.2"
   },

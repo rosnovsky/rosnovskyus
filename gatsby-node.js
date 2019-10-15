@@ -143,8 +143,8 @@ exports.createPages = async ({ graphql, actions }) => {
     _.flatten(
       result.data.allMarkdownRemark.edges.map(edge => {
         return _.castArray(_.get(edge, 'node.frontmatter.tags', []));
-      }),
-    ),
+      })
+    )
   );
   tags.forEach(tag => {
     createPage({
