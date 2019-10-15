@@ -16,8 +16,7 @@ jobs:
             - ./node_modules
       - run:
           name: Prettier
-          command: ./node_modules/.bin/prettier --print-width=100 --trailing-comma=es5 --single-quote --list-different './src/**/*.{js,jsx,ts,tsx}'
-      - run: yarn lint
+          command: ./node_modules/.bin/prettier --semi=true --single-quote=true --trailing-comma=es5 --check './src/**/*.{js,jsx,ts,tsx}'
 
 workflows:
   version: 2
