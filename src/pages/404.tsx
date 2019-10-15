@@ -1,15 +1,15 @@
-import { graphql, Link } from 'gatsby';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { graphql, Link } from 'gatsby'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
-import SiteNavLogo from '../components/header/SiteNavLogo';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
-import IndexLayout from '../layouts';
-import { colors } from '../styles/colors';
-import { inner, outer, PostFeed, SiteHeader } from '../styles/shared';
-import { PageContext } from '../templates/post';
+import SiteNavLogo from '../components/header/SiteNavLogo'
+import PostCard from '../components/PostCard'
+import Wrapper from '../components/Wrapper'
+import IndexLayout from '../layouts'
+import { colors } from '../styles/colors'
+import { inner, outer, PostFeed, SiteHeader } from '../styles/shared'
+import { PageContext } from '../templates/post'
 
 const SiteNavCenter = styled.nav`
   display: flex;
@@ -20,11 +20,11 @@ const SiteNavCenter = styled.nav`
   .site-nav-logo {
     margin-right: 0;
   }
-`;
+`
 
 const ErrorTemplate = css`
   padding: 7vw 4vw;
-`;
+`
 
 const ErrorCode = styled.h1`
   margin: 0;
@@ -32,7 +32,7 @@ const ErrorCode = styled.h1`
   line-height: 1em;
   letter-spacing: -5px;
   opacity: 0.3;
-`;
+`
 
 const ErrorDescription = styled.p`
   margin: 0;
@@ -40,12 +40,12 @@ const ErrorDescription = styled.p`
   font-size: 3rem;
   line-height: 1.3em;
   font-weight: 400;
-`;
+`
 
 const ErrorLink = css`
   display: inline-block;
   margin-top: 5px;
-`;
+`
 
 interface NotFoundTemplateProps {
   data: {
@@ -59,7 +59,7 @@ interface NotFoundTemplateProps {
 }
 
 const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
-  const { edges } = props.data.allMarkdownRemark;
+  const { edges } = props.data.allMarkdownRemark
 
   return (
     <IndexLayout>
@@ -93,10 +93,10 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
         </aside>
       </Wrapper>
     </IndexLayout>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage
 
 export const pageQuery = graphql`
   query {

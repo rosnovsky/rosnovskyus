@@ -1,9 +1,9 @@
-import IndexLayout from '../layouts';
-import Wrapper from '../components/Wrapper';
-import SiteNav from '../components/header/SiteNav';
-import { SiteHeader, outer, inner, SiteMain } from '../styles/shared';
-import * as React from 'react';
-import { css } from '@emotion/core';
+import IndexLayout from '../layouts'
+import Wrapper from '../components/Wrapper'
+import SiteNav from '../components/header/SiteNav'
+import { SiteHeader, outer, inner, SiteMain } from '../styles/shared'
+import * as React from 'react'
+import { css } from '@emotion/core'
 
 import {
   PostFullHeader,
@@ -20,7 +20,7 @@ const PageTemplate = css`
     background: #fff;
     padding-bottom: 4vw;
   }
-`;
+`
 
 const About: React.FC = () => (
   <IndexLayout>
@@ -73,6 +73,6 @@ const About: React.FC = () => (
       <Footer />
     </Wrapper>
   </IndexLayout>
-);
+)
 
-export default About;
+export default About

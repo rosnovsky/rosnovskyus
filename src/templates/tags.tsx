@@ -1,11 +1,11 @@
-import { graphql } from 'gatsby';
-import React from 'react';
+import { graphql } from 'gatsby'
+import React from 'react'
 
-import Footer from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
-import IndexLayout from '../layouts';
+import Footer from '../components/Footer'
+import SiteNav from '../components/header/SiteNav'
+import PostCard from '../components/PostCard'
+import Wrapper from '../components/Wrapper'
+import IndexLayout from '../layouts'
 import {
   inner,
   outer,
@@ -16,24 +16,24 @@ import {
   SiteHeaderContent,
   SiteMain,
   SiteTitle,
-} from '../styles/shared';
-import { PageContext } from './post';
-import Helmet from 'react-helmet';
-import config from '../website-config';
+} from '../styles/shared'
+import { PageContext } from './post'
+import Helmet from 'react-helmet'
+import config from '../website-config'
 
 interface TagTemplateProps {
   pathContext: {
-    slug: string;
-  };
+    slug: string
+  }
   pageContext: {
-    tag: string;
-  };
+    tag: string
+  }
   data: {
     allTagYaml: {
       edges: {
         node: {
-          id: string;
-          description: string;
+          id: string
+          description: string
           image?: {
             childImageSharp: {
               fluid: any;
@@ -134,10 +134,10 @@ const Tags: React.FC<TagTemplateProps> = props => {
         <Footer />
       </Wrapper>
     </IndexLayout>
-  );
-};
+  )
+}
 
-export default Tags;
+export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -199,4 +199,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -1,17 +1,17 @@
-import { darken, desaturate, lighten, mix } from 'polished';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { darken, desaturate, lighten, mix } from 'polished'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
-import { colors } from '../../styles/colors';
-import config from '../../website-config';
+import { colors } from '../../styles/colors'
+import config from '../../website-config'
 
 const SubscribeFormStyles = css`
   @media (max-width: 500px) {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-`;
+`
 
 const SubscribeEmail = styled.input`
   display: block;
@@ -33,7 +33,7 @@ const SubscribeEmail = styled.input`
     /* border-color: color(var(--lightgrey) l(-2%)); */
     border-color: ${darken('0.02', colors.lightgrey)};
   }
-`;
+`
 
 const SubscribeFormButton = styled.button`
   display: inline-block;
@@ -73,14 +73,14 @@ const SubscribeFormButton = styled.button`
     margin: 10px 0 0;
     width: 100%;
   }
-`;
+`
 
 const FormGroup = styled.div`
   flex-grow: 1;
   @media (max-width: 500px) {
     width: 100%;
   }
-`;
+`
 
 const SubscribeForm: React.FC = () => {
   return (
@@ -110,7 +110,7 @@ const SubscribeForm: React.FC = () => {
         <span>Subscribe</span>
       </SubscribeFormButton>
     </form>
-  );
-};
+  )
+}
 
-export default SubscribeForm;
+export default SubscribeForm

@@ -1,14 +1,14 @@
-import { Link, StaticQuery, graphql } from 'gatsby';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import * as _ from 'lodash';
+import { Link, StaticQuery, graphql } from 'gatsby'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import * as _ from 'lodash'
 
-import { colors } from '../styles/colors';
-import InfinityIcon from './icons/infinity';
-import config from '../website-config';
+import { colors } from '../styles/colors'
+import InfinityIcon from './icons/infinity'
+import config from '../website-config'
 
 export interface ReadNextCardStylesProps {
-  coverImage: string;
+  coverImage: string
 }
 
 const ReadNextCardStyles = styled.article<ReadNextCardStylesProps>`
@@ -43,21 +43,21 @@ const ReadNextCardStyles = styled.article<ReadNextCardStylesProps>`
     border-radius: 5px;
     backdrop-filter: blur(2px);
   }
-`;
+`
 
 const ReadNextCardHeader = styled.header`
   position: relative;
   z-index: 50;
   padding-top: 20px;
   text-align: center;
-`;
+`
 
 const ReadNextCardHeaderSitetitle = styled.small`
   display: block;
   font-size: 1.3rem;
   line-height: 1.3em;
   opacity: 0.8;
-`;
+`
 
 const ReadNextCardHeaderTitle = styled.h3`
   margin: 0;
@@ -76,7 +76,7 @@ const ReadNextCardHeaderTitle = styled.h3`
   a:hover {
     text-decoration: none;
   }
-`;
+`
 
 const ReadNextDivider = styled.div`
   position: relative;
@@ -92,7 +92,7 @@ const ReadNextDivider = styled.div`
     stroke-width: 0.5px;
     stroke-opacity: 0.65;
   }
-`;
+`
 
 const ReadNextCardContent = styled.div`
   position: relative;
@@ -136,7 +136,7 @@ const ReadNextCardContent = styled.div`
   li a:hover {
     opacity: 1;
   }
-`;
+`
 
 const ReadNextCardFooter = styled.footer`
   position: relative;
@@ -146,18 +146,18 @@ const ReadNextCardFooter = styled.footer`
   a {
     color: #fff;
   }
-`;
+`
 
 export interface ReadNextProps {
-  tags: string[];
+  tags: string[]
   relatedPosts: {
     totalCount: number;
     edges: {
       node: {
-        timeToRead: number;
+        timeToRead: number
         frontmatter: {
-          title: string;
-        };
+          title: string
+        }
         fields: {
           slug: string;
         };
@@ -169,9 +169,9 @@ export interface ReadNextProps {
 export interface ReadNextQuery {
   header: {
     childImageSharp: {
-      fluid: any;
-    };
-  };
+      fluid: any
+    }
+  }
 }
 
 const ReadNextCard: React.FC<ReadNextProps> = props => {
@@ -215,7 +215,7 @@ const ReadNextCard: React.FC<ReadNextProps> = props => {
                       {n.node.frontmatter.title}
                     </Link>
                   </li>
-                );
+                )
               })}
             </ul>
           </ReadNextCardContent>
@@ -230,7 +230,7 @@ const ReadNextCard: React.FC<ReadNextProps> = props => {
         </ReadNextCardStyles>
       )}
     />
-  );
-};
+  )
+}
 
-export default ReadNextCard;
+export default ReadNextCard

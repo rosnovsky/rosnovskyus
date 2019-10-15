@@ -1,12 +1,12 @@
-import { Link } from 'gatsby';
-import { setLightness } from 'polished';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { Link } from 'gatsby'
+import { setLightness } from 'polished'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
-import { colors } from '../styles/colors';
-import { outer, inner } from '../styles/shared';
-import config from '../website-config';
+import { colors } from '../styles/colors'
+import { outer, inner } from '../styles/shared'
+import config from '../website-config'
 
 const SiteFooter = css`
   position: relative;
@@ -14,7 +14,7 @@ const SiteFooter = css`
   padding-bottom: 60px;
   color: #fff;
   background: ${setLightness('0.0015', colors.darkgrey)};
-`;
+`
 
 const SiteFooterContent = css`
   display: flex;
@@ -33,7 +33,7 @@ const SiteFooterContent = css`
   @media (max-width: 650px) {
     flex-direction: column;
   }
-`;
+`
 
 const SiteFooterNav = styled.nav`
   display: flex;
@@ -63,7 +63,7 @@ const SiteFooterNav = styled.nav`
       margin-left: 0;
     }
   }
-`;
+`
 
 const Footer: React.FC = () => {
   return (
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
         </SiteFooterNav>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

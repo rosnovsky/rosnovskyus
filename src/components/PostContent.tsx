@@ -1,9 +1,9 @@
-import { lighten, setLightness, darken, setSaturation } from 'polished';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import RehypeReact from 'rehype-react';
+import { lighten, setLightness, darken, setSaturation } from 'polished'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import RehypeReact from 'rehype-react'
 
-import { colors } from '../styles/colors';
+import { colors } from '../styles/colors'
 
 export const PostFullContent = styled.section`
   position: relative;
@@ -552,21 +552,21 @@ export const PostFullContent = styled.section`
     min-width: 100%;
   }
   /* End Syntax Highlighting */
-`;
+`
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   // components: { 'interactive-counter': Counter },
   components: {},
-}).Compiler;
+}).Compiler
 
 const Ast = ({ ast, ...props }: any) => {
-  ast.properties = props;
-  return renderAst(ast);
-};
+  ast.properties = props
+  return renderAst(ast)
+}
 
 export interface PostContentProps {
-  htmlAst: any;
+  htmlAst: any
 }
 
 const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
@@ -575,7 +575,7 @@ const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
       {/* TODO: this will apply the class when rehype-react is published https://github.com/rhysd/rehype-react/pull/11 */}
       <Ast className="post-content" ast={htmlAst} />
     </PostFullContent>
-  );
-};
+  )
+}
 
-export default PostContent;
+export default PostContent

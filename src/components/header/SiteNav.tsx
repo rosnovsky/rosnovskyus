@@ -1,22 +1,22 @@
 // tslint:disable:no-http-string
-import { Link } from 'gatsby';
-import * as React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { Link } from 'gatsby'
+import * as React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
-import { SocialLink } from '../../styles/shared';
-import config from '../../website-config';
-import Facebook from '../icons/facebook';
-import Twitter from '../icons/twitter';
-import SubscribeModal from '../subscribe/SubscribeOverlay';
-import SiteNavLogo from './SiteNavLogo';
+import { SocialLink } from '../../styles/shared'
+import config from '../../website-config'
+import Facebook from '../icons/facebook'
+import Twitter from '../icons/twitter'
+import SubscribeModal from '../subscribe/SubscribeOverlay'
+import SiteNavLogo from './SiteNavLogo'
 
 const HomeNavRaise = css`
   @media (min-width: 900px) {
     position: relative;
     top: -70px;
   }
-`;
+`
 
 const SiteNavStyles = css`
   position: relative;
@@ -27,7 +27,7 @@ const SiteNavStyles = css`
   overflow-y: hidden;
   height: 40px;
   font-size: 1.2rem;
-`;
+`
 
 const SiteNavLeft = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const SiteNavLeft = styled.div`
     margin-right: 0;
     padding-left: 4vw;
   }
-`;
+`
 
 const NavStyles = css`
   display: flex;
@@ -73,7 +73,7 @@ const NavStyles = css`
     text-decoration: none;
     opacity: 1;
   }
-`;
+`
 
 const SiteNavRight = styled.div`
   flex-shrink: 0;
@@ -84,7 +84,7 @@ const SiteNavRight = styled.div`
   @media (max-width: 700px) {
     display: none;
   }
-`;
+`
 
 const SocialLinks = styled.div`
   flex-shrink: 0;
@@ -93,7 +93,7 @@ const SocialLinks = styled.div`
   a:last-of-type {
     padding-right: 20px;
   }
-`;
+`
 
 const SubscribeButton = styled.a`
   display: block;
@@ -110,14 +110,14 @@ const SubscribeButton = styled.a`
     opacity: 1;
     cursor: pointer;
   }
-`;
+`
 
 interface SiteNavProps {
-  isHome?: boolean;
+  isHome?: boolean
 }
 
 interface SiteNaveState {
-  isOpen: boolean;
+  isOpen: boolean
 }
 
 class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
@@ -129,9 +129,9 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
   }
   public openModal = () => {
     if (this.subscribe.current) {
-      this.subscribe.current.open();
+      this.subscribe.current.open()
     }
-  };
+  }
 
   public render() {
     const { isHome = false } = this.props;
@@ -190,8 +190,8 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         </SiteNavRight>
       </nav>
-    );
+    )
   }
 }
 
-export default SiteNav;
+export default SiteNav

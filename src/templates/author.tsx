@@ -1,13 +1,13 @@
-import { graphql } from 'gatsby';
-import React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { graphql } from 'gatsby'
+import React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
-import Footer from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
-import IndexLayout from '../layouts';
+import Footer from '../components/Footer'
+import SiteNav from '../components/header/SiteNav'
+import PostCard from '../components/PostCard'
+import Wrapper from '../components/Wrapper'
+import IndexLayout from '../layouts'
 import {
   AuthorProfileImage,
   inner,
@@ -19,19 +19,19 @@ import {
   SiteTitle,
   SiteMain,
   SocialLink,
-} from '../styles/shared';
-import { PageContext } from './post';
-import Facebook from '../components/icons/facebook';
-import Helmet from 'react-helmet';
-import config from '../website-config';
-import Website from '../components/icons/website';
-import Twitter from '../components/icons/twitter';
+} from '../styles/shared'
+import { PageContext } from './post'
+import Facebook from '../components/icons/facebook'
+import Helmet from 'react-helmet'
+import config from '../website-config'
+import Website from '../components/icons/website'
+import Twitter from '../components/icons/twitter'
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
     display: none;
   }
-`;
+`
 
 const AuthorMeta = styled.div`
   z-index: 10;
@@ -42,7 +42,7 @@ const AuthorMeta = styled.div`
   margin: 0 0 10px 0;
   font-family: Georgia, serif;
   font-style: italic;
-`;
+`
 
 const AuthorBio = styled.h2`
   z-index: 10;
@@ -54,13 +54,13 @@ const AuthorBio = styled.h2`
   font-weight: 300;
   letter-spacing: 0.5px;
   opacity: 0.8;
-`;
+`
 
 const Bull = styled.span`
   display: inline-block;
   margin: 0 12px;
   opacity: 0.5;
-`;
+`
 
 const AuthorProfileBioImage = css`
   z-index: 10;
@@ -69,21 +69,21 @@ const AuthorProfileBioImage = css`
   width: 100px;
   height: 100px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
-`;
+`
 
 interface AuthorTemplateProps {
   pathContext: {
-    slug: string;
-  };
+    slug: string
+  }
   pageContext: {
-    author: string;
-  };
+    author: string
+  }
   data: {
     logo: {
       childImageSharp: {
-        fluid: any;
-      };
-    };
+        fluid: any
+      }
+    }
     allMarkdownRemark: {
       totalCount: number;
       edges: {
@@ -91,29 +91,29 @@ interface AuthorTemplateProps {
       }[];
     };
     authorYaml: {
-      id: string;
-      website?: string;
-      twitter?: string;
-      facebook?: string;
-      location?: string;
+      id: string
+      website?: string
+      twitter?: string
+      facebook?: string
+      location?: string
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
         childImageSharp: {
-          fluid: any;
-        };
-      };
-      bio?: string;
+          fluid: any
+        }
+      }
+      bio?: string
       avatar: {
         childImageSharp: {
-          fluid: any;
-        };
-      };
-    };
-  };
+          fluid: any
+        }
+      }
+    }
+  }
 }
 
 const Author: React.FC<AuthorTemplateProps> = props => {
-  const author = props.data.authorYaml;
+  const author = props.data.authorYaml
 
   const edges = props.data.allMarkdownRemark.edges.filter(edge => {
     const isDraft =
@@ -264,7 +264,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
           <div css={inner}>
             <div css={[PostFeed, PostFeedRaise]}>
               {edges.map(({ node }) => {
-                return <PostCard key={node.fields.slug} post={node} />;
+                return <PostCard key={node.fields.slug} post={node} />
               })}
             </div>
           </div>
@@ -272,10 +272,10 @@ const Author: React.FC<AuthorTemplateProps> = props => {
         <Footer />
       </Wrapper>
     </IndexLayout>
-  );
-};
+  )
+}
 
-export default Author;
+export default Author
 
 export const pageQuery = graphql`
   query($author: String) {
@@ -344,4 +344,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
