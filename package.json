@@ -70,7 +70,7 @@
     "react-helmet": "5.2.1",
     "react-test-renderer": "16.10.2",
     "rehype-react": "3.1.0",
-    "serve": "11.1.0",
+    "serve": "11.2.0",
     "ts-jest": "24.1.0",
     "typescript-eslint": "0.0.1-alpha.0"
   },
