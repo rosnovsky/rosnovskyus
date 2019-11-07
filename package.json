@@ -18,7 +18,7 @@
     "@emotion/core": "10.0.10",
     "@emotion/styled": "10.0.12",
     "@emotion/styled-base": "10.0.13",
-    "@testing-library/react": "9.3.0",
+    "@testing-library/react": "9.3.2",
     "@types/jest": "24.0.19",
     "@weknow/gatsby-remark-twitter": "0.2.1",
     "babel-jest": "24.9.0",
