@@ -68,7 +68,7 @@
     "react-dom": "latest",
     "react-emotion": "10.0.0",
     "react-helmet": "5.2.1",
-    "react-test-renderer": "16.10.2",
+    "react-test-renderer": "16.11.0",
     "rehype-react": "3.1.0",
     "serve": "11.1.0",
     "ts-jest": "24.1.0",
@@ -91,7 +91,7 @@
     "eslint-config-xo-typescript": "0.14.0",
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-react": "7.13.0",
-    "eslint-plugin-react-hooks": "1.6.0",
+    "eslint-plugin-react-hooks": "1.7.0",
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "typescript": "3.5.2"
