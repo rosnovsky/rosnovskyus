@@ -63,7 +63,7 @@
     "postcss-color-function": "4.1.0",
     "prettier": "1.18.2",
     "prism-themes": "1.1.0",
-    "prismjs": "1.16.0",
+    "prismjs": "1.17.1",
     "react": "latest",
     "react-dom": "latest",
     "react-emotion": "10.0.0",
