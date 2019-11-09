@@ -61,7 +61,7 @@
     "normalize.css": "8.0.1",
     "polished": "3.4.1",
     "postcss-color-function": "4.1.0",
-    "prettier": "1.19.0",
+    "prettier": "1.19.1",
     "prism-themes": "1.1.0",
     "prismjs": "1.16.0",
     "react": "latest",
@@ -92,7 +92,7 @@
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-react": "7.13.0",
     "eslint-plugin-react-hooks": "1.7.0",
-    "prettier": "1.19.0",
+    "prettier": "1.19.1",
     "rimraf": "2.6.3",
     "typescript": "3.5.2"
   },
