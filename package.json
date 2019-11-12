@@ -93,7 +93,7 @@
     "eslint-plugin-react": "7.13.0",
     "eslint-plugin-react-hooks": "1.7.0",
     "prettier": "1.19.1",
-    "rimraf": "2.6.3",
+    "rimraf": "3.0.0",
     "typescript": "3.5.2"
   },
   "engines": {
