@@ -16,7 +16,7 @@ You know what happens when you [promise publicly to post more often](/blog/2019/
 
 I'm still neck deep in my latest job hunt, although I'm quite sure it's very much a final stretch now. And boy is it different this time around! Not only did I change my whole strategy (I still maintain that it's numbers game), but I have quite a bit of experience now, and feeling so much more confident. I breeze through on-sites (I deliberately select companies who's hiring practices align with what I think they should be), I have a ton of fun white-boarding stuff I know and like to do, I enjoy getting off-topic to share my excitement about [nullish coalescing](https://github.com/tc39/proposal-nullish-coalescing) coming soon to JavaScript, or discuss pros and cons of [Svelte](https://svelte.dev)'s approach to compiling JS code. Out of three recent on-site interviews, I'm really expecting at least one, but likely two job offers. One more interview is coming up later today, and I'm really excited about it!
 
-Oh, if I do get an offer from this one companies I've interviewed with, I'd have an awesome HR story for you. Fingers crossed!
+Oh, if I do get an offer from this one companies I've interviewed with earlier this week, I'd have an awesome HR story for you. Fingers crossed! **UPDATE**: Just received a very helpful and actionable rejection from them. I'd probably still write this story down, just because it's too good to bury.
 
 ## Travel
 
