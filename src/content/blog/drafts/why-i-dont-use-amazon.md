@@ -6,6 +6,6 @@ lang: English
 type: "text"
 excerpt: ""
 author: Artem Rosnovsky
-draft: truegit 
+draft: true
 image: 
 ---
