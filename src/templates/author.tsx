@@ -21,11 +21,11 @@ import {
   SocialLink,
 } from '../styles/shared';
 import { PageContext } from './post';
-import Facebook from '../components/icons/facebook';
+import Mastodon from '../components/icons/mastodon';
 import Helmet from 'react-helmet';
 import config from '../website-config';
 import Website from '../components/icons/website';
-import Twitter from '../components/icons/twitter';
+import Pixelfed from '../components/icons/pixelfed';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -93,8 +93,8 @@ interface AuthorTemplateProps {
     authorYaml: {
       id: string;
       website?: string;
-      twitter?: string;
-      facebook?: string;
+      pixelfed?: string;
+      mastodon?: string;
       location?: string;
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
@@ -144,29 +144,12 @@ const Author: React.FC<AuthorTemplateProps> = props => {
         />
         <meta
           property="article:publisher"
-          content="https://www.facebook.com/rosnovsky"
+          content="https://social.rosnovsky.us/rosnovsky"
         />
         <meta
           property="article:author"
-          content="https://www.facebook.com/rosnovsky"
+          content="https://social.rosnovsky.us/rosnovsky"
         />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
-        <meta
-          name="twitter:url"
-          content={config.siteUrl + props.pathContext.slug}
-        />
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
-        {config.twitter && (
-          <meta
-            name="twitter:creator"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
         )}
       </Helmet>
       <Wrapper>
@@ -216,28 +199,28 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                     </a>
                   </div>
                 )}
-                {author.twitter && (
+                {author.pixelfed && (
                   <a
                     className="social-link-tw"
                     css={SocialLink}
-                    href={`https://twitter.com/${author.twitter}`}
-                    title="Twitter"
+                    href={`https://pixelfed.social/${author.pixelfed}`}
+                    title="Pixelfed"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Twitter />
+                    <Pixelfed />
                   </a>
                 )}
-                {author.facebook && (
+                {author.mastodon && (
                   <a
                     className="social-link-fb"
                     css={SocialLink}
-                    href={`https://www.facebook.com/${author.facebook}`}
-                    title="Facebook"
+                    href={`https://social.rosnovsky.us/${author.mastodon}`}
+                    title="Mastodon"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Facebook />
+                    <Mastodon />
                   </a>
                 )}
                 {/* TODO: RSS for author */}
@@ -282,9 +265,9 @@ export const pageQuery = graphql`
     authorYaml(id: { eq: $author }) {
       id
       website
-      twitter
+      pixelfed
       bio
-      facebook
+      mastodon
       location
       profile_image {
         childImageSharp {

@@ -6,8 +6,8 @@ import { css } from '@emotion/core';
 
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
-import Facebook from '../icons/facebook';
-import Twitter from '../icons/twitter';
+import Mastodon from '../icons/mastodon';
+import Pixelfed from '../icons/pixelfed';
 import SubscribeModal from '../subscribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
 
@@ -152,33 +152,33 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             </li>
             <li role="menuitem">
               <strong>
-                <Link to="/feed">RSS Feed</Link>
+                <a href="/feed/"><i class="fas fa-rss"></i> RSS Feed</a>
               </strong>
             </li>
           </ul>
         </SiteNavLeft>
         <SiteNavRight>
           <SocialLinks>
-            {config.facebook && (
+            {config.mastodon && (
               <a
                 css={SocialLink}
-                href={config.facebook}
+                href={config.mastodon}
                 target="_blank"
-                title="Facebook"
+                title="Mastodon"
                 rel="noopener noreferrer"
               >
-                <Facebook />
+                <Mastodon />
               </a>
             )}
-            {config.twitter && (
+            {config.pixelfed && (
               <a
                 css={SocialLink}
-                href={config.twitter}
-                title="Twitter"
+                href={config.pixelfed}
+                title="Pixelfed"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter />
+                <Pixelfed />
               </a>
             )}
           </SocialLinks>
