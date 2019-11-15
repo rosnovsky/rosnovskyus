@@ -152,7 +152,9 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             </li>
             <li role="menuitem">
               <strong>
-                <a href="/feed/"><i class="fas fa-rss"></i> RSS Feed</a>
+                <a href="/feed/">
+                  <i class="fas fa-rss"></i> RSS Feed
+                </a>
               </strong>
             </li>
           </ul>

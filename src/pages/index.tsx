@@ -118,7 +118,10 @@ const IndexPage: React.FC<IndexProps> = props => {
         )}
         <meta property="og:image:width" content={width} />
         <meta property="og:image:height" content={height} />
-        <script src="https://kit.fontawesome.com/724f1d4ac5.js" crossorigin="anonymous"></script>
+        <script
+          src="https://kit.fontawesome.com/724f1d4ac5.js"
+          crossorigin="anonymous"
+        ></script>
       </Helmet>
       <Wrapper>
         <header

@@ -224,7 +224,6 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
       <Helmet>
         <html lang={config.lang} />
         <title>{post.frontmatter.title}</title>
-
         <meta name="description" content={post.excerpt} />
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="article" />
@@ -249,7 +248,6 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
         {post.frontmatter.tags && (
           <meta property="article:tag" content={post.frontmatter.tags[0]} />
         )}
-
         {config.mastodon && (
           <meta property="article:publisher" content={config.mastodon} />
         )}
