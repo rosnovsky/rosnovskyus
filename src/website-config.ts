@@ -55,7 +55,7 @@ const config: WebsiteConfig = {
   logo: '',
   lang: 'en',
   siteUrl: 'https://rosnovsky.us',
-  mastodon: 'https://social.rosnovsky.us/rosnovsky',
+  mastodon: 'https://social.rosnovsky.us/@rosnovsky',
   pixelfed: 'https://pixelfed.social/rosnovsky',
   showSubscribe: true,
   mailchimpAction:

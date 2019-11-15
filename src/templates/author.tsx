@@ -144,11 +144,11 @@ const Author: React.FC<AuthorTemplateProps> = props => {
         />
         <meta
           property="article:publisher"
-          content="https://social.rosnovsky.us/rosnovsky"
+          content="https://social.rosnovsky.us/@rosnovsky"
         />
         <meta
           property="article:author"
-          content="https://social.rosnovsky.us/rosnovsky"
+          content="https://social.rosnovsky.us/@rosnovsky"
         />
         )}
       </Helmet>
@@ -215,7 +215,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                   <a
                     className="social-link-fb"
                     css={SocialLink}
-                    href={`https://social.rosnovsky.us/${author.mastodon}`}
+                    href={`https://social.rosnovsky.us/@${author.mastodon}`}
                     title="Mastodon"
                     target="_blank"
                     rel="noopener noreferrer"
