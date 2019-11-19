@@ -28,7 +28,7 @@
     "emotion": "10.0.23",
     "emotion-server": "10.0.17",
     "eslint-plugin-prettier": "3.1.1",
-    "gatsby": "2.17.17",
+    "gatsby": "2.18.0",
     "gatsby-cli": "2.8.12",
     "gatsby-image": "2.2.33",
     "gatsby-plugin-canonical-urls": "2.1.15",
