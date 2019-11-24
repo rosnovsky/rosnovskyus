@@ -15,11 +15,11 @@ export interface WebsiteConfig {
   /**
    * full url, no username
    */
-  facebook?: string;
+  mastodon?: string;
   /**
    * full url, no username
    */
-  twitter?: string;
+  pixelfed?: string;
   /**
    * hide or show all email subscribe boxes
    */
@@ -55,10 +55,11 @@ const config: WebsiteConfig = {
   logo: '',
   lang: 'en',
   siteUrl: 'https://rosnovsky.us',
-  facebook: 'https://www.facebook.com/rosnovsky',
-  twitter: 'https://twitter.com/rosnovsky',
+  mastodon: 'https://social.rosnovsky.us/@rosnovsky',
+  pixelfed: 'https://pixelfed.social/rosnovsky',
   showSubscribe: true,
-  mailchimpAction: 'https://rosnovsky.us11.list-manage.com/subscribe/post?u=e4fad23c5627b8f9070cdce9e&amp;id=874dfc643c',
+  mailchimpAction:
+    'https://rosnovsky.us11.list-manage.com/subscribe/post?u=e4fad23c5627b8f9070cdce9e&amp;id=874dfc643c',
   mailchimpName: 'b_e4fad23c5627b8f9070cdce9e_874dfc643c',
   mailchimpEmailFieldName: 'MERGE0',
 };

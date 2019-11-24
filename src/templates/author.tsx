@@ -21,11 +21,11 @@ import {
   SocialLink,
 } from '../styles/shared';
 import { PageContext } from './post';
-import Facebook from '../components/icons/facebook';
+import Mastodon from '../components/icons/mastodon';
 import Helmet from 'react-helmet';
 import config from '../website-config';
 import Website from '../components/icons/website';
-import Twitter from '../components/icons/twitter';
+import Pixelfed from '../components/icons/pixelfed';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -86,15 +86,15 @@ interface AuthorTemplateProps {
     };
     allMarkdownRemark: {
       totalCount: number;
-      edges: Array<{
+      edges: {
         node: PageContext;
-      }>;
+      }[];
     };
     authorYaml: {
       id: string;
       website?: string;
-      twitter?: string;
-      facebook?: string;
+      pixelfed?: string;
+      mastodon?: string;
       location?: string;
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
@@ -115,13 +115,16 @@ interface AuthorTemplateProps {
 const Author: React.FC<AuthorTemplateProps> = props => {
   const author = props.data.authorYaml;
 
-  const edges = props.data.allMarkdownRemark.edges.filter(
-    edge => {
-      const isDraft = (edge.node.frontmatter.draft !== true ||
-        process.env.NODE_ENV === 'development');
-      return isDraft && edge.node.frontmatter.author && edge.node.frontmatter.author.id === author.id;
-    }
-  );
+  const edges = props.data.allMarkdownRemark.edges.filter(edge => {
+    const isDraft =
+      edge.node.frontmatter.draft !== true ||
+      process.env.NODE_ENV === 'development';
+    return (
+      isDraft &&
+      edge.node.frontmatter.author &&
+      edge.node.frontmatter.author.id === author.id
+    );
+  });
   const totalCount = edges.length;
 
   return (
@@ -135,23 +138,18 @@ const Author: React.FC<AuthorTemplateProps> = props => {
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content={`${author.id} - ${config.title}`} />
-        <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        <meta property="article:publisher" content="https://www.facebook.com/rosnovsky" />
-        <meta property="article:author" content="https://www.facebook.com/rosnovsky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
-        <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
-        {config.twitter && (
-          <meta
-            name="twitter:creator"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
+        <meta
+          property="og:url"
+          content={config.siteUrl + props.pathContext.slug}
+        />
+        <meta
+          property="article:publisher"
+          content="https://social.rosnovsky.us/@rosnovsky"
+        />
+        <meta
+          property="article:author"
+          content="https://social.rosnovsky.us/@rosnovsky"
+        />
         )}
       </Helmet>
       <Wrapper>
@@ -160,11 +158,10 @@ const Author: React.FC<AuthorTemplateProps> = props => {
           css={[outer, SiteHeader]}
           style={{
             // eslint-disable-next-line @typescript-eslint/camelcase
-            background:
-            author.profile_image ?
-              `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${author.profile_image.childImageSharp.fluid.src})` :
-                '',
-              backgroundSize: `cover`
+            background: author.profile_image
+              ? `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${author.profile_image.childImageSharp.fluid.src})`
+              : '',
+            backgroundSize: `cover`,
           }}
         >
           <div css={inner}>
@@ -202,28 +199,28 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                     </a>
                   </div>
                 )}
-                {author.twitter && (
+                {author.pixelfed && (
                   <a
                     className="social-link-tw"
                     css={SocialLink}
-                    href={`https://twitter.com/${author.twitter}`}
-                    title="Twitter"
+                    href={`https://pixelfed.social/${author.pixelfed}`}
+                    title="Pixelfed"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Twitter />
+                    <Pixelfed />
                   </a>
                 )}
-                {author.facebook && (
+                {author.mastodon && (
                   <a
                     className="social-link-fb"
                     css={SocialLink}
-                    href={`https://www.facebook.com/${author.facebook}`}
-                    title="Facebook"
+                    href={`https://social.rosnovsky.us/@${author.mastodon}`}
+                    title="Mastodon"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Facebook />
+                    <Mastodon />
                   </a>
                 )}
                 {/* TODO: RSS for author */}
@@ -268,9 +265,9 @@ export const pageQuery = graphql`
     authorYaml(id: { eq: $author }) {
       id
       website
-      twitter
+      pixelfed
       bio
-      facebook
+      mastodon
       location
       profile_image {
         childImageSharp {
@@ -288,9 +285,9 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { draft: { ne: true } } },
-      sort: { fields: [frontmatter___date], order: DESC },
-      limit: 2000,
+      filter: { frontmatter: { draft: { ne: true } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 2000
     ) {
       edges {
         node {
@@ -304,7 +301,7 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 840) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

@@ -51,9 +51,9 @@ interface NotFoundTemplateProps {
   data: {
     allMarkdownRemark: {
       totalCount: number;
-      edges: Array<{
+      edges: {
         node: PageContext;
-      }>;
+      }[];
     };
   };
 }
@@ -100,46 +100,46 @@ export default NotFoundPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark( 
-      filter: { frontmatter: { draft: { ne: true } } }, 
-      limit: 3, 
-      sort: { fields: [frontmatter___date],  
-        order: DESC }) {
-          edges {
-            node {
-              timeToRead
-              frontmatter {
-                title
-                date
-                tags
-                image {
-                  childImageSharp {
-                    fluid(maxWidth: 840) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                author {
-                  id
-                  bio
-                  avatar {
-                    children {
-                      ... on ImageSharp {
-                        fixed(quality: 100) {
-                          src
-                        }
-                      }
-                    }
-                  }
+    allMarkdownRemark(
+      filter: { frontmatter: { draft: { ne: true } } }
+      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          timeToRead
+          frontmatter {
+            title
+            date
+            tags
+            image {
+              childImageSharp {
+                fluid(maxWidth: 840) {
+                  ...GatsbyImageSharpFluid
                 }
               }
-              excerpt
-              fields {
-                layout
-                slug
+            }
+            author {
+              id
+              bio
+              avatar {
+                children {
+                  ... on ImageSharp {
+                    fixed(quality: 100) {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
+          excerpt
+          fields {
+            layout
+            slug
+          }
         }
       }
-    `;
+    }
+  }
+`;

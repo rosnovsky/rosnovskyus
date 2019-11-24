@@ -1,6 +1,8 @@
-# Rosnovsky Park™
+# [Rosnovsky Park](https://rosnovsky.us)™
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/43748f50-6cc7-4e65-9356-048408536938/deploy-status)](https://app.netlify.com/sites/rosnovsky/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/43748f50-6cc7-4e65-9356-048408536938/deploy-status)](https://app.netlify.com/sites/rosnovsky/deploys) [![codecov](https://codecov.io/gh/rosnovsky/rosnovskyus/branch/master/graph/badge.svg)](https://codecov.io/gh/rosnovsky/rosnovskyus) [![CircleCI](https://circleci.com/gh/rosnovsky/rosnovskyus.svg?style=svg)](https://circleci.com/gh/rosnovsky/rosnovskyus) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rosnovsky_rosnovskyus&metric=alert_status)](https://sonarcloud.io/dashboard?id=rosnovsky_rosnovskyus)
+
+
 
 This is simple, really. Find a bug, fork, do your thing, make pull-request.
 

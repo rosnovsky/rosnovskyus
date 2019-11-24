@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const _ = require('lodash');
 
@@ -8,37 +9,35 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // interpreter if not a single content uses it. Therefore, we're putting them
   // through `createNodeField` so that the fields still exist and GraphQL won't
   // trip up. An empty string is still required in replacement to `null`.
-  switch (node.internal.type) {
-    case 'MarkdownRemark': {
-      const { permalink, layout, primaryTag } = node.frontmatter;
-      const { relativePath } = getNode(node.parent);
+  if (node.internal.type === 'MarkdownRemark') {
+    const { permalink, layout, primaryTag } = node.frontmatter;
+    const { relativePath } = getNode(node.parent);
 
-      let slug = permalink;
+    let slug = permalink;
 
-      if (!slug) {
-        slug = `/${relativePath.replace('.md', '')}/`;
-      }
-
-      // Used to generate URL to view this content.
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug || '',
-      });
-
-      // Used to determine a page layout.
-      createNodeField({
-        node,
-        name: 'layout',
-        value: layout || '',
-      });
-
-      createNodeField({
-        node,
-        name: 'primaryTag',
-        value: primaryTag || '',
-      });
+    if (!slug) {
+      slug = `/${relativePath.replace('.md', '')}/`;
     }
+
+    // Used to generate URL to view this content.
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug || '',
+    });
+
+    // Used to determine a page layout.
+    createNodeField({
+      node,
+      name: 'layout',
+      value: layout || '',
+    });
+
+    createNodeField({
+      node,
+      name: 'primaryTag',
+      value: primaryTag || '',
+    });
   }
 };
 
@@ -143,8 +142,8 @@ exports.createPages = async ({ graphql, actions }) => {
     _.flatten(
       result.data.allMarkdownRemark.edges.map(edge => {
         return _.castArray(_.get(edge, 'node.frontmatter.tags', []));
-      }),
-    ),
+      })
+    )
   );
   tags.forEach(tag => {
     createPage({

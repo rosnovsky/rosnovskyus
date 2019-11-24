@@ -7,6 +7,7 @@ type: "text"
 excerpt: ""
 author: Artem Rosnovsky
 draft: true
+image: 
 ---
 
 - few words about Fediverse, link to the digital hygiene post

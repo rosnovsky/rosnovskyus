@@ -30,7 +30,7 @@ interface TagTemplateProps {
   };
   data: {
     allTagYaml: {
-      edges: Array<{
+      edges: {
         node: {
           id: string;
           description: string;
@@ -40,22 +40,22 @@ interface TagTemplateProps {
             };
           };
         };
-      }>;
+      }[];
     };
     allMarkdownRemark: {
       totalCount: number;
-      edges: Array<{
+      edges: {
         node: PageContext;
-      }>;
+      }[];
     };
   };
 }
 
 const Tags: React.FC<TagTemplateProps> = props => {
-  const tag = (props.pageContext.tag) ? props.pageContext.tag : '';
+  const tag = props.pageContext.tag ? props.pageContext.tag : '';
   const { edges, totalCount } = props.data.allMarkdownRemark;
   const tagData = props.data.allTagYaml.edges.find(
-    n => n.node.id.toLowerCase() === tag.toLowerCase(),
+    n => n.node.id.toLowerCase() === tag.toLowerCase()
   );
 
   return (
@@ -72,16 +72,13 @@ const Tags: React.FC<TagTemplateProps> = props => {
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${tag} - ${config.title}`} />
-        <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        {config.facebook && <meta property="article:publisher" content={config.facebook} />}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${tag} - ${config.title}`} />
-        <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
+        <meta
+          property="og:url"
+          content={config.siteUrl + props.pathContext.slug}
+        />
+        {config.mastodon && (
+          <meta property="article:publisher" content={config.mastodon} />
+        )}
         )}
       </Helmet>
       <Wrapper>
@@ -90,9 +87,10 @@ const Tags: React.FC<TagTemplateProps> = props => {
           css={[outer, SiteHeader]}
           style={{
             background:
-              tagData && tagData.node.image ?
-              `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${tagData.node.image.childImageSharp.fluid.src})` : '',
-              backgroundSize: `cover`
+              tagData && tagData.node.image
+                ? `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(${tagData.node.image.childImageSharp.fluid.src})`
+                : '',
+            backgroundSize: `cover`,
           }}
         >
           <div css={inner}>
@@ -163,8 +161,8 @@ export const pageQuery = graphql`
             date
             image {
               childImageSharp {
-                fluid(maxWidth: 1240) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 2000) {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

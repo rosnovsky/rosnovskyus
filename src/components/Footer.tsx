@@ -59,7 +59,7 @@ const SiteFooterNav = styled.nav`
     display: none;
   }
   @media (max-width: 650px) {
-    a:first-child {
+    a:first-of-type {
       margin-left: 0;
     }
   }
@@ -70,7 +70,8 @@ const Footer: React.FC = () => {
     <footer css={[outer, SiteFooter]}>
       <div css={[inner, SiteFooterContent]}>
         <section className="copyright">
-          <Link to="/">{config.title}</Link> &copy; 2006-{new Date().getFullYear()}{' '}
+          <Link to="/">{config.title}</Link> &copy; 2006-
+          {new Date().getFullYear()}{' '}
           {config.footer && (
             <Link to="/">
               | {config.title} {config.footer}
@@ -79,8 +80,10 @@ const Footer: React.FC = () => {
         </section>
         <SiteFooterNav>
           <Link to="/">Latest Posts</Link>
-          <a href="/rss.xml">RSS</a>
-          <a rel="me" href="https://social.rosnovsky.us/@rosnovsky">Mastodon</a>
+          <a href="/feed/">RSS</a>
+          <a rel="me" href="https://social.rosnovsky.us/@rosnovsky">
+            Mastodon
+          </a>
         </SiteFooterNav>
       </div>
     </footer>

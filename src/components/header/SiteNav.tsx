@@ -6,8 +6,8 @@ import { css } from '@emotion/core';
 
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
-import Facebook from '../icons/facebook';
-import Twitter from '../icons/twitter';
+import Mastodon from '../icons/mastodon';
+import Pixelfed from '../icons/pixelfed';
 import SubscribeModal from '../subscribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
 
@@ -121,13 +121,13 @@ interface SiteNaveState {
 }
 
 class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
-  subscribe = React.createRef<SubscribeModal>();
+  public subscribe = React.createRef<SubscribeModal>();
 
-  constructor(props: SiteNavProps) {
+  public constructor(props: SiteNavProps) {
     super(props);
     this.state = { isOpen: false };
   }
-  openModal = () => {
+  public openModal = () => {
     if (this.subscribe.current) {
       this.subscribe.current.open();
     }
@@ -148,40 +148,46 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/about">About</Link>
             </li>
             <li role="menuitem">
-              <strong><Link to="/resume">Resume</Link></strong>
+              <Link to="/resume">Resume</Link>
             </li>
-            {/* <li role="menuitem">
-              <Link to="/tags/getting-started/">Getting Started</Link>
-            </li> */}
+            <li role="menuitem">
+              <strong>
+                <a href="/feed/">
+                  <i class="fas fa-rss"></i> RSS Feed
+                </a>
+              </strong>
+            </li>
           </ul>
         </SiteNavLeft>
         <SiteNavRight>
           <SocialLinks>
-            {config.facebook && (
+            {config.mastodon && (
               <a
                 css={SocialLink}
-                href={config.facebook}
+                href={config.mastodon}
                 target="_blank"
-                title="Facebook"
+                title="Mastodon"
                 rel="noopener noreferrer"
               >
-                <Facebook />
+                <Mastodon />
               </a>
             )}
-            {config.twitter && (
+            {config.pixelfed && (
               <a
                 css={SocialLink}
-                href={config.twitter}
-                title="Twitter"
+                href={config.pixelfed}
+                title="Pixelfed"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter />
+                <Pixelfed />
               </a>
             )}
           </SocialLinks>
           {config.showSubscribe && (
-            <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
+            <SubscribeButton onClick={this.openModal}>
+              Newsletter
+            </SubscribeButton>
           )}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         </SiteNavRight>
