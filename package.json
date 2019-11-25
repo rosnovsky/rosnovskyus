@@ -39,7 +39,7 @@
     "gatsby-plugin-offline": "3.0.22",
     "gatsby-plugin-postcss": "2.1.15",
     "gatsby-plugin-react-helmet": "3.1.15",
-    "gatsby-plugin-sharp": "2.3.2",
+    "gatsby-plugin-sharp": "2.3.3",
     "gatsby-plugin-sitemap": "2.2.21",
     "gatsby-plugin-typescript": "2.1.19",
     "gatsby-remark-abbr": "1.0.1",
