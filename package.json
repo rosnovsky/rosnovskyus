@@ -14,8 +14,8 @@
     "test": "jest --coverage && codecov"
   },
   "dependencies": {
-    "@babel/core": "7.7.2",
-    "@babel/preset-typescript": "7.7.2",
+    "@babel/core": "7.7.4",
+    "@babel/preset-typescript": "7.7.4",
     "@emotion/core": "10.0.22",
     "@emotion/styled": "10.0.23",
     "@emotion/styled-base": "10.0.24",
