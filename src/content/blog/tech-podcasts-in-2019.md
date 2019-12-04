@@ -3,8 +3,8 @@ title: 30 Best Tech and Dev Podcasts
 date: 2019-06-10T11:53:00
 tags: ['podcasting', 'web development']
 lang: English
-type: "text"
-excerpt: "Top Tech Podcasts 2019" # TODO: Make excerpts work with Casper
+type: 'text'
+excerpt: 'Top Tech Podcasts 2019' # TODO: Make excerpts work with Casper
 author: Artem Rosnovsky
 draft: false
 image: 30-top-tech-podcasts-in-2019/cover.jpg
@@ -20,7 +20,7 @@ Here's a list of my favorite podcasts. Some of them are in their second decade o
 
 ## Dev
 
-Dev podcasts provide a great deal of information and an amazing learning experience. They also give a greater sense of community and feeling of belonging. Below is a list of podcasts that deal directly with software and web development.  
+Dev podcasts provide a great deal of information and an amazing learning experience. They also give a greater sense of community and feeling of belonging. Below is a list of podcasts that deal directly with software and web development.
 
 ### 1. [Syntax](https://syntax.fm/)
 
@@ -57,7 +57,7 @@ The Changelog has been around for quite some time now. Episodes feature prominen
 ### 5. [JS Party](https://changelog.com/jsparty)
 
 🎉🎉🎉
-Fun and casual, the kind of chat you'd like to be a part of. As serious as some topics are (burnout, anyone?), episodes are mostly on inspiring and empowering side.  
+Fun and casual, the kind of chat you'd like to be a part of. As serious as some topics are (burnout, anyone?), episodes are mostly on inspiring and empowering side.
 
 <small>JS Party [iTunes](https://itunes.apple.com/us/podcast/js-party/id1209616598) | JS Party [RSS](https://changelog.com/jsparty/feed)</small>
 
@@ -65,7 +65,7 @@ Fun and casual, the kind of chat you'd like to be a part of. As serious as some 
 
 ### 6. [Developer Tea](https://spec.fm/podcasts/developer-tea)
 
-Developer Tea is on a shorter, bite-size side of podcasting. Inspiring and useful to both newbies and seasoned developers, and available to anyone with a 20+ minute commute. I even trained my Alexa to give me new Developer Tea in the morning, and most days their episodes fit nicely into my breakfast routine.   
+Developer Tea is on a shorter, bite-size side of podcasting. Inspiring and useful to both newbies and seasoned developers, and available to anyone with a 20+ minute commute. I even trained my Alexa to give me new Developer Tea in the morning, and most days their episodes fit nicely into my breakfast routine.
 
 <small>Developer Tea [iTunes](https://geo.itunes.apple.com/ca/podcast/feed/id955596067) | Developer Tea [RSS](http://feeds.feedburner.com/developertea)</small>
 
@@ -73,7 +73,7 @@ Developer Tea is on a shorter, bite-size side of podcasting. Inspiring and usefu
 
 ### 7. [Full Stack Radio](http://www.fullstackradio.com/)
 
-Weekly in-depth interview show with Adam Wathan. Sometimes I listen to the guests and wonder if I'd ever have such an enormous understanding of tech as they do. 
+Weekly in-depth interview show with Adam Wathan. Sometimes I listen to the guests and wonder if I'd ever have such an enormous understanding of tech as they do.
 
 <small>Full Stack Radio [iTunes](https://geo.itunes.apple.com/ca/podcast/feed/id955596067) | Full Stack Radio [RSS](https://rss.simplecast.com/podcasts/279/rss)</small>
 
@@ -81,7 +81,7 @@ Weekly in-depth interview show with Adam Wathan. Sometimes I listen to the guest
 
 ### 8. [Shop Talk](https://shoptalkshow.com/)
 
-Another great show about frontend development, web design and all things UX. It's interesting how sometimes you here the same guests on different podcasts from this list, but every host and every show has a different angle and offers a different conversation. Exciting guests, great in-depth conversations.  
+Another great show about frontend development, web design and all things UX. It's interesting how sometimes you here the same guests on different podcasts from this list, but every host and every show has a different angle and offers a different conversation. Exciting guests, great in-depth conversations.
 
 <small>Shop Talk [iTunes](http://itunes.apple.com/podcast/id493890455) | Shop Talk [RSS](https://shoptalkshow.com/feed/podcast)</small>
 
@@ -97,7 +97,7 @@ FreeCodeCamp is one of the absolutely best and completely free and open-source r
 
 ### 10. [Second Career Devs](https://secondcareerdevs.com/)
 
-Kyle talks with people who became software engineers after they had a previous career in other fields. This one is particularly dear to me since I've been a journalist and a radio host in my _previous life_, and can very much relate as being a second career developer myself. 
+Kyle talks with people who became software engineers after they had a previous career in other fields. This one is particularly dear to me since I've been a journalist and a radio host in my _previous life_, and can very much relate as being a second career developer myself.
 
 <small>Second Career Devs [iTunes](https://podcasts.apple.com/us/podcast/second-career-devs/id1317467797) | Second Career Devs [RSS](http://feeds.soundcloud.com/users/soundcloud:users:332558027/sounds.rss)</small>
 
@@ -113,7 +113,7 @@ Legacy code, technical debt, and how to maintain and advance older projects (per
 
 ### 12. [CodePen Radio](https://blog.codepen.io/radio/)
 
-CodePen is an awesome tool to quickly prototype a feature, showcase some code, do an exercise or collaborate on a project. They run an insightful podcast about, well, running a web software business.  
+CodePen is an awesome tool to quickly prototype a feature, showcase some code, do an exercise or collaborate on a project. They run an insightful podcast about, well, running a web software business.
 
 <small>CodePen Radio [iTunes](https://itunes.apple.com/us/podcast/codepen-radio/id824437159) | CodePen Radio [RSS](https://blog.codepen.io/feed/podcast/)</small>
 
@@ -121,7 +121,7 @@ CodePen is an awesome tool to quickly prototype a feature, showcase some code, d
 
 ### 13. [Coding Blocks](https://www.codingblocks.net/)
 
-> Podcast about computer programming and software development so you can learn on the go. 
+> Podcast about computer programming and software development so you can learn on the go.
 
 Indeed. Topics vary greatly, but you'll find yourself diving deep into different programming concepts and learning a whole lot of new stuff every month.
 
@@ -144,7 +144,7 @@ P.S. I've met with Leo once a while back, it was fun :)
 
 ### 15. [Accidental Tech Podcast](https://atp.fm/)
 
-Marco Arment, Casey Liss, and John Siracusa, a trio of well-known software developers, writers and producers, run this very special show. It's both sarcastic, and optimistic, and all-doom-and-gloom at times, but then it's something else completely. It's all over the place in the best sense possible. It is quite heavily Apple-leaning, since hosts been covering Apple or working with Apple stack for decades. Marco Arment, for instance, is the person responsible for [Overcast](https://overcast.fm/), without a doubt the best podcast app out there. 
+Marco Arment, Casey Liss, and John Siracusa, a trio of well-known software developers, writers and producers, run this very special show. It's both sarcastic, and optimistic, and all-doom-and-gloom at times, but then it's something else completely. It's all over the place in the best sense possible. It is quite heavily Apple-leaning, since hosts been covering Apple or working with Apple stack for decades. Marco Arment, for instance, is the person responsible for [Overcast](https://overcast.fm/), without a doubt the best podcast app out there.
 
 <small>Accidental [iTunes](https://itunes.apple.com/us/podcast/accidental-tech-podcast/id617416468) | Accidental [RSS](http://atp.fm/episodes?format=rss)</small>
 
@@ -158,7 +158,7 @@ I couldn't skip Indie Hackers, although this is probably one of the podcasts tha
 
 ## Apple & Mac
 
-As we all know, Apple _invented_ podcasts. To exactly no one's surprise, Apple is heavily covered by dozens of different shows. The company is beloved by some, and despised by others, but I really don't know a single person who's completely indifferent towards Apple. 
+As we all know, Apple _invented_ podcasts. To exactly no one's surprise, Apple is heavily covered by dozens of different shows. The company is beloved by some, and despised by others, but I really don't know a single person who's completely indifferent towards Apple.
 
 ### 17. [MacBreak Weekly](https://www.twit.tv/shows/macbreak-weekly)
 
@@ -174,7 +174,7 @@ Co-founder of Relay.fm network Myke Hurley and his legendary co-host Jason Snell
 
 ### 19. [Vector](https://www.imore.com/vector)
 
-Rene Ritchie of iMore runs this (almost) daily (and sometimes twice-a-day) show about personal tech in general and Apple tech in particular. Rene is great at explaining things, and usually he gets to the bottom of whatever he's talking about before actually talking about it. 
+Rene Ritchie of iMore runs this (almost) daily (and sometimes twice-a-day) show about personal tech in general and Apple tech in particular. Rene is great at explaining things, and usually he gets to the bottom of whatever he's talking about before actually talking about it.
 
 <small>Vector [iTunes](http://applepodcasts.com/vector) | Vector [RSS](http://vector.libsyn.com/rss)</small>
 
@@ -186,7 +186,7 @@ A unique mix of perspectives and accents. Apple-focused, this show offers a grea
 
 ## Google & Android
 
-Googleverse is of course a thing, and quite a few exciting things go on in this universe at any given moment. 
+Googleverse is of course a thing, and quite a few exciting things go on in this universe at any given moment.
 
 ### 21. [This Week in Google](https://www.twit.tv/shows/this-week-in-google)
 
@@ -196,7 +196,7 @@ This actually is quite a show. It is called This Week in Google, but man, do the
 
 ### 22. [Material Podcast](https://www.relay.fm/material)
 
-Two people known for their other shows, Andy Ihnatko of MacBreak Weekly and Florence Ion of All About Android, joined forces to create Material Podcast. All things Android, with quite a bit of easygoing fire-side chatter and entertaining points of view.  
+Two people known for their other shows, Andy Ihnatko of MacBreak Weekly and Florence Ion of All About Android, joined forces to create Material Podcast. All things Android, with quite a bit of easygoing fire-side chatter and entertaining points of view.
 
 <small>Material Podcast [iTunes](https://itunes.apple.com/us/podcast/material/id1015422651) | Material Podcast [RSS](https://www.relay.fm/material/feed)</small>
 
@@ -212,13 +212,13 @@ In recent years, Microsoft shifted a lot from a consumer-focused operating syste
 
 ### 24. [Windows Weekly](https://www.twit.tv/shows/windows-weekly)
 
-If you're looking for some friendly venom from people covering Microsoft professionally, look no further. Sometimes I wonder why all the sarcasm, but then hosts go in-depth explains what's going on, why, since when, and what's next.  
+If you're looking for some friendly venom from people covering Microsoft professionally, look no further. Sometimes I wonder why all the sarcasm, but then hosts go in-depth explains what's going on, why, since when, and what's next.
 
 <small>Windows Weekly [iTunes](https://podcasts.apple.com/us/podcast/windows-weekly-mp3/id197875368?uo=10) | Windows Weekly [RSS](http://feeds.twit.tv/ww.xml)</small>
 
 ### 25. [This Week in Channel 9](https://channel9.msdn.com/shows/This+Week+On+Channel+9/)
 
-This is a bit _meta_. My colleague Christina Warren basically sums up all things Channel 9, Microsoft's outgoing stream of news, feature update talks, tech discussions, blog posts and so on. I also recommend [Channel 9](https://channel9.msdn.com/) in its entirety, but be ready, it's a lot of great content. 
+This is a bit _meta_. My colleague Christina Warren basically sums up all things Channel 9, Microsoft's outgoing stream of news, feature update talks, tech discussions, blog posts and so on. I also recommend [Channel 9](https://channel9.msdn.com/) in its entirety, but be ready, it's a lot of great content.
 
 <small>TWiC9 [iTunes](https://itunes.apple.com/gb/podcast/this-week-on-channel-9-mp4-channel-9/id360667463) | TWiC9 [RSS](https://channel9.msdn.com/Shows/This+Week+On+Channel+9/feed/mp3)</small>
 
@@ -255,5 +255,3 @@ A little bit on a corporate side of things, but nevertheless informative in gene
 This one is again a more on a general interest side of things. Still, it's a lot of fun and inspiration, and thought-provoking conversations, neatly packed in a 30-60 minutes.
 
 <small>99% invisible [iTunes](https://itunes.apple.com/us/podcast/99-invisible/id394775318?at=10l9zE) | 99% invisible [RSS](http://feeds.99percentinvisible.org/99percentinvisible)</small>
-
-

@@ -1,18 +1,16 @@
 ---
-title: "TEDxSeattle: Shift"
+title: 'TEDxSeattle: Shift'
 date: 2019-11-23
 tags: ['blog']
 lang: English
-type: "text"
-excerpt: "TEDxSeattle 2019: Shift" # TODO: Make excerpts work with Casper
+type: 'text'
+excerpt: 'TEDxSeattle 2019: Shift' # TODO: Make excerpts work with Casper
 author: Artem Rosnovsky
 draft: false
 image: tedexseattle-shift/IMG_7056.jpg
 ---
 
->
 > **Ideas Worth Spreading**
->
 
 This is my second TEDx. I've been to [TEDxPortland: Wonderland](https://history.tedxportland.com/wonderland) in 2016, and it absolutely blew my mind. I didn't have a chance to attend Seattle's show last year, so as soon as tickets went on sale in 2019, I grabbed one.
 
@@ -30,7 +28,7 @@ As I'm writing this, it's "Session 5" (the intermission); I'm sitting at the top
 - Orcas are _much_ smarter than we think
 - HIV is likely to be eradicated within our lifetime
 - Expressing gratitude now is always better than reading a glowing obituary over an open casket
-- We know almost nothing about the world around us, and we all are mostly empty space  
+- We know almost nothing about the world around us, and we all are mostly empty space
 - We must adapt our education to youth culture. Duh!
 - There might be a better approach to fighting climate change than scaring everyone to death
 
@@ -70,7 +68,7 @@ As I'm writing this, it's "Session 5" (the intermission); I'm sitting at the top
 
 [![Alexandra Morton](tedexseattle-shift/alexandra.jpg)](https://tedxseattle.com/speakers/alexandra-morton/)
 
-[Alexandra Morton](https://tedxseattle.com/speakers/alexandra-morton/) explained how researching salmon and taking hints from orcas can make our lives so much better, make our water and air cleaner, and lead to a sustainable future of our species.  
+[Alexandra Morton](https://tedxseattle.com/speakers/alexandra-morton/) explained how researching salmon and taking hints from orcas can make our lives so much better, make our water and air cleaner, and lead to a sustainable future of our species.
 
 ## Art in Our Community
 

@@ -1,10 +1,10 @@
 ---
-title: "New OS, Who Dis: Going Linux after 15 years on Mac" 
+title: 'New OS, Who Dis: Going Linux after 15 years on Mac'
 date: 2019-08-25
 tags: ['linux', 'foss', 'tech']
 lang: English
-type: "text"
-excerpt: ""
+type: 'text'
+excerpt: ''
 author: Artem Rosnovsky
 draft: false
 image: mac-to-linux/ubuntu.png
@@ -26,7 +26,7 @@ I want adventure. I want the new stuff. I want the cutting edge. I want round pe
 
 To this day, I haven't had any serious day-to-day experience with Linux. I use Windows 10 at work, and it's a pretty ok system, but it's not something I want to deal with in my personal life for a variety of reasons (from the fact that direction may and will change, and you have no input, to the fact that you get system "as is", and it always be like that.)
 
-The only alternative I know to Windows and Mac OS is Linux in all its flavors (don't get me started saying that there's also ChromeOS. Not only it's Linux-based, it's quite a joke, tbh). So my plan was simple: try some Linuxes (or is it *Linuxi?*), make sure they meet my needs, gradually transition my work to Linux, and finally migrate to some decent hardware as well. This is a sensible thing to do, a smooth and straightforward plan. So, yeah. I did none of this in this order. What I did, I outright bought a performance laptop, slapped Ubuntu on it, and haven't opened my MacBook for a week. This is how real *crazy ones* explore new things, amirite?
+The only alternative I know to Windows and Mac OS is Linux in all its flavors (don't get me started saying that there's also ChromeOS. Not only it's Linux-based, it's quite a joke, tbh). So my plan was simple: try some Linuxes (or is it _Linuxi?_), make sure they meet my needs, gradually transition my work to Linux, and finally migrate to some decent hardware as well. This is a sensible thing to do, a smooth and straightforward plan. So, yeah. I did none of this in this order. What I did, I outright bought a performance laptop, slapped Ubuntu on it, and haven't opened my MacBook for a week. This is how real _crazy ones_ explore new things, amirite?
 
 ## The Process
 
@@ -37,7 +37,7 @@ Anywho. Selecting a distro is like whoa?! 😲 There hundreds if not thousands o
 So how do I choose? Should I try Debian? After all, it runs on my home server. Or maybe, Ubuntu? I've tried it a few times in the past, and it runs on all my Digital Ocean instances. Maybe, Arch? It's so customizable, they said. Manjaro, the friendly Arch? Fedora? CentOS? Mint? KDE Neon? OpenSUSE?
 
 ![](mac-to-linux/linuxi.png)
-<small>*I've got them all!*</small>
+<small>_I've got them all!_</small>
 
 And what about desktop environments? They are, again, so alike, yet so different. GNOME looks ok, but KDE people tend to bash it a lot, and Plasma 5 indeed looks amazing. Perhaps, Cinnamon? Bungie? MATE? Maybe, Xfce? Pantheon? Deepin?
 

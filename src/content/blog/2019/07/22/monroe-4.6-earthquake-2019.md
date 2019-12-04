@@ -3,7 +3,7 @@ title: Monroe 4.6 magnitude earthquake 2019
 date: 2019-07-22T10:53:00
 tags: ['blog', 'events']
 lang: English
-type: "text"
+type: 'text'
 excerpt: ...And then you wake up at 2:51 am on a Friday night because your bed is shaking pretty violently, and the whole house is rattling and creaking for a whole 5-10 seconds...
 author: Artem Rosnovsky
 draft: false
@@ -33,4 +33,3 @@ But then it went all quiet. Wife woke up, looked at the time on her phone, and w
 I never felt an earthquake before (at least, I can't remember it), and this was a jolt of an experience. We don't have any food or water for emergencies! I have no idea what to do in an earthquake (run? go outside? crawl under the bed??). So I spent the rest of the night reading through al the news about all the local earthquakes, [preparedness blogs](https://www.beyondsurvivalgear.com/11-survival-gear-essentials/), and so on. I'm still not prepared, but I'm on track!
 
 Anyway, my point is, every now and then, theory you've known all along, becomes reality. Get ready and be prepared!
-

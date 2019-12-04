@@ -1,10 +1,10 @@
 ---
-title: "Moving forward" 
+title: 'Moving forward'
 date: 2019-10-01
 tags: ['blog']
 lang: English
-type: "text"
-excerpt: ""
+type: 'text'
+excerpt: ''
 author: Artem Rosnovsky
 draft: false
 image: moving-forward/jens-lelie-u0vgcIOQG08-unsplash.jpg
