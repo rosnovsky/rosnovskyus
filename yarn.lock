@@ -6569,13 +6569,12 @@ gatsby-react-router-scroll@^2.1.16:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-abbr@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-abbr/-/gatsby-remark-abbr-1.0.1.tgz#c573e5764d6c2401b383512f3c9f6f950e9a736d"
-  integrity sha512-rgHftUfzZ1ewSgckbi59nXz7oO8Uzzd4pwrnyONmgwdp1KAxKd+aLX+HoTYvDOnlxtVfeDP/NAwmeP6XI9kj1g==
+gatsby-remark-abbr@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-abbr/-/gatsby-remark-abbr-2.0.0.tgz#c63540898ec2c2d51e251fc4b380d604202fb283"
+  integrity sha512-qU6fa7XZOpiNhE7Hn3hLqHRZYWborweGZnmqG8SMBLZf/XFHYEHyWlo4OFZKA81OoIfJycNrSO0RqpDFfgz+iA==
   dependencies:
     remark-abbr "^1.0.7"
-    unist-util-visit "^1.2.0"
 
 gatsby-remark-copy-linked-files@2.1.30:
   version "2.1.30"
@@ -14704,7 +14703,7 @@ unist-util-visit-parents@^2.0.0, unist-util-visit-parents@^2.1.2:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.2.0, unist-util-visit@^1.3.0, unist-util-visit@^1.3.1, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.3.0, unist-util-visit@^1.3.1, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
