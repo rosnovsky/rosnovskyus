@@ -3,8 +3,8 @@ title: Middle School Football
 date: 2018-10-21T20:12:03.284Z
 excerpt: This year my I signed up my son for school football. It's been an exciting and eye-opening experience for both of us.
 tags: ['sport', 'football', 'family', 'entertainment', 'school']
-lang: English
-author: Artem Rosnovsky
+lang: Art
+author: Art Rosnovsky
 draft: false
 image: middle-school-football/blog0005.jpg
 ---

@@ -5,7 +5,7 @@ tags: ['travel', 'pilot']
 lang: English
 type: 'video'
 time: 4
-author: Artem Rosnovsky
+author: Art Rosnovsky
 image: seaside-helicopters/blog0021.jpg
 ---
 

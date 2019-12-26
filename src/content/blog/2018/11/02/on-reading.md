@@ -4,7 +4,7 @@ date: 2018-11-02T22:12:03.284Z
 excerpt: I love reading, but does reading Reddit or blogs count? Or is it only books should be considered proper reading?
 tags: ['books', 'ideas']
 lang: English
-author: Artem Rosnovsky
+author: Art Rosnovsky
 image: on-reading/blog0004.jpg
 ---
 

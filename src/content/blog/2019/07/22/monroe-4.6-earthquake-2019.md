@@ -5,7 +5,7 @@ tags: ['blog', 'events']
 lang: English
 type: 'text'
 excerpt: ...And then you wake up at 2:51 am on a Friday night because your bed is shaking pretty violently, and the whole house is rattling and creaking for a whole 5-10 seconds...
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: monroe-4.6-earthquake-2019/cover.jpg
 ---

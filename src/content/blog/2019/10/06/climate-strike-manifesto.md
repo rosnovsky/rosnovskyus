@@ -4,7 +4,7 @@ date: 2019-10-06
 tags: ['blog', 'text', 'open source']
 lang: English
 # excerpt: ""
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: true
 image: nature.jpg
 ---

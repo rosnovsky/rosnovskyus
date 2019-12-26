@@ -3,7 +3,7 @@
   "description": "Rosnovsky Park website",
   "version": "2.0.0",
   "private": true,
-  "author": "Artem Rosnovsky <artem@rosnovsky.us>",
+  "author": "Art Rosnovsky <artem@rosnovsky.us>",
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",

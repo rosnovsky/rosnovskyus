@@ -4,7 +4,7 @@ date: 2019-10-04
 tags: ['podcasting', 'web development', 'open source', 'linux']
 lang: English
 # excerpt: ""
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: img/community.jpg
 ---

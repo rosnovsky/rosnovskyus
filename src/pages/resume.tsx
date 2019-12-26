@@ -26,7 +26,7 @@ const PageTemplate = css`
 const Resume: React.FC = () => (
   <IndexLayout>
     <Helmet>
-      <title>Artem Rosnovsky - Resume</title>
+      <title>Art Rosnovsky - Resume</title>
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header css={[outer, SiteHeader]}>
@@ -38,11 +38,13 @@ const Resume: React.FC = () => (
         <article className="post page" css={[PostFull, NoImage]}>
           <PostFullHeader>
             <PostFullTitle>
-              Artem Rosnovsky
+              Art Rosnovsky
               <br /> <h1>Web Developer</h1>
               <h3>
                 <a href="https://github.com/rosnovsky">Github</a> |{' '}
-                <a href="art-rosnovsky-web-dev.pdf">Full Resume (PDF)</a>
+                <a href="/art-rosnovsky-software-engineer.pdf">
+                  Full Resume (PDF)
+                </a>
               </h3>
             </PostFullTitle>
           </PostFullHeader>
@@ -51,14 +53,35 @@ const Resume: React.FC = () => (
             <div className="post-content">
               <div>
                 <p>
-                  <strong>Toolkit</strong>: JavaScript, React, Node.js, C#, .Net
-                  Core, MongoDB, MSSQL, REST APIs, HTML, CSS, and more.
+                  <strong>Toolkit</strong>: JavaScript, React, Node.js, MongoDB,
+                  REST APIs, HTML, CSS, and more.
                 </p>
               </div>
               <div>
                 <div>
-                  <h1>Microsoft</h1>
-                  <h3>Web Developer</h3>
+                  <h1>
+                    <a href="https://auth0.com">Auth0</a>
+                  </h1>
+                  <h3>Developer Support Engineer</h3>
+                  <h6>Dec 2019 - Present</h6>
+                  <p>
+                    <em>
+                      Making sure that developers have excellent experience,
+                      resources, and support they need when working on their
+                      Identity Management.
+                    </em>
+                  </p>
+
+                  <p>
+                    We solve the most complex and large-scale identity use cases
+                    for global enterprises with our extensible and
+                    easy-to-integrate platform, securing billions of logins
+                    every year.
+                  </p>
+                </div>
+                <div>
+                  <h3>Microsoft</h3>
+                  <h6>Web Developer</h6>
                   <h6>Apr 2019 - Oct 2019</h6>
                   <p>
                     <em>
@@ -76,8 +99,8 @@ const Resume: React.FC = () => (
                   </p>
                 </div>
                 <div>
-                  <h2>Transmark Logistics</h2>
-                  <h3>Web Developer</h3>
+                  <h3>Transmark Logistics</h3>
+                  <h6>Web Developer</h6>
                   <h6>Oct 2018 - Mar 2019</h6>
                   <ul>
                     <li>
@@ -112,8 +135,8 @@ const Resume: React.FC = () => (
                   </ul>
                 </div>
                 <div>
-                  <h2>AT&T</h2>
-                  <h3>Implementation Specialist</h3>
+                  <h3>AT&T</h3>
+                  <h6>Implementation Specialist</h6>
                   <h6>Apr 2017 - Sep 2018</h6>
                   <p>
                     Implemented over 100 code and content items & fixed over 100
@@ -121,8 +144,8 @@ const Resume: React.FC = () => (
                   </p>
                 </div>
                 <div>
-                  <h2>Intel</h2>
-                  <h3>Web Producer</h3>
+                  <h3>Intel</h3>
+                  <h6>Web Producer</h6>
                   <h6>Dec 2016 - Apr 2017</h6>
                   <ul>
                     <li>

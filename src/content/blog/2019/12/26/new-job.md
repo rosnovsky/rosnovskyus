@@ -5,7 +5,7 @@ tags: ['blog', 'web development']
 lang: English
 type: "text"
 excerpt: "My first few weeks @ Auth0" # TODO: Make excerpts work with Casper
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: auth0.jpg
 ---

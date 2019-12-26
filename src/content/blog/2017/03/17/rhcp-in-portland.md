@@ -4,7 +4,7 @@ date: 2017-03-17T16:40:00
 tags: ['music', 'events', 'video']
 lang: English
 time: 6
-author: Artem Rosnovsky
+author: Art Rosnovsky
 image: rhcp-in-portland/blog0009.jpg
 ---
 

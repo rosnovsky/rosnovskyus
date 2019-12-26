@@ -5,7 +5,7 @@ tags: ['podcasting', 'web development']
 lang: English
 type: 'text'
 excerpt: 'Top Tech Podcasts 2019' # TODO: Make excerpts work with Casper
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: 30-top-tech-podcasts-in-2019/cover.jpg
 ---

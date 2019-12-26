@@ -4,7 +4,7 @@ date: 2018-06-09T14:23:00+00:00
 excerpt: Since I broke my leg in late earlier this year, it's been a hell of a ride. And just a few months late, I've hit 100 miles on bike.
 tags: ['health', 'broken leg', 'fitness', 'work', 'bike']
 lang: English
-author: Artem Rosnovsky
+author: Art Rosnovsky
 image: 100-miles-biking-milestone/blog0013.jpg
 ---
 

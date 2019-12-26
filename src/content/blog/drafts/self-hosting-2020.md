@@ -5,7 +5,7 @@ tags: ['self-hosting', 'fediverse', 'foss']
 lang: English
 type: 'text'
 excerpt: ''
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: true
 image:
 ---

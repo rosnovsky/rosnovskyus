@@ -49,11 +49,11 @@ const About: React.FC = () => (
                 heart that I always come back.
               </p>
               <p>
-                Hi, I'm Artem Rosnovsky. I'm a software engineer and web
-                developer from Greater Seattle area, working mostly with
-                JavaScript stack (JavaScript, React, Node), and venturing to the
-                land of C#/.NET every now and again. I solve problems, one line
-                of code at a time.
+                Hi, I'm Art Rosnovsky. I'm a software engineer and web developer
+                from Greater Seattle area, working mostly with JavaScript stack
+                (JavaScript, React, Node), and venturing to the land of C#/.NET
+                every now and again. I solve problems, one line of code at a
+                time.
               </p>
               <p>
                 More often than not, I'm invited by businesses of all sizes to

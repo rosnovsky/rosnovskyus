@@ -5,7 +5,7 @@ tags: ['blog']
 lang: English
 type: 'text'
 excerpt: 'TEDxSeattle 2019: Shift' # TODO: Make excerpts work with Casper
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: tedexseattle-shift/IMG_7056.jpg
 ---

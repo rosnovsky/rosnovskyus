@@ -5,7 +5,7 @@ tags: ['blog', 'web development']
 lang: English
 type: 'text'
 excerpt: 'November 2019 Life Update' # TODO: Make excerpts work with Casper
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: november-2019-life-update/cover.jpg
 ---

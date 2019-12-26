@@ -5,7 +5,7 @@ tags: ['tech', 'self-hosting', 'fedeverse', 'foss', 'privacy']
 lang: English
 type: 'text'
 excerpt: ''
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: digital-hygiene/tyler-milligan-dSIcpkddKrM-unsplash.jpg
 ---

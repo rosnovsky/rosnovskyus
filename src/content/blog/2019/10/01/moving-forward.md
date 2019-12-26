@@ -5,7 +5,7 @@ tags: ['blog']
 lang: English
 type: 'text'
 excerpt: ''
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: moving-forward/jens-lelie-u0vgcIOQG08-unsplash.jpg
 ---

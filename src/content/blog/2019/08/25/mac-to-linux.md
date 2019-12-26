@@ -5,7 +5,7 @@ tags: ['linux', 'foss', 'tech']
 lang: English
 type: 'text'
 excerpt: ''
-author: Artem Rosnovsky
+author: Art Rosnovsky
 draft: false
 image: mac-to-linux/ubuntu.png
 ---

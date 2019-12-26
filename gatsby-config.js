@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Rosnovsky Park™',
-    description: 'Blog of Artem Rosnovsky, software engineer from Seattle, WA',
+    description: 'Blog of Art Rosnovsky, software engineer from Seattle, WA',
     siteUrl: 'https://rosnovsky.us',
     titleTemplate: '%s · Rosnovsky Park™',
     image: '/image.jpg',

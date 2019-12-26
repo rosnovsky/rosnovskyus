@@ -4,7 +4,7 @@ date: 2018-08-01T19:05:00
 tags: ['video', 'work', 'bike']
 lang: English
 type: 'video'
-author: Artem Rosnovsky
+author: Art Rosnovsky
 time: 5
 image: 20-miunute-bike-commute/blog0011.jpg
 ---
