@@ -3,7 +3,7 @@ title: Saturday Helicopter Fun @ Seaside
 date: 2013-08-26T12:11:00
 tags: ['travel', 'pilot']
 lang: English
-type: "video"
+type: 'video'
 time: 4
 author: Artem Rosnovsky
 image: seaside-helicopters/blog0021.jpg
@@ -21,4 +21,4 @@ Seaside Helicopters is one of the only companies offering helicopter tours along
 
 > All takeoffs are optional, all landings are mandatory
 
-Basically, you're 100% in control to take off or not. However, if you make a bad choice and fly in poor conditions, you will land, one way or the other. We were lucky, and weather was amazing for our booking date, so we enjoyed the tour a lot. Pilots comment on what you see, point out where things are, and give you a certain freedom to decide where to go and what to see. All in all, we enjoyed the experience, even though, as I mentioned before, it cost us something in the ballbark of $300 for 15-minute tour for two adults and a child.
+Basically, you're 100% in control to take off or not. However, if you make a bad choice and fly in poor conditions, you will land, one way or the other. We were lucky, and weather was amazing for our booking date, so we enjoyed the tour a lot. Pilots comment on what you see, point out where things are, and give you a certain freedom to decide where to go and what to see. All in all, we enjoyed the experience, even though, as I mentioned before, it cost us something in the ballbark of \$300 for 15-minute tour for two adults and a child.

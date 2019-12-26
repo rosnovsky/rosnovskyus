@@ -1,16 +1,16 @@
 ---
-title: November 2019 Life Update 
+title: November 2019 Life Update
 date: 2019-11-14
 tags: ['blog', 'web development']
 lang: English
-type: "text"
-excerpt: "November 2019 Life Update" # TODO: Make excerpts work with Casper
+type: 'text'
+excerpt: 'November 2019 Life Update' # TODO: Make excerpts work with Casper
 author: Artem Rosnovsky
 draft: false
 image: november-2019-life-update/cover.jpg
 ---
 
-You know what happens when you [promise publicly to post more often](/blog/2019/10/01/moving-forward/)? Yeah, exactly. Life happens, and you feel guilty that you've broken a promise. Then you get even busier, and even guiltier. Lemme break this circle real quick. 
+You know what happens when you [promise publicly to post more often](/blog/2019/10/01/moving-forward/)? Yeah, exactly. Life happens, and you feel guilty that you've broken a promise. Then you get even busier, and even guiltier. Lemme break this circle real quick.
 
 ## Job Hunt
 

@@ -16,6 +16,7 @@ export interface WebsiteConfig {
    * full url, no username
    */
   mastodon?: string;
+  github?: string;
   /**
    * full url, no username
    */
@@ -57,6 +58,7 @@ const config: WebsiteConfig = {
   siteUrl: 'https://rosnovsky.us',
   mastodon: 'https://social.rosnovsky.us/@rosnovsky',
   pixelfed: 'https://pixelfed.social/rosnovsky',
+  github: 'https://github.com/rosnovsky',
   showSubscribe: true,
   mailchimpAction:
     'https://rosnovsky.us11.list-manage.com/subscribe/post?u=e4fad23c5627b8f9070cdce9e&amp;id=874dfc643c',

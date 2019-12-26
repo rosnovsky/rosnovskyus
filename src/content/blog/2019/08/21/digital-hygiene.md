@@ -3,8 +3,8 @@ title: Digital Hygiene
 date: 2019-08-19
 tags: ['tech', 'self-hosting', 'fedeverse', 'foss', 'privacy']
 lang: English
-type: "text"
-excerpt: ""
+type: 'text'
+excerpt: ''
 author: Artem Rosnovsky
 draft: false
 image: digital-hygiene/tyler-milligan-dSIcpkddKrM-unsplash.jpg
@@ -20,9 +20,9 @@ For me, social media was a way to socialize since its inception. I've got my inv
 
 ## Life after mainstream social media
 
-It's really a huge privilege to be able to just quit Facebook. For so many people around the world, Facebook *is* the internet, and quitting it is just not an option. For me, luckily, it's very much an option. I'm missing out, of course, since everyone and their grandmother is on Facebook, sharing baby pictures and concert invites, but my wife keeps me in the loop of truly important things and you know what? I'm still available! You have to be deliberate as in explicitly share things with that you think I might be interested in. I know, it's hard to believe, but that's how things used to be: you have friends and you don't just make radio announcements whenever you find something you want to share with them. You'd call, text, talk to them over a coffee, send them a post pigeon or roll in a clay plate. Whatever you do, you're deliberate in your communications and relationships.
+It's really a huge privilege to be able to just quit Facebook. For so many people around the world, Facebook _is_ the internet, and quitting it is just not an option. For me, luckily, it's very much an option. I'm missing out, of course, since everyone and their grandmother is on Facebook, sharing baby pictures and concert invites, but my wife keeps me in the loop of truly important things and you know what? I'm still available! You have to be deliberate as in explicitly share things with that you think I might be interested in. I know, it's hard to believe, but that's how things used to be: you have friends and you don't just make radio announcements whenever you find something you want to share with them. You'd call, text, talk to them over a coffee, send them a post pigeon or roll in a clay plate. Whatever you do, you're deliberate in your communications and relationships.
 
-And you know what? It appears to be a good filter (well, still not sure if it's good or bad, but it's *a filter*). I used to struggle with guilt over the fact that I'm not connecting with people enough; I don't call or text my friends that much, but hey, phones work both ways. If I don't call or text you and therefore we lose connection, you weren't calling me either. So was it ever a meaningful thing to begin with?..
+And you know what? It appears to be a good filter (well, still not sure if it's good or bad, but it's _a filter_). I used to struggle with guilt over the fact that I'm not connecting with people enough; I don't call or text my friends that much, but hey, phones work both ways. If I don't call or text you and therefore we lose connection, you weren't calling me either. So was it ever a meaningful thing to begin with?..
 
 ## Alternatives
 

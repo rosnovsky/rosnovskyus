@@ -6,6 +6,7 @@ import { css } from '@emotion/core';
 
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
+import Github from '../icons/github';
 import Mastodon from '../icons/mastodon';
 import Pixelfed from '../icons/pixelfed';
 import SubscribeModal from '../subscribe/SubscribeOverlay';
@@ -161,6 +162,17 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
         </SiteNavLeft>
         <SiteNavRight>
           <SocialLinks>
+            {config.github && (
+              <a
+                css={SocialLink}
+                href={config.github}
+                target="_blank"
+                title="Github"
+                rel="noopener noreferrer"
+              >
+                <Github />
+              </a>
+            )}
             {config.mastodon && (
               <a
                 css={SocialLink}
@@ -186,7 +198,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
           </SocialLinks>
           {config.showSubscribe && (
             <SubscribeButton onClick={this.openModal}>
-              Newsletter
+              Email Updates
             </SubscribeButton>
           )}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
