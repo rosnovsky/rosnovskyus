@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         <SiteFooterNav>
           <Link to="/">Latest Posts</Link>
           <a href="/feed/">RSS</a>
-          <a rel="me" href="https://social.rosnovsky.us/@rosnovsky">
+          <a rel="me" href="https://freeradical.zone/@rosnovsky">
             Mastodon
           </a>
         </SiteFooterNav>
