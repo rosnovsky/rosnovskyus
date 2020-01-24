@@ -12,7 +12,7 @@ image: cover.jpg
 
 I was driving to work this morning, looking forward to a weekly Q&A with Nico (deep dive into HAR files this week), when I realized that it's my day off. Whenever we work on weekends, we can then take a day off during the week. Well, today was the day, and I forgot about it.
 
-I'm not entirely sure what it means. Probably, that I'm less organized than I though previously, or maybe I still don't think about my work as a _joby-job_; I come to work, we hang out tackling things and battling all sorts of uncertainties, figure out stuff together and on our own, recreate apps, reproduce bugs, troubleshoot the unknown, stretch (!), drink coffee and go back home whenever we feel like it to keep doing all these things remotely. (sounds good? Join us, [we are hiring](https://jobs.lever.co/auth0?lever-via=KkPp8EXnYD)!) 
+I'm not entirely sure what it means. Probably, that I'm less organized than I though previously, or maybe I still don't think about my work as a _joby-job_; I come to work, we hang out tackling things and battling all sorts of uncertainties, figure out stuff together and on our own, recreate apps, reproduce bugs, troubleshoot the unknown, stretch (!), drink coffee and go back home whenever we feel like it to keep doing all these things remotely. (sounds good? Join us, [we are hiring](https://jobs.lever.co/auth0?lever-via=KkPp8EXnYD)!)
 
 > Is it my passion to do all this? For sure. But is it my **PASSION**? Nope. Not by a long shot.
 

@@ -26,12 +26,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1rem',
-            },
-          },
-          {
             resolve: 'gatsby-remark-embed-video',
             options: {
               width: 800,
@@ -57,6 +51,12 @@ module.exports = {
             options: {
               maxWidth: 1170,
               quality: 100,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              wrapperStyle: 'margin-bottom: 1rem',
             },
           },
         ],
