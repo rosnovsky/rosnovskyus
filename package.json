@@ -24,7 +24,7 @@
     "@emotion/styled-base": "10.0.27",
     "@testing-library/react": "9.4.0",
     "@types/jest": "24.9.1",
-    "babel-jest": "25.1.0",
+    "babel-jest": "24.9.0",
     "babel-preset-typescript": "7.0.0-beta.3",
     "classnames": "2.2.6",
     "codecov": "3.6.2",
@@ -32,7 +32,7 @@
     "emotion": "10.0.27",
     "emotion-server": "10.0.27",
     "eslint-plugin-prettier": "3.1.2",
-    "gatsby": "2.19.5",
+    "gatsby": "2.19.3",
     "gatsby-cli": "2.8.27",
     "gatsby-image": "2.2.39",
     "gatsby-plugin-canonical-urls": "2.1.19",
@@ -48,7 +48,7 @@
     "gatsby-plugin-typescript": "2.1.26",
     "gatsby-remark-abbr": "2.0.0",
     "gatsby-remark-copy-linked-files": "2.1.36",
-    "gatsby-remark-embed-video": "2.0.1",
+    "gatsby-remark-embed-video": "^2.0.1",
     "gatsby-remark-images": "3.1.42",
     "gatsby-remark-prismjs": "3.3.30",
     "gatsby-remark-responsive-iframe": "2.2.31",
@@ -59,7 +59,7 @@
     "gatsby-transformer-sharp": "2.3.13",
     "gatsby-transformer-yaml": "2.2.23",
     "global": "4.4.0",
-    "jest": "25.1.0",
+    "jest": "24.9.0",
     "joi": "14.3.1",
     "lodash": "4.17.15",
     "modern-normalize": "0.6.0",
@@ -76,8 +76,8 @@
     "react-test-renderer": "16.12.0",
     "rehype-react": "4.0.1",
     "serve": "11.3.0",
-    "styled-components": "5.0.0",
-    "ts-jest": "25.0.0",
+    "styled-components": "4.4.1",
+    "ts-jest": "24.3.0",
     "typescript-eslint": "0.0.1-alpha.0"
   },
   "devDependencies": {
@@ -92,7 +92,7 @@
     "babel-plugin-styled-components": "1.10.6",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.9.0",
-    "eslint-config-xo-react": "0.22.0",
+    "eslint-config-xo-react": "0.20.0",
     "eslint-config-xo-space": "0.22.0",
     "eslint-config-xo-typescript": "0.24.1",
     "eslint-plugin-import": "2.20.0",
@@ -101,8 +101,5 @@
     "prettier": "1.19.1",
     "rimraf": "3.0.0",
     "typescript": "3.7.5"
-  },
-  "engines": {
-    "node": ">=8.0.0"
   }
 }
