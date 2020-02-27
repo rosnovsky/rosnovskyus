@@ -14,7 +14,6 @@ import {
 import { PostFullContent } from '../components/PostContent';
 import Footer from '../components/Footer';
 import Helmet from 'react-helmet';
-import PostCard from '../components/PostCard';
 
 const PageTemplate = css`
   .site-main {
