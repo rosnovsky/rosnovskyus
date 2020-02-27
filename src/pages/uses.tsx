@@ -71,12 +71,12 @@ const Resume: React.FC = () => (
                   </ul>
                   <h3>Web Development</h3>
                   <ul>
-                      <li>JavaScript / Typescript</li>
-                      <li>yarn</li>
-                      <li>Node</li>
-                      <li>React</li>
-                      <li>Svelte</li>
-                      <li>GraphQL (Apollo)</li>
+                    <li>JavaScript / Typescript</li>
+                    <li>yarn</li>
+                    <li>Node</li>
+                    <li>React</li>
+                    <li>Svelte</li>
+                    <li>GraphQL (Apollo)</li>
                   </ul>
                 </div>
               </div>
