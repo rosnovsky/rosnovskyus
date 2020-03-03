@@ -6,7 +6,7 @@ lang: English
 type: "text"
 excerpt: "Progress Update" # TODO: Make excerpts work with Casper
 author: Art Rosnovsky
-draft: false
+draft: true
 image: breakfast.jpg
 ---
 
