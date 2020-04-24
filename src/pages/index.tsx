@@ -102,6 +102,15 @@ const IndexPage: React.FC<IndexProps> = props => {
         <meta property="og:title" content={config.title} />
         <meta property="og:description" content={config.description} />
         <meta property="og:url" content={config.siteUrl} />
+        <script src="https://rosnovsky-posthog.herokuapp.com/static/array.js"></script>
+        <script dangerouslySetInnerHTML={{
+            __html: `
+        posthog.init(
+            'lV6Ed-ZMPBTJ6aheZ3pdkX67LBOB81Jtnincsa6SPxk', 
+            { 
+                api_host: 'https://rosnovsky-posthog.herokuapp.com'
+                }
+            )`}} />
         <meta
           property="og:image"
           content={`${config.siteUrl}${props.data.header.childImageSharp.fluid.src}`}
