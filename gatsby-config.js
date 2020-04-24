@@ -25,8 +25,7 @@ module.exports = {
       resolve: `gatsby-source-ghost`,
       options: {
         apiUrl: `https://rosnovsky.us`,
-        contentApiKey: ` 04a10ba9fe889af4cb49c0c8c5
-        `,
+        contentApiKey: `04a10ba9fe889af4cb49c0c8c5`,
         version: `v3`,
       },
     },
