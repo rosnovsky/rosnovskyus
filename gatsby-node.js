@@ -1,178 +1,202 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path');
-const _ = require('lodash');
+const path = require(`path`)
+const { postsPerPage } = require(`./src/utils/siteConfig`)
+const { paginate } = require(`gatsby-awesome-pagination`)
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-
-  // Sometimes, optional fields tend to get not picked up by the GraphQL
-  // interpreter if not a single content uses it. Therefore, we're putting them
-  // through `createNodeField` so that the fields still exist and GraphQL won't
-  // trip up. An empty string is still required in replacement to `null`.
-  if (node.internal.type === 'MarkdownRemark') {
-    const { permalink, layout, primaryTag } = node.frontmatter;
-    const { relativePath } = getNode(node.parent);
-
-    let slug = permalink;
-
-    if (!slug) {
-      slug = `/${relativePath.replace('.md', '')}/`;
-    }
-
-    // Used to generate URL to view this content.
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug || '',
-    });
-
-    // Used to determine a page layout.
-    createNodeField({
-      node,
-      name: 'layout',
-      value: layout || '',
-    });
-
-    createNodeField({
-      node,
-      name: 'primaryTag',
-      value: primaryTag || '',
-    });
-  }
-};
-
+/**
+ * Here is the place where Gatsby creates the URLs for all the
+ * posts, tags, pages and authors that we fetched from the Ghost site.
+ */
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+    const { createPage } = actions
 
-  const result = await graphql(`
-    {
-      allMarkdownRemark(
-        limit: 2000
-        sort: { fields: [frontmatter___date], order: ASC }
-        filter: { frontmatter: { draft: { ne: true } } }
-      ) {
-        edges {
-          node {
-            excerpt
-            timeToRead
-            frontmatter {
-              title
-              tags
-              date
-              draft
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 840) {
-                    aspectRatio
-                    base64
-                    sizes
-                    src
-                    srcSet
-                  }
-                }
-              }
-              author {
-                id
-                bio
-                avatar {
-                  children {
-                    ... on ImageSharp {
-                      fixed(quality: 100) {
-                        src
-                      }
+    const result = await graphql(`
+        {
+            allGhostPost(sort: { order: ASC, fields: published_at }) {
+                edges {
+                    node {
+                        slug
                     }
-                  }
                 }
-              }
             }
-            fields {
-              layout
-              slug
+            allGhostTag(sort: { order: ASC, fields: name }) {
+                edges {
+                    node {
+                        slug
+                        url
+                        postCount
+                    }
+                }
             }
-          }
+            allGhostAuthor(sort: { order: ASC, fields: name }) {
+                edges {
+                    node {
+                        slug
+                        url
+                        postCount
+                    }
+                }
+            }
+            allGhostPage(sort: { order: ASC, fields: published_at }) {
+                edges {
+                    node {
+                        slug
+                        url
+                    }
+                }
+            }
         }
-      }
-      allAuthorYaml {
-        edges {
-          node {
-            id
-          }
-        }
-      }
+    `)
+
+    // Check for any errors
+    if (result.errors) {
+        throw new Error(result.errors)
     }
-  `);
 
-  if (result.errors) {
-    console.error(result.errors);
-    throw new Error(result.errors);
-  }
+    // Extract query results
+    const tags = result.data.allGhostTag.edges
+    const authors = result.data.allGhostAuthor.edges
+    const pages = result.data.allGhostPage.edges
+    const posts = result.data.allGhostPost.edges
 
-  // Create post pages
-  const posts = result.data.allMarkdownRemark.edges;
-  posts.forEach(({ node }, index) => {
-    const { slug, layout } = node.fields;
-    const prev = index === 0 ? null : posts[index - 1].node;
-    const next = index === posts.length - 1 ? null : posts[index + 1].node;
+    // Load templates
+    const indexTemplate = path.resolve(`./src/templates/index.js`)
+    const tagsTemplate = path.resolve(`./src/templates/tag.js`)
+    const authorTemplate = path.resolve(`./src/templates/author.js`)
+    const pageTemplate = path.resolve(`./src/templates/page.js`)
+    const postTemplate = path.resolve(`./src/templates/post.js`)
 
-    createPage({
-      path: slug,
-      // This will automatically resolve the template to a corresponding
-      // `layout` frontmatter in the Markdown.
-      //
-      // Feel free to set any `layout` as you'd like in the frontmatter, as
-      // long as the corresponding template file exists in src/templates.
-      // If no template is set, it will fall back to the default `post`
-      // template.
-      //
-      // Note that the template has to exist first, or else the build will fail.
-      component: path.resolve(`./src/templates/${layout || 'post'}.tsx`),
-      context: {
-        // Data passed to context is available in page queries as GraphQL variables.
-        slug,
-        prev,
-        next,
-        primaryTag: node.frontmatter.tags ? node.frontmatter.tags[0] : '',
-      },
-    });
-  });
+    // Create tag pages
+    tags.forEach(({ node }) => {
+        const totalPosts = node.postCount !== null ? node.postCount : 0
+        const numberOfPages = Math.ceil(totalPosts / postsPerPage)
 
-  // Create tag pages
-  const tagTemplate = path.resolve('./src/templates/tags.tsx');
-  const tags = _.uniq(
-    _.flatten(
-      result.data.allMarkdownRemark.edges.map(edge => {
-        return _.castArray(_.get(edge, 'node.frontmatter.tags', []));
-      })
-    )
-  );
-  tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
-      component: tagTemplate,
-      context: {
-        tag,
-      },
-    });
-  });
+        // This part here defines, that our tag pages will use
+        // a `/tag/:slug/` permalink.
+        node.url = `/tag/${node.slug}/`
 
-  // Create author pages
-  const authorTemplate = path.resolve('./src/templates/author.tsx');
-  result.data.allAuthorYaml.edges.forEach(edge => {
-    createPage({
-      path: `/author/${_.kebabCase(edge.node.id)}/`,
-      component: authorTemplate,
-      context: {
-        author: edge.node.id,
-      },
-    });
-  });
-};
+        Array.from({ length: numberOfPages }).forEach((_, i) => {
+            const currentPage = i + 1
+            const prevPageNumber = currentPage <= 1 ? null : currentPage - 1
+            const nextPageNumber =
+                currentPage + 1 > numberOfPages ? null : currentPage + 1
+            const previousPagePath = prevPageNumber
+                ? prevPageNumber === 1
+                    ? node.url
+                    : `${node.url}page/${prevPageNumber}/`
+                : null
+            const nextPagePath = nextPageNumber
+                ? `${node.url}page/${nextPageNumber}/`
+                : null
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  // adds sourcemaps for tsx in dev mode
-  if (stage === `develop` || stage === `develop-html`) {
-    actions.setWebpackConfig({
-      devtool: 'eval-source-map',
-    });
-  }
-};
+            createPage({
+                path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
+                component: tagsTemplate,
+                context: {
+                    // Data passed to context is available
+                    // in page queries as GraphQL variables.
+                    slug: node.slug,
+                    limit: postsPerPage,
+                    skip: i * postsPerPage,
+                    numberOfPages: numberOfPages,
+                    humanPageNumber: currentPage,
+                    prevPageNumber: prevPageNumber,
+                    nextPageNumber: nextPageNumber,
+                    previousPagePath: previousPagePath,
+                    nextPagePath: nextPagePath,
+                },
+            })
+        })
+    })
+
+    // Create author pages
+    authors.forEach(({ node }) => {
+        const totalPosts = node.postCount !== null ? node.postCount : 0
+        const numberOfPages = Math.ceil(totalPosts / postsPerPage)
+
+        // This part here defines, that our author pages will use
+        // a `/author/:slug/` permalink.
+        node.url = `/author/${node.slug}/`
+
+        Array.from({ length: numberOfPages }).forEach((_, i) => {
+            const currentPage = i + 1
+            const prevPageNumber = currentPage <= 1 ? null : currentPage - 1
+            const nextPageNumber =
+                currentPage + 1 > numberOfPages ? null : currentPage + 1
+            const previousPagePath = prevPageNumber
+                ? prevPageNumber === 1
+                    ? node.url
+                    : `${node.url}page/${prevPageNumber}/`
+                : null
+            const nextPagePath = nextPageNumber
+                ? `${node.url}page/${nextPageNumber}/`
+                : null
+
+            createPage({
+                path: i === 0 ? node.url : `${node.url}page/${i + 1}/`,
+                component: authorTemplate,
+                context: {
+                    // Data passed to context is available
+                    // in page queries as GraphQL variables.
+                    slug: node.slug,
+                    limit: postsPerPage,
+                    skip: i * postsPerPage,
+                    numberOfPages: numberOfPages,
+                    humanPageNumber: currentPage,
+                    prevPageNumber: prevPageNumber,
+                    nextPageNumber: nextPageNumber,
+                    previousPagePath: previousPagePath,
+                    nextPagePath: nextPagePath,
+                },
+            })
+        })
+    })
+
+    // Create pages
+    pages.forEach(({ node }) => {
+        // This part here defines, that our pages will use
+        // a `/:slug/` permalink.
+        node.url = `/${node.slug}/`
+
+        createPage({
+            path: node.url,
+            component: pageTemplate,
+            context: {
+                // Data passed to context is available
+                // in page queries as GraphQL variables.
+                slug: node.slug,
+            },
+        })
+    })
+
+    // Create post pages
+    posts.forEach(({ node }) => {
+        // This part here defines, that our posts will use
+        // a `/:slug/` permalink.
+        node.url = `/${node.slug}/`
+
+        createPage({
+            path: node.url,
+            component: postTemplate,
+            context: {
+                // Data passed to context is available
+                // in page queries as GraphQL variables.
+                slug: node.slug,
+            },
+        })
+    })
+
+    // Create pagination
+    paginate({
+        createPage,
+        items: posts,
+        itemsPerPage: postsPerPage,
+        component: indexTemplate,
+        pathPrefix: ({ pageNumber }) => {
+            if (pageNumber === 0) {
+                return `/`
+            } else {
+                return `/page`
+            }
+        },
+    })
+}

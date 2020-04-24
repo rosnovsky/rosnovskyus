@@ -1,159 +1,187 @@
-const path = require('path');
+const path = require(`path`)
 
+const config = require(`./src/utils/siteConfig`)
+const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
+
+let ghostConfig
+
+try {
+    ghostConfig = require(`./.ghost`)
+} catch (e) {
+    ghostConfig = {
+        production: {
+            apiUrl: process.env.GHOST_API_URL,
+            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+        },
+    }
+} finally {
+    const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
+
+    if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
+        throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
+    }
+}
+
+/**
+* This is the place where you can tell Gatsby which plugins to use
+* and set them up the way you want.
+*
+* Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
+*
+*/
 module.exports = {
-  siteMetadata: {
-    title: 'Rosnovsky Park™',
-    description: 'Blog of Art Rosnovsky, software engineer from Seattle, WA',
-    siteUrl: 'https://rosnovsky.us',
-    titleTemplate: '%s · Rosnovsky Park™',
-    image: '/image.jpg',
-  },
-  mapping: {
-    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
-  },
-  plugins: [
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'content',
-        path: path.join(__dirname, 'src', 'content'),
-      },
+    siteMetadata: {
+        siteUrl: config.siteUrl,
     },
-    {
-      resolve: `gatsby-source-ghost`,
-      options: {
-        apiUrl: `https://rosnovsky.us`,
-        contentApiKey: `04a10ba9fe889af4cb49c0c8c5`,
-        version: `v3`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-embed-video',
+    plugins: [
+        /**
+         *  Content Plugins
+         */
+        {
+            resolve: `gatsby-source-filesystem`,
             options: {
-              width: 800,
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              height: 400, // Optional: Overrides optional.ratio
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-              urlOverrides: [
+                path: path.join(__dirname, `src`, `pages`),
+                name: `pages`,
+            },
+        },
+        // Setup for optimised images.
+        // See https://www.gatsbyjs.org/packages/gatsby-image/
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: path.join(__dirname, `src`, `images`),
+                name: `images`,
+            },
+        },
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
+            resolve: `gatsby-source-ghost`,
+            options:
+                process.env.NODE_ENV === `development`
+                    ? ghostConfig.development
+                    : ghostConfig.production,
+        },
+        /**
+         *  Utility Plugins
+         */
+        {
+            resolve: `gatsby-plugin-ghost-manifest`,
+            options: {
+                short_name: config.shortTitle,
+                start_url: `/`,
+                background_color: config.backgroundColor,
+                theme_color: config.themeColor,
+                display: `minimal-ui`,
+                icon: `static/${config.siteIcon}`,
+                legacy: true,
+                query: `
                 {
-                  id: 'youtube',
-                  embedURL: videoId =>
-                    `https://www.youtube-nocookie.com/embed/${videoId}`,
-                },
-              ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-abbr',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1170,
-              quality: 100,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1rem',
-            },
-          },
-        ],
-      },
-    },
-    'gatsby-transformer-json',
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: 'https://rosnovsky.us',
-      },
-    },
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-typescript',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-yaml',
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                const siteUrl = site.siteMetadata.siteUrl;
-                const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is a blog post I've posted at rosnovsky.us. You can read it <a href="${siteUrl +
-                  edge.node.fields.slug}">here</a>.)</div>
-              `;
-
-                let html = edge.node.html;
-                html = html
-                  .replace(/href="\//g, `href="${siteUrl}/`)
-                  .replace(/src="\//g, `src="${siteUrl}/`)
-                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
-
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.excerpt,
-                  date: edge.node.fields.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': html + postText }],
-                });
-              });
-            },
-
-            query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {frontmatter: { draft: {ne: true}}}
-                ) {
-                  edges {
-                    node {
-                      excerpt(pruneLength: 250)
-                      html
-                      fields { 
-                        slug   
-                      }
-                      frontmatter {
-                        title
-                        date
-                        excerpt
-                      }
+                    allGhostSettings {
+                        edges {
+                            node {
+                                title
+                                description
+                            }
+                        }
                     }
-                  }
                 }
-              }
-            `,
-            output: '/rss.xml',
-            title: 'Rosnovsky Park™ RSS Feed',
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Rosnovsky Park™`,
-        short_name: `Rosnovsky.us`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        // icon: `content/assets/favicon.ico`,
-      },
-    },
-    `gatsby-plugin-offline`,
-  ],
-};
+              `,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+                {
+                    allGhostSettings {
+                        edges {
+                            node {
+                                title
+                                description
+                            }
+                        }
+                    }
+                }
+              `,
+                feeds: [
+                    generateRSSFeed(config),
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-advanced-sitemap`,
+            options: {
+                query: `
+                {
+                    allGhostPost {
+                        edges {
+                            node {
+                                id
+                                slug
+                                updated_at
+                                created_at
+                                feature_image
+                            }
+                        }
+                    }
+                    allGhostPage {
+                        edges {
+                            node {
+                                id
+                                slug
+                                updated_at
+                                created_at
+                                feature_image
+                            }
+                        }
+                    }
+                    allGhostTag {
+                        edges {
+                            node {
+                                id
+                                slug
+                                feature_image
+                            }
+                        }
+                    }
+                    allGhostAuthor {
+                        edges {
+                            node {
+                                id
+                                slug
+                                profile_image
+                            }
+                        }
+                    }
+                }`,
+                mapping: {
+                    allGhostPost: {
+                        sitemap: `posts`,
+                    },
+                    allGhostTag: {
+                        sitemap: `tags`,
+                    },
+                    allGhostAuthor: {
+                        sitemap: `authors`,
+                    },
+                    allGhostPage: {
+                        sitemap: `pages`,
+                    },
+                },
+                exclude: [
+                    `/dev-404-page`,
+                    `/404`,
+                    `/404.html`,
+                    `/offline-plugin-app-shell-fallback`,
+                ],
+                createLinkInHead: true,
+                addUncaughtPages: true,
+            },
+        },
+        `gatsby-plugin-catch-links`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-force-trailing-slashes`,
+        `gatsby-plugin-offline`,
+    ],
+}

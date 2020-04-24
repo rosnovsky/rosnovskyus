@@ -1,36 +1,59 @@
 module.exports = {
-  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
-  extends: [
-    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-    "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
-  ],
-  "env": {
-    "browser": true,
-    "es6": true,
-  },
-  "plugins": [
-    "react",
-  ],
-  "globals": {
-    "graphql": true,
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "ecmaVersion": 2018,
-      "jsx": true,
+    'parser': 'babel-eslint',
+    'parserOptions': {
+        'ecmaVersion': 6,
+        'ecmaFeatures': {
+            'jsx': true,
+            'experimentalObjectRestSpread': true
+        }
     },
-  },
-  "settings": {
-    "react": {
-      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    plugins: ['ghost', 'react'],
+    extends: [
+        'plugin:ghost/node',
+        'plugin:ghost/ember',
+        'plugin:react/recommended'
+    ],
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "version": "16.0",
+            "flowVersion": "0.53"
+        },
+        "propWrapperFunctions": ["forbidExtraProps"]
+    },
+    "rules": {
+        "ghost/sort-imports-es6-autofix/sort-imports-es6": "off",
+        "ghost/ember/use-ember-get-and-set": "off",
+        "no-console": "off",
+        "no-inner-declarations": "off",
+        "valid-jsdoc": "off",
+        "require-jsdoc": "off",
+        "quotes": ["error", "backtick"],
+        "consistent-return": ["error"],
+        "arrow-body-style": [
+            "error",
+            "as-needed",
+            { "requireReturnForObjectLiteral": true }
+        ],
+        "jsx-quotes": ["error", "prefer-double"],
+        "semi": ["error", "never"],
+        "object-curly-spacing": ["error", "always"],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "ignore"
+            }
+        ],
+        "react/prop-types": [
+            "error",
+            {
+                "ignore": ["children"]
+            }
+        ]
     }
-  },
-  "rules": {
-    "semi": ["error", "always"],
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
-  }
-}
+};

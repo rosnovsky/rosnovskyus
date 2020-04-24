@@ -1,3 +1,5 @@
-/feed       https://feeds.rosnovsky.us    301!
-/blog/seaside-helicopters/  https://rosnovsky.us/blog/2013/08/26/seaside-helicopters/ 200
-    
+# Netlify redirects file, edit with your domain
+# https://www.netlify.com/docs/redirects/
+
+https://gatsby-starter-ghost.netlify.com/*      https://gatsby.ghost.org/:splat    301!
+http://gatsby-starter-ghost.netlify.com/*       https://gatsby.ghost.org/:splat    301!
