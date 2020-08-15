@@ -5,5 +5,6 @@
     "dev": "lerna run dev --parallel"
   },
   "devDependencies": {
+    "lerna": "^3.22.1"
   }
 }
