@@ -53,6 +53,7 @@ export default {
     select: {
       title: 'title',
       author: 'author.name',
+      description: 'publishedAt',
       media: 'mainImage'
     },
     prepare(selection) {

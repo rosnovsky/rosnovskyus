@@ -9,11 +9,16 @@ export default {
       type: 'string'
     },
     {
+      name: 'lastName',
+      title: 'Last Name',
+      type: 'string'
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'lastName',
         maxLength: 96
       }
     },
@@ -37,11 +42,18 @@ export default {
           lists: []
         }
       ]
+    }, 
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'string'
     }
   ],
   preview: {
     select: {
       title: 'name',
+      subtitle: 'location',
+      description: 'bio',
       media: 'image'
     }
   }

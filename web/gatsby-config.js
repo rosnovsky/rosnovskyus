@@ -7,21 +7,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: `gatsby-source-sanity`,
       options: {
-        projectId: '0jmxfdo4',
-        dataset: 'production',
+        projectId: `0jmxfdo4`,
+        dataset: `production`,
         // a token with read permissions is required
         // if you have a private dataset
         token: process.env.MY_SANITY_TOKEN,
+        watchMode: true,
+        overlayDrafts: true,
       },
     },
-    "gatsby-plugin-postcss",
+    `gatsby-plugin-postcss`,
     {
-      resolve: "gatsby-plugin-purgecss",
+      resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: ["src/css/index.css"],
+        purgeOnly: [`src/css/index.css`],
       },
     },
     `gatsby-plugin-typescript`,
@@ -40,11 +42,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-eslint",
+      resolve: `gatsby-plugin-eslint`,
       options: {
         test: /\.ts$|\.tsx$/,
         exclude: /(node_modules|.cache|public)/,
-        stages: ["develop", "build-javascript"],
+        stages: [`develop`, `build-javascript`],
         options: {
           emitWarning: true,
           failOnError: false,
@@ -53,6 +55,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
   ],
 }

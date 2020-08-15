@@ -2,6 +2,7 @@ export default {
   name: 'siteSettings',
   type: 'document',
   title: 'Site Settings',
+  icon: 'siteSettings.0.logo',
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
     {
@@ -31,6 +32,15 @@ export default {
       description: 'Publish an author and set a reference to them here.',
       title: 'Author',
       to: [{type: 'author'}]
+    },
+    {
+      name: "logo",
+      title: "Logo",
+      description: "Site logo and favicon.",
+      type: "image",
+      options: {
+        hotspot: true
+      }
     }
   ]
 }
