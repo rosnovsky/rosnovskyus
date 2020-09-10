@@ -1,42 +1,45 @@
-import React, { ReactElement, useState } from "react"
+import React from 'react';
 import { graphql, Link } from 'gatsby';
-import BasePortableText from '@sanity/block-content-to-react'
+import BasePortableText from '@sanity/block-content-to-react';
 import {
   mapEdgesToNodes,
-  buildImageObj,
   filterOutDocsWithoutSlugs,
   filterOutDocsPublishedInTheFuture,
-} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import clientConfig from '../../client-config'
-import Figure from "../components/Figure"
+} from '../lib/helpers';
+import { imageUrlFor } from '../lib/image-url';
+import clientConfig from '../../client-config';
+import Figure from '../components/Figure';
 
-interface Props {}
+type Props = {
+  data: Record<string, unknown>;
+  errors: string;
+};
 
-const Index = props => {
-  const {data, errors} = props
+const Index = (props: Props): JSX.Element => {
+  const { data, errors } = props;
 
   if (errors) {
-    throw new Error(errors)
+    throw new Error(errors);
   }
 
-  const site = (data || {}).site
+  const site = (data || {}).site;
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
-    : []
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
+    : [];
 
-    const serializers = {
-      types: {
-        authorReference: ({node}) => <span>{node.author.name}</span>,
-        mainImage: Figure
-      }
-    }
+  const serializers = {
+    types: {
+      // eslint-disable-next-line react/display-name
+      authorReference: ({ node }: any): JSX.Element => <span>{node.author.name}</span>,
+      mainImage: Figure,
+    },
+  };
 
-    const PortableText = ({blocks}) => (
-      <BasePortableText blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
-    )
+  const PortableText = ({ blocks }: any) => (
+    <BasePortableText blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
+  );
 
   // if (!site) {
   //   throw new Error(
@@ -58,7 +61,7 @@ const Index = props => {
               <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
             </svg>
             <span className="font-semibold text-xl tracking-tight">
-              {data.posts.edges[0].node.title}
+              {data.sanitySiteSettings.title}
             </span>
           </div>
           <div className="block lg:hidden">
@@ -78,9 +81,7 @@ const Index = props => {
               </svg>
             </button>
           </div>
-          <div
-            className={`w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto`}
-          >
+          <div className={`w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto`}>
             <div className="text-sm lg:flex-grow">
               <a
                 href="#responsive-header"
@@ -114,19 +115,23 @@ const Index = props => {
       </div>
       <div className="container max-w-md mx-auto mt-10">
         <div className="rounded overflow-hidden shadow-lg">
-        <img
+          <img
             src={imageUrlFor(data.posts.edges[0].node.mainImage)
               .width(600)
               .height(Math.floor((9 / 16) * 600))
-              .auto('format')
+              .auto(`format`)
               .url()}
             // alt={props.mainImage.alt}
             className="w-full"
           />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2"><Link to={`/blog/${data.posts.edges[0].node.slug.current}`}>{data.posts.edges[0].node.title}</Link></div>
+            <div className="font-bold text-xl mb-2">
+              <Link to={`/blog/${data.posts.edges[0].node.slug.current}`}>
+                {data.posts.edges[0].node.title}
+              </Link>
+            </div>
             <p className="text-gray-700 text-base">
-            <PortableText blocks={data.posts.edges[0].node._rawBody} />
+              <PortableText blocks={data.posts.edges[0].node._rawBody} />
             </p>
           </div>
           <div className="px-6 py-4">
@@ -143,10 +148,10 @@ const Index = props => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export const query = graphql`
   fragment Image on SanityImage {
@@ -171,6 +176,9 @@ export const query = graphql`
     }
   }
   query IndexPageQuery {
+    sanitySiteSettings {
+      title
+    }
     posts: allSanityPost(
       limit: 6
       sort: { fields: [publishedAt], order: DESC }
@@ -187,9 +195,9 @@ export const query = graphql`
           slug {
             current
           }
-          _rawBody(resolveReferences: {maxDepth: 10})
+          _rawBody(resolveReferences: { maxDepth: 10 })
         }
       }
     }
   }
-`
+`;

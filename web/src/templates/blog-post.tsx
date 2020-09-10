@@ -1,23 +1,24 @@
-import React from 'react'
-import {graphql} from 'gatsby'
-import {imageUrlFor} from '../lib/image-url'
-import BasePortableText from '@sanity/block-content-to-react'
-import clientConfig from '../../client-config'
-import Figure from "../components/Figure"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { imageUrlFor } from '../lib/image-url';
+import BasePortableText from '@sanity/block-content-to-react';
+import clientConfig from '../../client-config';
+import Figure from '../components/Figure';
 
 const serializers = {
   types: {
-    authorReference: ({node}) => <span>{node.author.name}</span>,
-    mainImage: Figure
-  }
-}
+    // eslint-disable-next-line react/display-name
+    authorReference: ({ node }) => <span>{node.author.name}</span>,
+    mainImage: Figure,
+  },
+};
 
-const PortableText = ({blocks}) => (
+const PortableText = ({ blocks }) => (
   <BasePortableText blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
-)
+);
 
 export const query = graphql`
-fragment Image on SanityImage {
+  fragment Image on SanityImage {
     crop {
       _key
       _type
@@ -39,7 +40,7 @@ fragment Image on SanityImage {
     }
   }
   query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: {eq: $id}) {
+    post: sanityPost(id: { eq: $id }) {
       id
       publishedAt
       categories {
@@ -54,50 +55,48 @@ fragment Image on SanityImage {
         current
       }
       # _rawExcerpt(resolveReferences: {maxDepth: 5})
-      _rawBody(resolveReferences: {maxDepth: 5})
-    #   authors {
-    #     _key
-    #     author {
-    #       image {
-    #         crop {
-    #           _key
-    #           _type
-    #           top
-    #           bottom
-    #           left
-    #           right
-    #         }
-    #         hotspot {
-    #           _key
-    #           _type
-    #           x
-    #           y
-    #           height
-    #           width
-    #         }
-    #         asset {
-    #           _id
-    #         }
-    #       }
-    #       name
-    #     }
-    #   }
-      }
+      _rawBody(resolveReferences: { maxDepth: 5 })
+      #   authors {
+      #     _key
+      #     author {
+      #       image {
+      #         crop {
+      #           _key
+      #           _type
+      #           top
+      #           bottom
+      #           left
+      #           right
+      #         }
+      #         hotspot {
+      #           _key
+      #           _type
+      #           x
+      #           y
+      #           height
+      #           width
+      #         }
+      #         asset {
+      #           _id
+      #         }
+      #       }
+      #       name
+      #     }
+      #   }
+    }
   }
-`
+`;
 
-const BlogPostTemplate = props => {
-  const {data, errors} = props
-  const post = data && data.post
-  return (
-      <BlogPost {...post} />
-  )
-}
+const BlogPostTemplate = (props) => {
+  const { data, errors } = props;
+  const post = data && data.post;
+  return <BlogPost {...post} />;
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
-function BlogPost (props) {
-  const {_rawBody, authors, categories, title, mainImage, publishedAt} = props
+function BlogPost(props) {
+  const { _rawBody, authors, categories, title, mainImage, publishedAt } = props;
   return (
     <article>
       {mainImage && mainImage.asset && (
@@ -106,8 +105,8 @@ function BlogPost (props) {
             src={imageUrlFor(mainImage)
               .width(1200)
               .height(Math.floor((9 / 16) * 1200))
-              .fit('crop')
-              .auto('format')
+              .fit(`crop`)
+              .auto(`format`)
               .url()}
             alt={mainImage.alt}
           />
@@ -120,17 +119,13 @@ function BlogPost (props) {
             {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
           <aside>
-            {publishedAt && (
-              <div>
-                {publishedAt}
-              </div>
-            )}
+            {publishedAt && <div>{publishedAt}</div>}
             {/* {authors && <AuthorList items={authors} title='Authors' />} */}
             {categories && (
               <div>
                 <h3>Categories</h3>
                 <ul>
-                  {categories.map(category => (
+                  {categories.map((category) => (
                     <li key={category._id}>{category.title}</li>
                   ))}
                 </ul>
@@ -140,5 +135,5 @@ function BlogPost (props) {
         </div>
       </div>
     </article>
-  )
+  );
 }
