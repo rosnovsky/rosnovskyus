@@ -9,6 +9,8 @@ import BasePortableText from '@sanity/block-content-to-react';
 import { imageUrlFor } from '../lib/image-url';
 import clientConfig from '../../client-config';
 import Figure from '../components/Figure';
+import { Tags } from '../components/Post/Tags';
+import { PostHeading } from '../components/Post/PostHeading';
 
 type Props = {
   data: Record<string, any>;
@@ -116,34 +118,34 @@ const Index = (props: Props): JSX.Element => {
       <div className="container max-w-md mx-auto mt-10">
         <div className="rounded overflow-hidden shadow-lg">
           <img
-            src={imageUrlFor(data.posts.edges[0].node.mainImage)
-              .width(600)
-              .height(Math.floor((9 / 16) * 600))
-              .auto(`format`)
-              .url()}
+            src={
+              imageUrlFor(data.posts.edges[0].node.mainImage)
+                .width(600)
+                .height(Math.floor((9 / 16) * 600))
+                .auto(`format`)
+                .url() || undefined
+            }
             // alt={props.mainImage.alt}
             className="w-full"
           />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">
               <Link to={`/blog/${data.posts.edges[0].node.slug.current}`}>
-                {data.posts.edges[0].node.title}
+                <PostHeading title={data.posts.edges[0].node.title} />
               </Link>
             </div>
-            <p className="text-gray-700 text-base">
+            <div className="text-gray-700 text-base">
               <PortableText blocks={data.posts.edges[0].node._rawBody} />
-            </p>
+            </div>
           </div>
           <div className="px-6 py-4">
-            <span className="inline-block bg-burg rounded-full px-3 py-1 text-sm font-semibold text-brightGreen mr-2">
-              #photography
-            </span>
-            <span className="inline-block bg-lightGreen rounded-full px-3 py-1 text-sm font-semibold text-darkGreen mr-2">
-              #travel
-            </span>
-            <span className="inline-block bg-orange rounded-full px-3 py-1 text-sm font-semibold text-lighttGreen mr-2">
-              #winter
-            </span>
+            <Tags>
+              {[
+                { title: 'hike', type: 'featured' },
+                { title: 'photo' },
+                { title: 'travel', type: 'featured' },
+              ]}
+            </Tags>
           </div>
         </div>
       </div>

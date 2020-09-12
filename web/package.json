@@ -6,10 +6,10 @@
   "author": "Art Rosnovsky <artem@rosnovsky.us>",
   "dependencies": {
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-helmet": "6.1.0"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "react-helmet": "6.1.0",
     "@sanity/block-content-to-react": "^2.0.7",
     "@storybook/addon-actions": "^6.0.21",
     "babel-preset-react-app": "^9.1.2",
