@@ -8,12 +8,12 @@ import Figure from '../components/Figure';
 const serializers = {
   types: {
     // eslint-disable-next-line react/display-name
-    authorReference: ({ node }) => <span>{node.author.name}</span>,
+    authorReference: ({ node }: any) => <span>{node.author.name}</span>,
     mainImage: Figure,
   },
 };
 
-const PortableText = ({ blocks }) => (
+const PortableText = ({ blocks }: any) => (
   <BasePortableText blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
 );
 
@@ -87,15 +87,15 @@ export const query = graphql`
   }
 `;
 
-const BlogPostTemplate = (props) => {
-  const { data, errors } = props;
+const BlogPostTemplate = (props: Record<string, any>): JSX.Element => {
+  const { data } = props;
   const post = data && data.post;
   return <BlogPost {...post} />;
 };
 
 export default BlogPostTemplate;
 
-function BlogPost(props) {
+function BlogPost(props: Record<string, any>) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } = props;
   return (
     <article>
@@ -125,7 +125,7 @@ function BlogPost(props) {
               <div>
                 <h3>Categories</h3>
                 <ul>
-                  {categories.map((category) => (
+                  {categories.map((category: Record<string, string>) => (
                     <li key={category._id}>{category.title}</li>
                   ))}
                 </ul>

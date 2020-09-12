@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import { getFluidGatsbyImage } from 'gatsby-source-sanity';
 import clientConfig from '../../client-config';
 
-export default ({ node }): null | JSX.Element => {
+export default ({ node }: Record<string, any>): null | JSX.Element => {
   if (!node || !node.asset || !node.asset._id) {
     return null;
   }

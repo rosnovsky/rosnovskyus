@@ -1,17 +1,17 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import BasePortableText from '@sanity/block-content-to-react';
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture,
-} from '../lib/helpers';
+// import {
+//   mapEdgesToNodes,
+//   filterOutDocsWithoutSlugs,
+//   filterOutDocsPublishedInTheFuture,
+// } from '../lib/helpers';
 import { imageUrlFor } from '../lib/image-url';
 import clientConfig from '../../client-config';
 import Figure from '../components/Figure';
 
 type Props = {
-  data: Record<string, unknown>;
+  data: Record<string, any>;
   errors: string;
 };
 
@@ -22,12 +22,12 @@ const Index = (props: Props): JSX.Element => {
     throw new Error(errors);
   }
 
-  const site = (data || {}).site;
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts)
-        .filter(filterOutDocsWithoutSlugs)
-        .filter(filterOutDocsPublishedInTheFuture)
-    : [];
+  // const site = (data || {}).site;
+  // const postNodes = (data || {}).posts
+  //   ? mapEdgesToNodes(data.posts)
+  //       .filter(filterOutDocsWithoutSlugs)
+  //       .filter(filterOutDocsPublishedInTheFuture)
+  //   : [];
 
   const serializers = {
     types: {
@@ -49,8 +49,8 @@ const Index = (props: Props): JSX.Element => {
   return (
     <>
       <div>
-        <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-          <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <nav className="flex items-center justify-between flex-wrap bg-orange p-6 text-burg">
+          <div className="flex items-center flex-shrink-0 text-burg mr-6">
             <svg
               className="fill-current h-8 w-8 mr-2"
               width="54"
@@ -135,13 +135,13 @@ const Index = (props: Props): JSX.Element => {
             </p>
           </div>
           <div className="px-6 py-4">
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+            <span className="inline-block bg-burg rounded-full px-3 py-1 text-sm font-semibold text-brightGreen mr-2">
               #photography
             </span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+            <span className="inline-block bg-lightGreen rounded-full px-3 py-1 text-sm font-semibold text-darkGreen mr-2">
               #travel
             </span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+            <span className="inline-block bg-orange rounded-full px-3 py-1 text-sm font-semibold text-lighttGreen mr-2">
               #winter
             </span>
           </div>
