@@ -1,8 +1,10 @@
+import {VscSettingsGear} from 'react-icons/vsc';
+
 export default {
   name: 'siteSettings',
   type: 'document',
   title: 'Site Settings',
-  icon: 'siteSettings.0.logo',
+  icon: VscSettingsGear,
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
     {

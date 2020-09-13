@@ -1,12 +1,21 @@
+import {CgFileDocument} from 'react-icons/cg'
+
 export default {
   name: 'post',
-  title: 'Blog Post',
+  title: 'Post',
   type: 'document',
+  icon: CgFileDocument,
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string'
+    },
+    {
+      name: 'type',
+      title: 'Post Type',
+      type: 'reference',
+      to: { type: 'postType'}
     },
     {
       name: 'slug',
@@ -53,13 +62,13 @@ export default {
     select: {
       title: 'title',
       author: 'author.name',
-      description: 'publishedAt',
+      description: 'type.name',
       media: 'mainImage'
     },
     prepare(selection) {
-      const {author} = selection
+      const {author, description} = selection
       return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
+        subtitle: `${description} by ${author}`
       })
     }
   }

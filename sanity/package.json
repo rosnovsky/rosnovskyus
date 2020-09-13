@@ -23,7 +23,8 @@
     "@sanity/vision": "^1.150.6",
     "prop-types": "^15.6",
     "react": "^16.2",
-    "react-dom": "^16.2"
+    "react-dom": "^16.2",
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {},
   "repository": {
