@@ -4,6 +4,15 @@ import { imageUrlFor } from '../lib/image-url';
 import BasePortableText from '@sanity/block-content-to-react';
 import clientConfig from '../../client-config';
 import Figure from '../components/Figure';
+// import getShareImage from '@jlengstorf/get-share-image';
+
+// const socialImage = getShareImage({
+//   title: 'Deploy a Node.js App to DigitalOcean with SSL',
+//   tagline: '#devops #nodejs #ssl',
+//   cloudName: 'rosnovsky',
+//   imagePublicID: 'samples/animals/kitten-playing',
+//   textColor: '232129',
+// });
 
 const serializers = {
   types: {
@@ -42,7 +51,7 @@ export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
     post: sanityPost(id: { eq: $id }) {
       id
-      publishedAt
+      publishedAt(fromNow: true)
       categories {
         _id
         title
@@ -119,7 +128,7 @@ function BlogPost(props: Record<string, any>) {
             {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
           <aside>
-            {publishedAt && <div>{publishedAt}</div>}
+            {publishedAt}
             {/* {authors && <AuthorList items={authors} title='Authors' />} */}
             {categories && (
               <div>

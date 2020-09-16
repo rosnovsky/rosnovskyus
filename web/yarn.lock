@@ -1740,6 +1740,11 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@jlengstorf/get-share-image@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@jlengstorf/get-share-image/-/get-share-image-0.7.1.tgz#bdef9c633ce6dbf8c300fc82d18befba615a0d5c"
+  integrity sha512-eXATsFDhdRYMqAcrBNW4SpZttAxlA9S/9IAvyUt7UTxxlwNXKo/tqrOxRoOSrA79l25QQ0oDqP/9BcdvvGmYxQ==
+
 "@mdx-js/mdx@^2.0.0-next.4", "@mdx-js/mdx@^2.0.0-next.7":
   version "2.0.0-next.7"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-2.0.0-next.7.tgz#3f27449e6a78ac0a9cc682f98e1c93442e93f166"
@@ -14251,14 +14256,7 @@ react-hotkeys@2.0.0:
   dependencies:
     prop-types "^15.6.1"
 
-react-icons@^3.0.1:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
-  integrity sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
-  dependencies:
-    camelcase "^5.0.0"
-
-react-icons@^3.11.0:
+react-icons@^3.0.1, react-icons@^3.11.0:
   version "3.11.0"
   resolved "https://a0us.jfrog.io/a0us/api/npm/npm/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
   integrity sha1-LKKQPfq4Joyhjr2Mwuh5kh7DslQ=
