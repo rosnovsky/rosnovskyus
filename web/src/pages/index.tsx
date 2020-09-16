@@ -95,12 +95,12 @@ const Index = (props: Props): JSX.Element => {
             className="w-full"
           />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">
+            <div className="font-bold text-xl">
               <Link to={`/blog/${data.posts.edges[0].node.slug.current}`}>
                 <PostHeading title={data.posts.edges[0].node.title} />
               </Link>
             </div>
-            <div className="w-full text-right text-gray-500">
+            <div className="w-full text-sm mb-3 text-gray-500">
               <PostMetadata metadata={{ publishedAt: data.posts.edges[0].node.publishedAt }} />
             </div>
             <div className="text-gray-700 text-base">
