@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { useColorMode } from "theme-ui";
 
-import mediaqueries from "@styles/media";
-import { copyToClipboard } from "@utils";
+import mediaqueries from "../../styles/media";
+import { copyToClipboard } from "../../utils";
 
 const ShareDarkModeOffIcon: React.FC<{}> = () => (
   <svg

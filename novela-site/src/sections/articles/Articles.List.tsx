@@ -92,12 +92,14 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
 
   const { gridLayout } = useContext(GridLayoutContext);
   const hasOverflow = narrow && article.title.length > 35;
-  const imageSource = narrow ? article.feature_image.narrow : article.feature_image.regular;
+  const imageSource = narrow ? article.feature_image : article.feature_image;
   const hasHeroImage =
     imageSource &&
     Object.keys(imageSource).length !== 0 &&
     imageSource.constructor === Object;
 
+
+    console.log(article)
   return (
     <ArticleLink to={article.slug} data-a11y="false">
       <Item gridLayout={gridLayout}>
@@ -116,7 +118,7 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
             {article.excerpt}
           </Excerpt>
           <MetaData>
-            {article.date} · {article.timeToRead} min read
+            {article.date} · {article.reading_time} min read
           </MetaData>
         </div>
       </Item>

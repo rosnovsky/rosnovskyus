@@ -48,22 +48,7 @@ function normalizeAvatar(author) {
 
 module.exports.local = {
   articles: ({ node: article }) => {
-    return {
-      ...article,
-      hero: normalizeHero(article),
-    };
-  },
-  authors: ({ node: author }) => {
-    return {
-      ...author,
-      avatar: normalizeAvatar(author),
-    };
-  },
-};
-
-module.exports.contentful = {
-  articles: ({ node: article }) => {
-    const author = article.author.reduce((curr, next, index, array) => {
+    const author = article.authors.reduce((curr, next, index, array) => {
       if (array.length === 1) {
         return next.name;
       }
@@ -74,16 +59,17 @@ module.exports.contentful = {
     return {
       ...article,
       author,
-      body: article.body.childMdx.body,
-      timeToRead: article.body.childMdx.timeToRead,
+      html: article.html,
+      reading_time: article.reading_time,
     };
   },
   authors: ({ node: author }) => {
     return {
       ...author,
-      social: author.social.map(s => ({ url: s })),
-      slug: author.fields.slug,
-      authorsPage: author.fields.authorsPage,
+      // social: author.social.map(s => ({ url: s })),
+      social: author.url,
+      slug: author.slug,
+      authorsPage: author.url,
     };
   },
 };

@@ -23,16 +23,18 @@ module.exports.local = {
           id
           slug
           title
+          url
           authors {
             name
             profile_image
             bio
             id
           }
+          html
           excerpt
-          canonical_url
           visibility
           feature_image 
+          reading_time
         }
       }
     }

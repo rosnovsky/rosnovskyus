@@ -7,10 +7,10 @@ module.exports = ({ actions }) => {
       date: Date! @dateformat
       author: String!
       excerpt(pruneLength: Int = 140): String!
-      body: String!
-      feature_image: File @fileByRelativePath
-      timeToRead: Int
-      canonical_url: String
+      html: String!
+      feature_image: String
+      reading_time: Int
+      url: String
     }
   `);
 };

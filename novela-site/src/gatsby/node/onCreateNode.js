@@ -1,21 +1,27 @@
 /* eslint-disable no-prototype-builtins */
 
 const crypto = require(`crypto`);
-const slugify = require('slugify');
 
 // Create fields for post slugs and source
 // This will change with schema customization with work
 module.exports = ({ node, actions, getNode, createNodeId }, themeOptions) => {
   const { createNode, createNodeField, createParentChildLink } = actions;
-  const contentPath = themeOptions.contentPath || 'content/posts';
-  const basePath = themeOptions.basePath || '/';
+  const basePath = '/';
   const articlePermalinkFormat = themeOptions.articlePermalinkFormat || ':slug';
 
   // Create source field (according to contentPath)
   const fileNode = getNode(node.parent);
-  const source = fileNode && fileNode.sourceInstanceName;
 
   // ///////////////// Utility functions ///////////////////
+
+  function slugify(string) {
+    return string
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036F]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)+/g, '');
+  }
 
   function generateArticlePermalink(slug, date) {
     const [year, month, day] = date.match(/\d{4}-\d{2}-\d{2}/)[0].split('-');
@@ -47,12 +53,8 @@ module.exports = ({ node, actions, getNode, createNodeId }, themeOptions) => {
 
   // ///////////////////////////////////////////////////////
 
-  if (node.internal.type === `AuthorsYaml`) {
-    const slug = node.slug
-      ? `/${node.slug}`
-      : slugify(node.name, {
-          lower: true,
-        });
+  if (node.internal.type === `GhostAuthor`) {
+    const slug = node.slug ? `/${node.slug}` : slugify(node.name);
 
     const fieldData = {
       ...node,
@@ -77,29 +79,26 @@ module.exports = ({ node, actions, getNode, createNodeId }, themeOptions) => {
       },
     });
 
-    createParentChildLink({ parent: fileNode, child: node });
+    // createParentChildLink({ parent: fileNode, child: node });
 
     return;
   }
 
-  if (node.internal.type === `Mdx` && source === contentPath) {
+  if (node.internal.type === `GhostPost`) {
     const fieldData = {
-      author: node.frontmatter.author,
-      date: node.frontmatter.date,
-      feature_image: node.frontmatter.feature_image,
-      visibility: node.frontmatter.visibility || false,
+      author: node.primary_author,
+      date: node.published_at,
+      hero: node.cover_image,
+      secret: node.visibility || false,
       slug: generateSlug(
         basePath,
         generateArticlePermalink(
-          slugify(node.frontmatter.slug || node.frontmatter.title, {
-            lower: true,
-          }),
-          node.frontmatter.date,
+          slugify(node.slug || node.title),
+          node.published_at,
         ),
       ),
-      title: node.frontmatter.title,
-      subscription: node.frontmatter.subscription !== false,
-      canonical_url: node.frontmatter.canonical_url,
+      title: node.title,
+      // subscription: node.subscription !== false,
     };
 
     createNode({
@@ -119,26 +118,7 @@ module.exports = ({ node, actions, getNode, createNodeId }, themeOptions) => {
       },
     });
 
-    createParentChildLink({ parent: fileNode, child: node });
+    // createParentChildLink({ parent: fileNode, child: node });
   }
 
-  if (node.internal.type === `ContentfulAuthor`) {
-    createNodeField({
-      node,
-      name: `slug`,
-      value: generateSlug(
-        basePath,
-        'authors',
-        slugify(node.name, {
-          lower: true,
-        }),
-      ),
-    });
-
-    createNodeField({
-      node,
-      name: `authorsPage`,
-      value: themeOptions.authorsPage || false,
-    });
-  }
 };

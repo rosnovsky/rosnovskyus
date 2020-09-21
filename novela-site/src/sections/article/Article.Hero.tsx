@@ -17,9 +17,7 @@ interface ArticleHeroProps {
 const ArticleHero: React.FC<ArticleHeroProps> = ({ article, authors }) => {
   const hasCoAUthors = authors.length > 1;
   const hasHeroImage =
-    article.feature_image &&
-    Object.keys(article.feature_image.full).length !== 0 &&
-    article.feature_image.full.constructor === Object;
+    article.feature_image
 
   return (
     <Hero>
@@ -28,13 +26,13 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ article, authors }) => {
         <HeroSubtitle hasCoAUthors={hasCoAUthors}>
           <ArticleAuthors authors={authors} />
           <ArticleMeta hasCoAUthors={hasCoAUthors}>
-            {article.date} · {article.timeToRead} min read
+            {article.date} · {article.reading_time} min read
           </ArticleMeta>
         </HeroSubtitle>
       </Header>
       <HeroImage id="ArticleImage__Hero">
         {hasHeroImage ? (
-          <Image src={article.feature_image.full} />
+          <Image src={article.feature_image} />
         ) : (
           <ImagePlaceholder />
         )}

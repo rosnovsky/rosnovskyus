@@ -33,7 +33,7 @@ interface HelmetProps {
   isBlogPost: false;
   pathname: string;
   published?: string;
-  timeToRead?: string;
+  reading_time?: number;
   title: string;
   isSecret: false;
 }
@@ -88,7 +88,7 @@ const SEO: React.FC<HelmetProps> = ({
   isBlogPost,
   pathname,
   published,
-  timeToRead,
+  reading_time,
   title,
   isSecret,
 }) => {
@@ -380,9 +380,9 @@ const SEO: React.FC<HelmetProps> = ({
     metaTags.push({ name: 'article:published_time', content: published });
   }
 
-  if (timeToRead) {
+  if (reading_time) {
     metaTags.push({ name: 'twitter:label1', value: 'Reading time' });
-    metaTags.push({ name: 'twitter:data1', value: `${timeToRead} min read` });
+    metaTags.push({ name: 'twitter:data1', value: `${reading_time} min read` });
   }
 
   if (isSecret) {

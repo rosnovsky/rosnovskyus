@@ -5,7 +5,7 @@ const mdxResolverPassthrough = fieldName => async (
   context,
   info,
 ) => {
-  const type = info.schema.getType(`Mdx`);
+  const type = info.schema.getType(`GhostPost`);
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
   });
@@ -13,21 +13,22 @@ const mdxResolverPassthrough = fieldName => async (
   const result = await resolver(mdxNode, arguments_, context, {
     fieldName,
   });
+  console.warn(result)
   return result;
 };
 
 // Define resolvers for custom fields
-module.exports = ({ createResolvers }) => {
+module.exports =  ({ createResolvers }) => {
   createResolvers({
     Article: {
       excerpt: {
         resolve: mdxResolverPassthrough(`excerpt`),
       },
-      body: {
+      html: {
         resolve: mdxResolverPassthrough(`body`),
       },
-      timeToRead: {
-        resolve: mdxResolverPassthrough(`timeToRead`),
+      reading_time: {
+        resolve: mdxResolverPassthrough(`reading_time`),
       },
     },
   });

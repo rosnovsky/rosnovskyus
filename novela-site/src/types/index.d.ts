@@ -31,25 +31,24 @@ export interface IAuthor {
   name: string;
   slug: string;
   bio: string;
-  avatar: {
-    image: IGatsbyImageFluid;
-    full: IGatsbyImageFluid;
-  };
+  profile_image: string
 }
 
 export interface IArticle {
   slug: string;
   authors: IAuthor[];
   excerpt: string;
-  body: string;
+  html: string;
   id: string;
-  hero: {
-    full: IGatsbyImageFluid;
-    preview: IGatsbyImageFluid;
-    regular: IGatsbyImageFluid;
-    seo: string;
-  };
-  timeToRead: number;
+  feature_image: string
+  title: string
+  // {
+    // full: IGatsbyImageFluid;
+    // preview: IGatsbyImageFluid;
+    // regular: IGatsbyImageFluid;
+    // seo: string;
+  // };
+  reading_time: string;
   date: string;
   visibility: boolean;
 }

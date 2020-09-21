@@ -68,7 +68,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   `);
 
   // Defaulting to look at the local MDX files as sources.
-  const { local = true, contentful = false } = sources;
+  const local = true;
 
   let authors;
   let articles;
@@ -88,7 +88,6 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   log('Config basePath', basePath);
   if (authorsPage) log('Config authorsPath', authorsPath);
 
-  if (local) {
     try {
       log('Querying Authors & Articles source:', 'Local');
       const localAuthors = await graphql(query.local.authors);
@@ -100,18 +99,17 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
       dataSources.local.articles = localArticles.data.articles.edges.map(
         normalize.local.articles,
       );
+
     } catch (error) {
       console.error(error);
     }
-  }
 
 
   // Combining together all the articles from different sources
   articles = [
     ...dataSources.local.articles,
-    ...dataSources.contentful.articles,
-    ...dataSources.netlify.articles,
   ].sort(byDate);
+
 
   const articlesThatArentSecret = articles.filter(article => !article.visibility);
 
@@ -207,7 +205,8 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
         slug: article.slug,
         id: article.id,
         title: article.title,
-        canonicalUrl: article.canonical_url,
+        body: article.html,
+        canonicalUrl: article.url,
         mailchimp,
         next,
       },

@@ -65,7 +65,7 @@ const GridItem: React.FC<GridItemProps> = ({ article, narrow }) => {
         </Title>
         <Excerpt hasOverflow={hasOverflow}>{article.excerpt}</Excerpt>
         <MetaData>
-          {article.date} · {article.timeToRead} min read
+          {article.date} · {article.reading_time} min read
         </MetaData>{" "}
       </Item>
     </ArticleLink>

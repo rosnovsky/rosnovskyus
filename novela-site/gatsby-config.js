@@ -82,15 +82,20 @@ module.exports = {
               
             query:`
               {
-                allArticle(sort: {order: DESC, fields: date}) {
+                allGhostPost {
                   edges {
                     node {
-                      body
+                      html
                       excerpt
-                      date
+                      published_at
                       slug
                       title
-                      author
+                      authors {
+                        name
+                        slug
+                        profile_image
+                        url
+                      }
                       visibility
                     }
                   }
