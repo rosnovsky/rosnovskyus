@@ -48,10 +48,10 @@ const byDate = (a, b) => new Date(b.dateForSEO) - new Date(a.dateForSEO);
 
 module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   const {
-    rootPath,
+    rootPath = '/',
     basePath = '/',
     authorsPath = '/authors',
-    authorsPage = true,
+    authorsPage = false,
     pageLength = 6,
     sources = {},
     mailchimp = '',
