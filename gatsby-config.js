@@ -38,6 +38,7 @@ const plugins = [
       articlePermalinkFormat: `blog/:year/:month/:day/:slug`,
       rootPath: "/",
       basePath: "/",
+      pageLength: 15,
       authorsPage: true,
       mailchimp: false,
       sources: {

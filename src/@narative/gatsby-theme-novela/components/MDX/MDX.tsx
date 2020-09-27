@@ -20,12 +20,10 @@ import Figcaption from '@components/Figcaption';
 // import * as shortcodes from '@blocks/kit';
 import mediaqueries from '@styles/media';
 import { toKebabCase } from '@utils';
-import {ReactTinyLink} from 'react-tiny-link';
-import StackGrid from "react-stack-grid";
+import Microlink from '@microlink/react'
 
 const shortcodes = {
-  ReactTinyLink,
-  StackGrid,
+  Microlink,
   ImageZoom
 }
 
