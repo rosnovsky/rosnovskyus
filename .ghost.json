@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://rosnovsky.us",
+    "contentApiKey": "158a98727d25d7d37ae3d14006"
+  },
+  "production": {
+    "apiUrl": "https://rosnovsky.us",
+    "contentApiKey": "158a98727d25d7d37ae3d14006"
+  }
+}
