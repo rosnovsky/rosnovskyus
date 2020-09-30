@@ -1,1 +1,1 @@
-export { default } from '@components/Logo/Logo'
+export { default } from '../../../../../_components/Logo/node_modules/@components/Logo/Logo'

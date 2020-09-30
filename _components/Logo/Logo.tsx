@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import mediaqueries from "../../../../../_components/MDX/node_modules/@styles/media";
+import mediaqueries from "@styles/media";
 
 import { Icon } from '@types';
 

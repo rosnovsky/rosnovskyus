@@ -1,3 +1,5 @@
+# Node template
+
 # Logs
 logs
 *.log
@@ -29,7 +31,7 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
@@ -51,19 +53,30 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variable files
-.env*
-
-# gatsby files
-.cache/
-public
-
-# Mac files
-.DS_Store
-
-# Yarn
-yarn-error.log
-.pnp/
-.pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# dotenv environment variables file
+.env
+.ghost.json
+
+# IDE
+.idea/*
+*.iml
+*.sublime-*
+
+# OSX
+.DS_Store
+.vscode
+
+# Docs Custom
+.cache/
+public
+yarn-error.log
+.netlify/
+<<<<<<< HEAD
+
+
+.env.*
+=======
+>>>>>>> 5aabed8b04b189bc6e3111659d05be52c964befd

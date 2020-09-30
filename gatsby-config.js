@@ -1,105 +1,52 @@
-require("dotenv").config();
+let siteConfig;
+let ghostConfig;
 
-const siteMetadata = {
-  title: `Rosnovsky Park™`,
-  name: `Rosnovsky Park`,
-  siteUrl: `https://rosnovsky.us`,
-  description: `This is my description that will be used in the meta tags and important for search results`,
-  hero: {
-    heading: `From Pacific Northwest to the World.`,
-    maxWidth: 652,
-  },
-  social: [
-    {
-      url: "https://github.com/rosnovsky"
-    },
-    { 
-      url: "https://instagram.com/rosnovsky"
-    },
-    { 
-      url: "https://dev.to/rosnovsky"
-    },
-    {
-      url: "https://linkedin.com/in/rosnovsky"
-    },
-    {
-      name: `mailto`,
-      url: `mailto:rosnovsky@hey.com`,
-    },
-  ],
-};
+// loading site config
+try {
+  siteConfig = require(`./siteConfig`);
+} catch (e) {
+  siteConfig = null;
+}
 
-const plugins = [
-  {
-    resolve: "@narative/gatsby-theme-novela",
-    options: {
-      contentPosts: "content/posts",
-      contentAuthors: "content/authors",
-      articlePermalinkFormat: `blog/:year/:month/:day/:slug`,
-      rootPath: "/",
-      basePath: "/",
-      pageLength: 15,
-      authorsPage: true,
-      mailchimp: false,
-      sources: {
-        local: true,
-        contentful: false,
-      },
+// loading ghost config
+try {
+  ghostConfig = require(`./.ghost.json`);
+} catch (e) {
+  ghostConfig = {
+    development: {
+      apiUrl: process.env.GHOST_API_URL,
+      contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+      version: process.env.GHOST_VERSION,
     },
-  },
-  {
-    resolve: `gatsby-plugin-manifest`,
-    options: {
-      name: `Novela by Narative`,
-      short_name: `Novela`,
-      start_url: `/`,
-      background_color: `#fff`,
-      theme_color: `#fff`,
-      display: `standalone`,
-      icon: `src/assets/favicon.png`,
+    production: {
+      apiUrl: process.env.GHOST_API_URL,
+      contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+      version: process.env.GHOST_VERSION,
     },
-  },
+  };
+} finally {
+  const { apiUrl, contentApiKey } =
+    process.env.NODE_ENV === `development`
+      ? ghostConfig.development
+      : ghostConfig.production;
+
+  if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
+    ghostConfig = null; //allow default config to take over
+  }
+}
+
+// setting up plugins
+let gatsbyPlugins = [
   {
-    resolve: "gatsby-plugin-mailchimp",
+    resolve: `@draftbox-co/gatsby-ghost-novela-theme`,
     options: {
-      endpoint:
-        "https://narative.us19.list-manage.com/subscribe/post?u=65ef169332a03669b9538f6ef&amp;id=c55c426282",
-    },
-  },
-  'gatsby-plugin-react-helmet',
-  {
-    resolve: 'gatsby-plugin-cloudinary-social-cards',
-    options: {
-      cloudName: 'rosnovsky',
-      apiKey: process.env.CLOUDINARY_API_KEY,
-      apiSecret: process.env.CLOUDINARY_API_SECRET,
-      imageTemplate: 'src/assets/social-card-template.jpg',
+      ghostConfig: ghostConfig,
+      siteConfig: siteConfig,
+      articlePermalinkFormat: "blog/:year/:month/:day/:slug"
     },
   },
 ];
 
-/**
- * For development purposes if there's no Contentful Space ID and Access Token
- * set we don't want to add in gatsby-source-contentful because it will throw
- * an error.
- *
- * To enanble Contentful you must
- * 1. Create a new Space on contentful.com
- * 2. Import the Contentful Model from @narative/gatsby-theme-novela/conteful
- * 3. Add .env to www/ (see www/env.example)
- * 4. Enable contentful as a source in this file for @narative/gatsby-theme-novela
- */
-if (process.env.CONTENTFUL_SPACE_ID && process.env.CONTENTFUL_ACCESS_TOKEN) {
-  plugins.push({
-    resolve: "gatsby-source-contentful",
-    options: {
-      spaceId: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    },
-  });
-}
-
 module.exports = {
-  siteMetadata,
-  plugins,
+  plugins: gatsbyPlugins,
 };
